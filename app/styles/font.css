@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?15bjmf');
+  src:  url('fonts/icomoon.eot?15bjmf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?15bjmf') format('truetype'),
+    url('fonts/icomoon.woff?15bjmf') format('woff'),
+    url('fonts/icomoon.svg?15bjmf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ig:before {
+  content: "\e900";
+}
+.icon-hour:before {
+  content: "\e901";
+}
+.icon-hit:before {
+  content: "\e902";
+}
+.icon-hamburger:before {
+  content: "\e903";
+}
+.icon-grid:before {
+  content: "\e904";
+}
+.icon-fb:before {
+  content: "\e905";
+}
+.icon-fashion:before {
+  content: "\e906";
+}
+.icon-email:before {
+  content: "\e907";
+}
+.icon-download:before {
+  content: "\e908";
+}
+.icon-down:before {
+  content: "\e909";
+}
+.icon-date:before {
+  content: "\e90a";
+}
+.icon-comment:before {
+  content: "\e90b";
+}
+.icon-close:before {
+  content: "\e90c";
+}
+.icon-brightness:before {
+  content: "\e90d";
+}
+.icon-bookmark:before {
+  content: "\e90e";
+}
+.icon-author:before {
+  content: "\e90f";
+}
+.icon-article:before {
+  content: "\e910";
+}
+.icon-zoom:before {
+  content: "\e911";
+}
+.icon-weird:before {
+  content: "\e912";
+}
+.icon-up:before {
+  content: "\e913";
+}
+.icon-time:before {
+  content: "\e914";
+}
+.icon-tag:before {
+  content: "\e915";
+}
+.icon-star:before {
+  content: "\e916";
+}
+.icon-skill:before {
+  content: "\e917";
+}
+.icon-share:before {
+  content: "\e918";
+}
+.icon-search:before {
+  content: "\e919";
+}
+.icon-right:before {
+  content: "\e91a";
+}
+.icon-retro:before {
+  content: "\e91b";
+}
+.icon-printer:before {
+  content: "\e91c";
+}
+.icon-place:before {
+  content: "\e91d";
+}
+.icon-photo:before {
+  content: "\e91e";
+}
+.icon-music:before {
+  content: "\e91f";
+}
+.icon-movies:before {
+  content: "\e920";
+}
+.icon-location:before {
+  content: "\e921";
+}
+.icon-list:before {
+  content: "\e922";
+}
+.icon-link:before {
+  content: "\e923";
+}
+.icon-left:before {
+  content: "\e924";
+}
+.icon-industry:before {
+  content: "\e925";
+}
+.icon-in:before {
+  content: "\e926";
+}
+.icon-image:before {
+  content: "\e927";
+}
