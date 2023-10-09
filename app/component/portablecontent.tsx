@@ -5,14 +5,13 @@ import {getImageDimensions} from '@sanity/asset-utils'
 import Image from 'next/image';
 import { InstagramEmbed } from 'react-social-media-embed';
 import { YouTubeEmbed } from 'react-social-media-embed';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { duotoneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
-export default function PortableContent(props) {
+ 
+ 
+export default function PortableContent(props:any) {
 
 
 // Barebones lazy-loaded image component
-const SampleImageComponent = ({value, isInline}) => {
+const SampleImageComponent = ({value, isInline}:any) => {
   const {width, height} = getImageDimensions(value)
  
   return (
@@ -47,14 +46,14 @@ const SampleImageComponent = ({value, isInline}) => {
   )
 }
 
-const SampleYouTubeComponent = ({value}) =>{
+const SampleYouTubeComponent = ({value}:any) =>{
    
   return(
     <YouTubeEmbed url={value.youtubelink} width="100%" height={500} />
   )
 }
 
-const InstagramComponent = ({value}) =>{
+const InstagramComponent = ({value}:any) =>{
   
   return(
 
@@ -64,27 +63,14 @@ const InstagramComponent = ({value}) =>{
   )
 }
 
-const CodeBlockComponent = ({value}) =>{
-
-  return(
-    <div className="bg-cyan-950 text-white">
-    <div className="pl-10 pt-3">{value.filename}</div>
-    <SyntaxHighlighter language={value.language} showLineNumbers={true} 
-    wrapLongLines={true} style={duotoneDark}>
-      {value.code}
-    </SyntaxHighlighter>
-    </div>
-  )
-}
-
-
+ 
+ 
 
 const components = {
   types: {
     image: SampleImageComponent,
     youtube: SampleYouTubeComponent,
     instagramPost: InstagramComponent,
-    myCodeField: CodeBlockComponent,
  
     // Any other custom types you have in your content
     // Examples: mapLocation, contactForm, code, featuredProjects, latestNews, etc.

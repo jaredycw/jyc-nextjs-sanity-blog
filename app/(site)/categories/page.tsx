@@ -1,12 +1,10 @@
 import { getCategories } from "@/sanity/sanity-utils";
-import Image from "next/image";
-import Link from "next/link";
 import ArchiveCategories from "@/app/component/archivecategories";
  
  
 
 
-export default async function Category(props){
+export default async function Category(props : any){
 
   const categories = await getCategories();
 

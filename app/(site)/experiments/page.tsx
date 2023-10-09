@@ -1,12 +1,10 @@
 import { getArchiveExps } from "@/sanity/sanity-utils";
-import Image from "next/image";
-import Link from "next/link";
 import ArchiveExperiments from "@/app/component/archivexps";
  
  
 
 
-export default async function Experiment(props){
+export default async function Experiment(props : any){
 
   const experiments = await getArchiveExps();
 

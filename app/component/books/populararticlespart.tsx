@@ -17,26 +17,27 @@ export default function PopularArticlesPart(){
     
             <div className="top-articles mt-10">
  
-              <h1 className="uppercase font-bold">Top 10 Articles</h1>
-              <p>Data provided by The New York Times</p>
-              <div className="grid grid-cols-4 gap-5">
+              <h1>Top 10 Articles</h1>
+              <p>Data provided by The New York Times(Cache:a Day ago)</p>
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 ">
               {topArticles.articles ? (
-                  topArticles.articles?.map((article, index: number) => (
+                  topArticles.articles?.map((article :any, index: number) => (
                     <Link href={article.url} target="_blank" className="transition hover:-translate-y-1 hover:scale-25" key={article.id}>
                     <div className="post-wrapper flex flex-col h-full">
-                      <img
+                      <Image
                       className='post-wrapper-img'
                       src={article.cover}
                       alt={article.title}
-                      height="100%"
+                      width={600}
+                      height={400}
                       key={article.id}
                       />
                     
-                    <div className="p-5">
-                      <p className="jy-font-sans font-bold">
+                    <div className="p-7 md:p-5">
+                      <p className="jy-font-sans font-bold leading-5 mb-2">
                           {article.title}
                       </p>
-                      <p className="jy-font-sans">
+                      <p className="jy-font-sans leading-5">
                         {article.byline}
                       </p>
                     </div>

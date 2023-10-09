@@ -3,26 +3,34 @@
 import React, { useRef } from 'react';
 import ExperimentImage from "./expimage";
 
-export default function ExperimentSection() {
 
-  const sliderExpRef = useRef(null);
+export default function ExperimentSection({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+
+  const sliderExpRef = useRef<HTMLDivElement>(null);
 
   function ExpPrev() {
-    console.log('its left');
-    sliderExpRef.current.scrollLeft -= 380;
-  }
-  function ExpNext() {
-    console.log('its right');
-    sliderExpRef.current.scrollLeft += 380;
+    if (sliderExpRef.current) {
+      sliderExpRef.current.scrollLeft -= 380;
+    }
   }
 
+  function ExpNext() {
+    if (sliderExpRef.current) {
+      sliderExpRef.current.scrollLeft += 380;
+    }
+  }
   return (
-              <>
+     
                           
                     <div className="slider-container">
                       
                       <div ref={sliderExpRef} id="slider-scroller" className="slider-scroller">
-                        <ExperimentImage />
+
+                        {children}
                       </div>
 
                       <div onClick={ExpPrev} className="control-prev-btn">
@@ -36,6 +44,6 @@ export default function ExperimentSection() {
                     
                     </div>
 
-              </>
+        
   );
 }

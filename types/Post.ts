@@ -2,10 +2,11 @@ import { PortableTextBlock } from "sanity";
 export type Post = {
     count: number,
     _id: string,
-    publishedOn: Date,
+    publishedOn: string,
     author:string,
     authorImage:string,
     authorBio:string,
+    authorLqip:string,
     title: string,
     slug: string,
     categories: string,

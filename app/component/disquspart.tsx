@@ -2,7 +2,7 @@
 import { DiscussionEmbed } from 'disqus-react';
 import { Recommendations } from 'disqus-react';
 
-export default function DisqusPart(props) {
+export default function DisqusPart(props:any) {
 
   return(
       <div>

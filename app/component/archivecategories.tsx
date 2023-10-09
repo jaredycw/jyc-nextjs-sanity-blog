@@ -5,11 +5,9 @@ import Image from 'next/image';
  
 
 
-export default function ArchiveCategories({ categories }: Props) {
+export default function ArchiveCategories({ categories }: any) {
     
-    type Props = {
-        categories: Categories[];
-      };
+ 
 
       const [ catNum, setCatNum] = useState(10); // Default number of posts dislplayed
 
@@ -23,7 +21,7 @@ export default function ArchiveCategories({ categories }: Props) {
   return (
     <>
           <div className="grid grid-cols-1 gap-5 xl:grid-cols-5">
-            {categories.slice(0, catNum).map((category) =>(
+            {categories.slice(0, catNum).map((category: any) =>(
               <Link href={`/categories/${category.slug}`} key={category._id}>
                 <div className="tag-box-wrapper my-2 mx-2">
                   

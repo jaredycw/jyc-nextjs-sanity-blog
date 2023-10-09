@@ -1,12 +1,8 @@
 import { getArchiveWorks } from "@/sanity/sanity-utils";
-import Image from "next/image";
-import Link from "next/link";
 import ArchiveWorks from "@/app/component/archiveworks";
  
  
-
-
-export default async function Work(props){
+export default async function Work(props:any){
 
   const works = await getArchiveWorks();
 

@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 import { metadata } from '../layout'
 
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata() {
   return {
     title: `404 Page not Found` + ` — ` + metadata.title
   }

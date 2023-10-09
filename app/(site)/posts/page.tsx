@@ -4,7 +4,7 @@ import ArchivePost from "@/app/component/archivepost";
  
 
 
-export default async function Post(props){
+export default async function Post(props:any){
 
   const posts = await getArchivePosts();
 

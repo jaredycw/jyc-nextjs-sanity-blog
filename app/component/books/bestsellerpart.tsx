@@ -17,15 +17,15 @@ export default function BestSellerPart(){
     
             <div className="top-books mt-10">
               {(console.log("Best Fiction is ",topBooks))}
-              <h1 className="uppercase font-bold">Top 10 Non Fiction Books</h1>
-              <p>Data provided by The New York Times</p>
+              <h1>Top 10 Non Fiction Books (Combined Print & E-book)</h1>
+              <p>Data provided by The New York Times (Last Modifited Date:  {topBooks.mDate})</p>
               {topBooks.books ? (
-                  topBooks.books?.map((book, index: number) => (
-                    <div className="flex flex-wrap items-center p-6 now-playing my-5" key={book.isbn13}>
-                    <div className="flex-none w-14 ml-5"><h1>{index + 1}</h1></div>
-                    <div className="flex-initial flex-wrap ml-5">
+                  topBooks.books?.map((book :any, index: number) => (
+                    <div className="flex flex-wrap flex-col md:flex-row items-center p-6 article-sample my-5" key={book.isbn13}>
+                    <div className="flex-none w-14 ml-0 md:ml-5 mb-5 md:mb-0"><h1 className="text-center md:text-left">{index + 1}</h1></div>
+                    <div className="flex-none ml-0 md:ml-5 mb-5 md:mb-0">
                       <Image
-                      className='w-20 shadow-sm'
+                      className='shadow-sm'
                       src={book.cover}
                       alt={book.title}
                       width={100}
@@ -33,15 +33,15 @@ export default function BestSellerPart(){
                       key={index}
                       />
                     </div>
-                    <div className='flex-1 flex-wrap ml-10'>
-                    <h1 className="fw-bold">
+                    <div className='flex-1 flex-wrap ml-0 md:ml-10'>
+                    <h1 className="fw-bold text-center md:text-left">
                         {book.title}
                     </h1>
-                    <h5>
+                    <h5 className="text-center md:text-left">
                       {book.author}
                     </h5>
                   </div>
-                  <div className='flex-none w-25 p-5 uppercase text-gray-400'>- NYT - </div>
+                  <div className='flex-none w-25 pt-10 md:p-5 uppercase text-gray-400'>- NYT - </div>
                   </div>
                   ))
                 ) : (

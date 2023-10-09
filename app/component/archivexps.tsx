@@ -5,11 +5,9 @@ import Image from 'next/image';
  
 
 
-export default function ArchiveExperiments({ experiments }: Props) {
+export default function ArchiveExperiments({ experiments }: any) {
     
-    type Props = {
-        experiments: Experiments[];
-      };
+ 
 
       const [ catNum, setCatNum] = useState(3); // Default number of posts dislplayed
 
@@ -23,7 +21,7 @@ export default function ArchiveExperiments({ experiments }: Props) {
   return (
     <>
           <div className="grid grid-cols-1 gap-10 xl:grid-cols-3">
-            {experiments.slice(0, catNum).map((experiment) =>(
+            {experiments.slice(0, catNum).map((experiment : any) =>(
               <Link href={`/experiments/${experiment.slug}`} key={experiment._id}>
                 <div className="jy-card">
                             {experiment.mainImage && (<Image src={experiment.mainImage} alt={experiment.title} width={450} height={300} 

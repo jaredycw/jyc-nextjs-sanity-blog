@@ -3,7 +3,7 @@ import { PortableTextBlock } from "sanity"
 
 export type Book = {
     _id: string,
-    publishedOn: Date,
+    publishedOn: string,
     title: string,
     bookAuthor: string,
     author: string,
@@ -13,6 +13,9 @@ export type Book = {
     list: string,
     slug: string,
     cover: string,
+    lqip: string,
+    mainImage: string,
+    categories: string,
     estimatedReadingTime: string,
     googleBooks:string,
     content: PortableTextBlock[];

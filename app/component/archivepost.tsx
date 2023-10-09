@@ -6,11 +6,8 @@ import Image from 'next/image';
  
 
 
-export default function ArchivePost({ posts }: Props) {
+export default function ArchivePost({ posts }: any) {
     
-    type Props = {
-        posts: Posts[];
-      };
 
       const [ postNum, setPostNum] = useState(6); // Default number of posts dislplayed
 
@@ -26,7 +23,7 @@ export default function ArchivePost({ posts }: Props) {
           
             <div className="grid grid-cols-1 gap-5 xl:grid-cols-3">
               
-                {posts.slice(0, postNum).map((post) =>(
+                {posts.slice(0, postNum).map((post: any) =>(
                             <Link href={`/posts/${post.slug}`} key={post._id}>
                                 <div className="post-wrapper">
                                   <div className="thumbnail">{post.mainImage !== null ? (

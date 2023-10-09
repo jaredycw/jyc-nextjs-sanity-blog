@@ -10,6 +10,7 @@ export type SpotifyTrack = {
     url: string;
   };
   artist: string;
+  releasedDate:string;
 };
 
 /* Spotify Artist  */

@@ -1,22 +1,18 @@
 import { getBook } from "@/sanity/sanity-utils";
 import Image from "next/image";
-import Link from "next/link";
-import { PortableText } from "@portabletext/react";
 import PortableContent from "@/app/component/portablecontent";
-import AuthorSection from "@/app/component/authorsection";
 import HobbySection from "@/app/component/hobbysection";
-import MovieSection from "@/app/component/moviesection";
 import TagSection from "@/app/component/tagsection";
 import MottoSection from "@/app/component/mottosection";
 import NotFound from "../../not-found";
 import SnsWidget from "@/app/component/snswidget";
-import { Metadata, ResolvingMetadata } from 'next';
 import { metadata } from "../../layout";
 import BooksApiExample from "@/app/component/books/booksapi";
+import AdsPart from "@/app/component/adpart";
 
 
 
-export async function generateMetadata({ params }: Props){
+export async function generateMetadata({ params }: any){
 
   const slug = params.book;
   const book = await getBook(slug);
@@ -45,7 +41,7 @@ export async function generateMetadata({ params }: Props){
 }
 
 
-export default async function Book({ params }: Props){
+export default async function Book({ params }: any){
 
   const slug = params.book;
   const book = await getBook(slug);
@@ -54,9 +50,9 @@ export default async function Book({ params }: Props){
     return (
 
       <div className="container mx-auto hobbies-section">
-        <div className="grid sm:grid-cols-7 grid-cols-2 gap-11">
-        <div className="col-span-full md:col-span-2">
-            <div className="hobbies-page-wrapper grid md:justify-items-center p-10">
+        <div className="grid lg:grid-cols-7 grid-cols-2 gap-11">
+        <div className="col-span-full lg:col-span-2">
+            <div className="hobbies-page-wrapper grid lg:justify-items-center p-10">
                 <div className="hobbies-list">
                         <Image src={book.cover} alt={book.title} width={150} height={220} className="post-wrapper-img"
                         blurDataURL={book.lqip} placeholder="blur" loading="lazy"
@@ -70,8 +66,8 @@ export default async function Book({ params }: Props){
                 </div>
             </div>
         </div>
-        <div className="col-span-full md:col-span-5"> 
-            <div className="md:pl-0 pl-5">
+        <div className="col-span-full lg:col-span-5"> 
+            <div className="lg:pl-5 pl-0">
                 <div className="hobbies-heading">
                   <div className="title"><h1>{book.title}</h1></div>
                   <div className="creator">{book.bookAuthor}</div>
@@ -80,12 +76,12 @@ export default async function Book({ params }: Props){
                   <div className="post-infor-wrapper">
                       <div className="post-author">{book.author}</div>
                       <div className="post-date">{book.publishedOn}</div>
-                      <div className="post-reading">{book.estimatedReadingTime} mins</div>
+                      <div className="post-reading">{book.estimatedReadingTime} mins read</div>
                   </div>
                 </div>
 
                 <SnsWidget />
-                <div className="content mt-10">
+                <div className="content mt-5">
                   <PortableContent content={book.content} />
                 </div>
             </div>
@@ -93,12 +89,15 @@ export default async function Book({ params }: Props){
         </div>
         </div>
         <section className="page-featured">
-          <div className="ad-placement my-20"></div>
+          <AdsPart />
           <BooksApiExample bookname={book.googleBooks} />
+          
           <MottoSection />
+          
           <TagSection categories={book.categories} />
           <div className="page-hobbies">
             <div id="section-hobby">
+              
               <HobbySection />
             </div>
           </div>

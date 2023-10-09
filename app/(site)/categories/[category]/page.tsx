@@ -7,7 +7,7 @@ import NotFound from "../../not-found";
  
 
 
-export default async function Category({ params }: Props){
+export default async function Category({ params }: any){
 
   const slug = params.category;
   const category = await getCategory(slug);

@@ -8,7 +8,7 @@ import Link from 'next/link';
  
 
 
-export default function BooksApiExample(props) {
+export default function BooksApiExample(props :any) {
   
 
   const [books, setBooks] = useState([]);
@@ -25,33 +25,27 @@ export default function BooksApiExample(props) {
         console.error('Error fetching data:', error);
       }
     };
-
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
    
   return (
     <div className="googleBooks">
-    <h2 className="mb-5">Google Books Results </h2>
-    <div className="grid grid-cols-5 gap-20 items-center">
+    <h2 className="mb-5 leading-3">Google Books Results </h2>
+    <p className="mb-5">Powered by Google Books API</p>
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-20 items-center justify-items-center md:justify-items-start">
       
-      {books.slice(0,5).map((item, index) => (
+      {books.slice(0,5).map((item : any, index : number) => (
         <div key={index}>
-          <div>
-            
-            
             <Link href={item.volumeInfo.canonicalVolumeLink} key={item.id} target="_blank">
-              
             {item.volumeInfo.imageLinks ? (
-                  <img src={item.volumeInfo.imageLinks.thumbnail} alt={item.volumeInfo.title} width={100} height={100} loading="lazy" />
+                  <Image src={item.volumeInfo.imageLinks.thumbnail} alt={item.volumeInfo.title} width={150} height={100} loading="lazy" />
                 ) : null}
-            <p className="text-xs my-5">{item.volumeInfo.title}</p>
-               
-              
+            <p className="text-xs my-5 text-center md:text-left">{item.volumeInfo.title}</p>         
               
             </Link>
             
-          </div>
         </div>
       ))}
     </div>

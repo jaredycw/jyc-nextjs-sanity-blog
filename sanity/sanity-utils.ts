@@ -121,7 +121,7 @@ export async function getPost(slug: string): Promise<Post>{
 
 }
 
-export async function getCourses(): Promise<Course>{ 
+export async function getCourses(): Promise<Course[]>{ 
  
 
     return createClient(clientConfig).fetch(
@@ -225,7 +225,7 @@ export async function getBook(slug: string): Promise<Book>{
     );
 }
 
-export async function getMovies(): Promise<Movie>{
+export async function getMovies(): Promise<Movie[]>{
 
     return createClient(clientConfig).fetch(
 
@@ -263,7 +263,7 @@ export async function getMovie(slug: string): Promise<Movie>{
     );
 }
 
-export async function getWorks(): Promise<Work>{
+export async function getWorks(): Promise<Work[]>{
 
     return createClient(clientConfig).fetch(
 
@@ -275,7 +275,7 @@ export async function getWorks(): Promise<Work>{
         }`
     );
 }
-export async function getArchiveWorks(): Promise<Work>{
+export async function getArchiveWorks(): Promise<Work[]>{
 
     return createClient(clientConfig).fetch(
 
@@ -402,7 +402,7 @@ export async function getExp(slug: string): Promise<Experiment>{
     );
 }
 
-export async function getMottos(count: number): Promise<Motto>{
+export async function getMottos(): Promise<Motto>{
     
 
     return createClient(clientConfig).fetch(

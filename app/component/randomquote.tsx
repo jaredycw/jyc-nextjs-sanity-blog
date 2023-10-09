@@ -1,8 +1,9 @@
  "use client"
 import React, { useState, useEffect } from 'react';
 
-export default function RandomItemDisplay({ items }){
-  const [randomIndex, setRandomIndex] = useState(null);
+
+export default function RandomItemDisplay({ items }: any){
+  const [randomIndex, setRandomIndex] = useState(0);
 
   useEffect(() => {
     const maxIndex = items.length - 1;
@@ -11,7 +12,7 @@ export default function RandomItemDisplay({ items }){
   }, [items]);
 
   return (
-     <>
+     <div>
       {randomIndex !== null && (
         <div key={items.id} className="motto-wrapper">
           <div className="motto-upper">{items[randomIndex].blackWording}</div>
@@ -19,6 +20,6 @@ export default function RandomItemDisplay({ items }){
         </div>
         
       )}
-    </>
+    </div>
   );
 }

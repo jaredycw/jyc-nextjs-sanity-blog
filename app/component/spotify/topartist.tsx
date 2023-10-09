@@ -22,14 +22,15 @@ export default function TopArtists(){
           </>
  
             <div className="top-artists">
-            <h1 className="uppercase font-bold">Top 10 Artists</h1>
+            <h1>Top 10 Artists</h1>
+            <span>(Approximately last 4 weeks)</span>
               {topArtists.artists ? ( 
                     topArtists.artists?.map((artist: SpotifyArtist, index: number) => (
-                      <Link href={artist.url} target="_blank" className="flex flex-wrap items-center p-6 now-playing my-5" key={index}>
-                        <div className="flex-none w-14 ml-5"><h1>{index + 1}</h1></div>
-                        <div className="flex-initial flex-wrap ml-5">
+                      <Link href={artist.url} target="_blank" className="flex flex-wrap flex-col md:flex-row items-center p-6 article-sample my-5" key={index}>
+                        <div className="flex-none w-14 ml-0 md:ml-5 mb-5 md:mb-0"><h1 className="text-center md:text-left">{index + 1}</h1></div>
+                        <div className="flex-none ml-0 md:ml-5 mb-5 md:mb-0">
                           <Image
-                          className='w-20 shadow-sm'
+                          className='shadow-sm'
                           src={artist.coverImage.url}
                           alt={artist.name}
                           width={100}
@@ -37,15 +38,16 @@ export default function TopArtists(){
                           key={index}
                           />
                         </div>
-                        <div className='flex-1 flex-wrap ml-10'>
-                        <h1 className="fw-bold">
+                        <div className='flex-1 flex-wrap ml-0 md:ml-10'>
+                        <h1 className="fw-bold text-center md:text-left">
                             {artist.name}
                         </h1>
-                        <h5>
-                            <span className="mr-10">Popularity: {artist.popularity}</span>  <span className="capitalize">Genre: {artist.genre} </span>
-                        </h5>
+                        <div className="text-center md:text-left my-5 md:my-1">
+                            <p className="mr-0 md:mr-10 capitalize blcok md:inline text-center md:text-left">Popularity: {artist.popularity}</p> 
+                            <p className="capitalize blcok md:inline text-center md:text-left">Genre: {artist.genre} </p>
+                        </div>
                       </div>
-                      <div className='flex-none w-25 p-5 uppercase text-gray-400'>- Spotify - </div>
+                      <div className='flex-none w-25 pt-10 md:p-5 uppercase text-gray-400'>- Spotify - </div>
                       </Link>
                     ))
                   ) : (

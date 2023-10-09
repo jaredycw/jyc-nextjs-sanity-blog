@@ -1,6 +1,5 @@
 
 import { getExps } from '@/sanity/sanity-utils';
-import { Exp } from '@/types/Exp';
 import Link from 'next/link';
 import Image from 'next/image';
 

@@ -1,5 +1,5 @@
 import Link from "next/link"
-export default function ExploreMoreBtn(props) {
+export default function ExploreMoreBtn(props:any) {
     return (
         
         <div className="explore-wrapper">

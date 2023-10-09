@@ -1,6 +1,6 @@
 import { getPost } from "@/sanity/sanity-utils";
 import Image from "next/image";
-import Link from "next/link";
+import React from "react";
 import PostSection from "@/app/component/postsection";
 import AuthorSection from "@/app/component/authorsection";
 import TagSection from "@/app/component/tagsection";
@@ -10,13 +10,16 @@ import NotFound from "../../not-found";
 import SnsWidget from "@/app/component/snswidget";
 import { metadata } from "../../layout";
 import DisqusPart from "@/app/component/disquspart";
+import AdsPart from "@/app/component/adpart";
  
 
-export async function generateMetadata({ params }: Props){
+export async function generateMetadata({ params }: any){
 
     const slug = params.post;
     const post = await getPost(slug);
-  
+    const host_name = process.env.HOST_NAME;
+    
+    const url = host_name + "posts/" + post.slug;
 
     if (post !== null) {
     return {
@@ -26,7 +29,7 @@ export async function generateMetadata({ params }: Props){
         openGraph: {
             title: post.title + ` — ` + metadata.title ,    
             description: post.title,
-            url: post.slug,
+            url: url,
             siteName: metadata.title ,
             images: [{
                 url: post.mainImage
@@ -42,18 +45,20 @@ export async function generateMetadata({ params }: Props){
 }
 
 
-export default async function Post({ params }: Props){
+export default async function Post({ params }: any){
 
     const slug = params.post;
     const post = await getPost(slug);
-    
+    const host_name = process.env.HOST_NAME;
 
     if (post !== null) {
-        const url = "http://localhost:3000/posts/" + post.slug;
+        const url = host_name + "posts/" + post.slug;
+        
     return (
       
     
         <div className="container mx-auto"> 
+
         <section className="post-heading">
             <div className="featured-wrapper">
     
@@ -95,7 +100,7 @@ export default async function Post({ params }: Props){
 
         </section>
                    
-        <div className="ad-placement my-5"></div>
+        <AdsPart />
 
         <article className="type-post">
           <PortableContent content={post.content}  />
@@ -103,7 +108,9 @@ export default async function Post({ params }: Props){
         <section className="page-featured">
 
         <DisqusPart url={url} id={post._id} title={post.title} /> 
+        
         <MottoSection />                    
+        
         <TagSection categories={post.categories} />
             <AuthorSection authorImage={post.authorImage} author={post.author} authorBio={post.authorBio} authorLqip={post.authorLqip}  />
 
@@ -113,6 +120,7 @@ export default async function Post({ params }: Props){
             <div className="section-title">
               <span className="section-name">Latest Post</span>
             </div>
+            
             <PostSection/>
         </div>                    
         </section>

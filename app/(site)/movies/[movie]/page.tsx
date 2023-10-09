@@ -1,18 +1,16 @@
 import { getMovie } from "@/sanity/sanity-utils";
 import Image from "next/image";
-import Link from "next/link";
-import { PortableText } from "@portabletext/react";
 import PortableContent from "@/app/component/portablecontent";
 import AuthorSection from "@/app/component/authorsection";
 import HobbySection from "@/app/component/hobbysection";
-import MovieSection from "@/app/component/moviesection";
 import TagSection from "@/app/component/tagsection";
 import MottoSection from "@/app/component/mottosection";
 import NotFound from "../../not-found";
 import SnsWidget from "@/app/component/snswidget";
+import AdsPart from "@/app/component/adpart";
 
 
-export default async function Movie({ params }: Props){
+export default async function Movie({ params }: any){
 
   const slug = params.movie;
   const movie = await getMovie(slug);
@@ -53,7 +51,7 @@ export default async function Movie({ params }: Props){
                 </div>
 
                 <SnsWidget/>
-                <div className="content mt-10">
+                <div className="content mt-5">
                   <PortableContent content={movie.content} />
                 </div>
             </div>
@@ -61,12 +59,15 @@ export default async function Movie({ params }: Props){
         </div>
         </div>
         <section className="page-featured">
-        <div className="ad-placement my-20"></div>
+        <AdsPart />
+        
         <MottoSection />
+        
         <TagSection categories={movie.categories} />
         <AuthorSection authorImage={movie.authorImage} author={movie.author} authorBio={movie.authorBio} authorLqip={movie.authorLqip} />
         <div className="page-hobbies">
           <div id="section-hobby">
+            
             <HobbySection />
           </div>
         </div>

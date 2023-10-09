@@ -14,7 +14,7 @@ export const getAccessToken = async () => {
     },
     body: new URLSearchParams({
       grant_type: "refresh_token",
-      refresh_token,
+      refresh_token : refresh_token ?? "",
     }),
   });
 
@@ -25,7 +25,7 @@ export const topTracks = async () => {
   const { access_token } = await getAccessToken();
  
 
-  return fetch("https://api.spotify.com/v1/me/top/tracks", {
+  return fetch("https://api.spotify.com/v1/me/top/tracks?time_range=short_term", {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
@@ -36,7 +36,7 @@ export const topTracks = async () => {
 export const topArtists = async () => {
   const { access_token } = await getAccessToken();
 
-  return fetch("https://api.spotify.com/v1/me/top/artists", {
+  return fetch("https://api.spotify.com/v1/me/top/artists?time_range=short_term", {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
@@ -44,6 +44,18 @@ export const topArtists = async () => {
 
   
 };
+
+export const newReleases = async () => {
+  const { access_token } = await getAccessToken();
+
+  return fetch("https://api.spotify.com/v1/browse/new-releases?country=HK&limit=10", {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  });
+};
+
+
 
 export const currentlyPlayingSong = async () => {
   const { access_token } = await getAccessToken();

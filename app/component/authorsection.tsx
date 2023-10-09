@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function AuthorSection(props){
+export default function AuthorSection(props: any){
     if (props.author !== null) {
         return (
         

@@ -4,18 +4,18 @@ import Image from "next/image"
 import logo from "../../images/svg/logo.svg"
 import React from "react"
 import { useState, useEffect } from "react"
-
+ 
 export default function Header(){
 
     const [isActive, setIsActive] = useState(false);
-    
+ 
 
     const handleHeaderClick = () => {
           setIsActive(!isActive);
     };
     
 
-    const handleOutsideClick = (event) => {
+    const handleOutsideClick = (event:any) => {
       if (!event.target.closest('.header') && !event.target.closest('.nav-mobile')) {
         setIsActive(false);
       }
@@ -50,10 +50,10 @@ export default function Header(){
             <div className="menu-bar-supper">
               <div className="menu-bar-wrapper">
                 <div className="menu-bar flex items-center">
-                <div className="font-black uppercase">
+                <div className="font-black">
                       <button 
                       onClick={() => setActiveTheme(inactiveTheme)}
-                      className="theme-toggle" 
+                      className="theme-toggle uppercase" 
                       id="theme-toggle" 
                       title="Toggles light & dark" 
                       aria-label="auto" 
@@ -63,22 +63,18 @@ export default function Header(){
                       </button>
                   </div>
                   <div className="jydeco-line"></div>
-                  <div className="logo">
-                      <Link 
-                      href="/"                     
-                      title="Home" 
-                      aria-label="auto" 
-                      aria-live="polite"  
-                      >
-                        <Image
-                            priority
-                            src={logo}
-                            width={200}
-                            height={300}
-                            alt="Logo"
-                        />
-                      </Link>
-                  </div>
+                  <Link href='/'>
+                    <div className="logo">
+                          <Image
+                              priority
+                              src={logo}
+                              width={200}
+                              height={200}
+                              alt="Logo"
+                              className="logo-svg"
+                          />     
+                    </div>
+                  </Link>
                   <div className="jydeco-line"></div>
                   <div className="flex items-center interact-box ">
                     <nav
@@ -114,7 +110,7 @@ export default function Header(){
                     <li><Link href="/categories" >Categories</Link></li>
                     <li><Link href="/works">Design</Link></li>
                     <li><Link href="/experiments">Experiment</Link></li>
-                    <li><Link href="/test">Fetch</Link></li>
+                    <li><Link href="/fetching">Fetching</Link></li>
                   </ul>
                 </nav>
 

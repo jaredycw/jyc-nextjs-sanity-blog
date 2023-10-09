@@ -1,12 +1,7 @@
 import { getCourses } from '@/sanity/sanity-utils';
-import { Course } from '@/types/Course';
-
 import { getBooks } from '@/sanity/sanity-utils';
-import { Book } from '@/types/Book';
-
 import Link from 'next/link';
 import Image from 'next/image';
-import { PortableText } from '@portabletext/react';
 
 export default async function HobbySection() {
     const courses = await getCourses();
@@ -45,8 +40,8 @@ export default async function HobbySection() {
               <div className="ml-0 py-0 xl:ml-10">
                 <div className="hobby-title">Recent Studying</div>
                 <div className="study-list-wrapper mx-0 xl:mx-10">
-                         <ul className="study-list my-20 pb-10 xl:mt-10 xl:py-10">
-                         {courses.map((course) =>(
+                         <ul className="study-list my-14 pb-7 md:my-20 md:pb-10">
+                         {courses.map((course : any) =>(
                           <Link href={course.link} key={course._id} target="_blank">
                             <li key={course._id}>{course.title}</li>
                           </Link>

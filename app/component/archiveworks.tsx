@@ -5,12 +5,9 @@ import Image from 'next/image';
  
 
 
-export default function ArchiveWorks({ works }: Props) {
+export default function ArchiveWorks({ works }: any) {
     
-    type Props = {
-        works: Experiments[];
-      };
-
+ 
       const [ catNum, setCatNum] = useState(3); // Default number of posts dislplayed
 
       function handleClick() {
@@ -23,7 +20,7 @@ export default function ArchiveWorks({ works }: Props) {
   return (
     <>
           <div className="grid grid-cols-1 gap-10 xl:grid-cols-3">
-            {works.slice(0, catNum).map((work) =>(
+            {works.slice(0, catNum).map((work : any) =>(
               <Link href={`/works/${work.slug}`} key={work._id}>
                 <div className="jy-card">
                             {work.mainImage && (<Image src={work.mainImage} alt={work.title} width={450} height={300} 

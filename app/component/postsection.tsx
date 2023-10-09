@@ -1,16 +1,12 @@
 import { getPosts } from '@/sanity/sanity-utils' ;
-import { Post } from '@/types/Post';
 import Link from 'next/link';
 import Image from 'next/image';
-import { PortableText } from '@portabletext/react';
  
-
-
 export default async function PostSection() {
     const posts = await getPosts();
 
   return (
-            <div className="grid grid-cols-1 gap-5 xl:grid-cols-3">
+            <div className="grid grid-cols-1 gap-0 md:gap-5 xl:grid-cols-3">
                 {posts.map((post) =>(
                             <Link href={`/posts/${post.slug}`} key={post._id}>
                                 <div className="post-wrapper" key={post._id}>

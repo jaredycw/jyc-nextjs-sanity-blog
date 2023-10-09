@@ -3,10 +3,13 @@ import { NextResponse } from 'next/server'
  
 export async function GET() {
  
-  
+  try{
   const res = await movieReviews();
+    if (!res.ok) {
+      throw new Error('Failed to fetch data'); // Handle this error appropriately
+    }
   const data  = await res.json();
-  const articles = data.response.docs.slice(0, 10).map((article) => ({
+  const articles = data.response.docs.slice(0, 10).map((article:any) => ({
     url: article.web_url,
     title: article.headline.main,
     date: article.pub_date,
@@ -18,4 +21,14 @@ export async function GET() {
 
  
   return NextResponse.json({articles})
+  } catch (error :any) {
+    // Handle the error appropriately, log it, and return an error response
+    console.error('An error occurred:', error);
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: {
+        'content-type': 'application/json'
+      }
+    });
+  }
 }

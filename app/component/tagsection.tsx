@@ -1,6 +1,6 @@
  import Link from "next/link";
  
-export default async function TagSection(props){
+export default async function TagSection(props: any){
  
   if (props.categories !== null) {
   return (
@@ -10,7 +10,7 @@ export default async function TagSection(props){
                         <div className="tag-title w-full lg:w-2/12 self-center">Tag</div>
                         <div className="tag-wrapper w-full lg:w-10/12 self-start">
                         <ul className="tag-wrapper">
-                            {props.categories.map((category) => (
+                            {props.categories.map((category : any) => (
                               <Link href={`/categories/${category.slug.current}`} key={category._id}>
                                 <li className="tag">{category.title}</li>
                               </Link>

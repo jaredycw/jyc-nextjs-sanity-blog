@@ -20,14 +20,15 @@ export default function TopTracks(){
           </>
 
             <div className="top-tracks">
-              <h1 className="uppercase font-bold">Top 10 Tracks</h1>
+              <h1>Top 10 Tracks</h1>
+              <span>(Approximately last 4 weeks)</span>
               {topTracks.tracks ? (
                   topTracks.tracks?.map((track: SpotifyTrack, index: number) => (
-                    <Link href={track.songUrl} target="_blank" className="flex flex-wrap items-center p-6 now-playing my-5" key={index}>
-                      <div className="flex-none w-14 ml-5"><h1>{index + 1}</h1></div>
-                      <div className="flex-initial flex-wrap ml-5">
-                        <img
-                        className='w-20 shadow-sm'
+                    <Link href={track.songUrl} target="_blank" className="flex flex-wrap flex-col md:flex-row items-center p-6 article-sample my-5" key={index}>
+                      <div className="flex-none w-14 ml-0 md:ml-5 mb-5 md:mb-0"><h1 className="text-center md:text-left">{index + 1}</h1></div>
+                      <div className="flex-none ml-0 md:ml-5 mb-5 md:mb-0">
+                        <Image
+                        className='shadow-sm'
                         src={track.coverImage.url}
                         alt={track.title}
                         width={100}
@@ -35,15 +36,15 @@ export default function TopTracks(){
                         key={index}
                         />
                       </div>
-                      <div className='flex-1 flex-wrap ml-10'>
-                      <h1 className="fw-bold">
+                      <div className='flex-1 flex-wrap ml-0 md:ml-10'>
+                      <h1 className="fw-bold text-center md:text-left">
                           {track.title}
                       </h1>
-                      <h5>
+                      <h5 className="text-center md:text-left">
                         {track.artist}
                       </h5>
                     </div>
-                    <div className='flex-none w-25 p-5 uppercase text-gray-400'>- Spotify - </div>
+                    <div className='flex-none w-25 pt-10 md:p-5 uppercase text-gray-400'>- Spotify - </div>
                     </Link>
                   ))
                 ) : (
