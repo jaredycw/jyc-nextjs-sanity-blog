@@ -23,7 +23,6 @@ const SampleImageComponent = ({value, isInline}:any) => {
           .projectId('mrzc8peh')
           .dataset('production')
           .auto('format')
-          .width(isInline ? 100 : 800)
           .fit('max')
           .url()}
           width={1920}
