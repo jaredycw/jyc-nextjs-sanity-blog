@@ -4,6 +4,19 @@ import Link from "next/link"
 import HeroImage from '../../images/hero-img.jpg'
 import logoA from '../../images/svg/logo-a.svg'
 import logoB from '../../images/svg/logo-b.svg'
+import { BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoTypescript, BiLogoPhp, BiLogoTailwindCss } from 'react-icons/bi'
+import { BsWordpress, BsFonts } from 'react-icons/bs'
+import { FaHtml5, FaBootstrap, FaFigma, FaWindows, FaApple } from 'react-icons/fa'
+import { SiNextdotjs, SiNodedotjs, SiCanva, SiAdobecreativecloud } from 'react-icons/si'
+import type { Metadata } from 'next'
+import { metadata } from "../layout"
+
+
+export function generateMetadata(): Metadata {
+    return {
+        title: 'About Myself - ' + metadata.title
+    }
+}
 
 export default function AboutMe(){
 
@@ -13,7 +26,7 @@ export default function AboutMe(){
         <div className="container mx-auto mt-5 mb-10 pb-10 ab-me">
         <div className="mb-20">
             <h1 className="uppercase md:text-5xl mb-3">Welcome! Hello! </h1>
-            <h1 className="uppercase md:text-8xl">I'm Jared Yeung 👨🏻‍💻💤</h1>
+            <h1 className="uppercase md:text-8xl">I&rsquo;m Jared Yeung 👨🏻‍💻💤</h1>
             <span className="float-right">
                 (TL;DR <Link href="#resume-part" className="ugly-blue">#Resume</Link>)
             </span>
@@ -65,17 +78,12 @@ export default function AboutMe(){
                     Every bit of code I wrote was like taking a step towards not just making a website but also creating my path in the digital world. There are several platforms: <Link href="https://chat.openai.com/" target="_blank" className="ugly-blue">ChatGPT</Link>, <Link href="https://www.freecodecamp.org/" target="_blank" className="ugly-blue">Freecodecamp</Link> , <Link href="https://www.coursera.org/" target="_blank" className="ugly-blue">Coursera</Link> , and <Link href="https://www.codecademy.com/" target="_blank" className="ugly-blue">Codecademy</Link> have been helping me a lot for learning digital world.
                 </p>
                 <p>
-                    Lastly, I enrolled in my second bachelor degree Computer Science. I'm working towards mastering technology. Getting a Master's degree in Computer Science is a big goal I'm aiming for 🎈.
+                    Lastly, I enrolled in my second bachelor degree Computer Science. Im working towards mastering technology. Getting a Master&rsquo;s degree in Computer Science is a big goal I&rsquo;m aiming for 🎈.
                 </p>
             </div>
         </section>
 
-        <section className="my-10">
-            <h2 className="uppercase md:text-5xl pb-3 border-b">Offical Resume</h2>
-            <div className="my-5">
-
-            </div>
-        </section>
+ 
 
         <section className="my-10">
             <h2 className="uppercase md:text-5xl">Skills</h2>
@@ -84,53 +92,170 @@ export default function AboutMe(){
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 gap-y-5">
                 <div>
                 <h5>Coding</h5>
-                    <div className="grid grid-cols-2 md:grid-cols-2 gap-5 my-5">
-                        <div className="card-sample text-center"> [ICON] HTML5</div>
-                        <div className="card-sample text-center"> [ICON] CSS3</div>
-                        <div className="card-sample text-center"> [ICON] Javascript </div>
-                        <div className="card-sample text-center"> [ICON] Typescript</div>
-                        <div className="card-sample text-center"> [ICON] NodeJS / CLI</div>
-                        <div className="card-sample text-center"> [ICON] ReactJS / NextJS</div>
-                        <div className="card-sample text-center"> [ICON] PHP</div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><FaHtml5 size={25}/></div> 
+                                <div className="card-grid-title">HTML5</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><BiLogoCss3 size={25}/></div> 
+                                <div className="card-grid-title">CSS3</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><BiLogoJavascript size={25}/></div> 
+                                <div className="card-grid-title">Javascript</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><BiLogoTypescript size={25}/></div> 
+                                <div className="card-grid-title">Typescript</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><SiNodedotjs size={25}/></div> 
+                                <div className="card-grid-title">Nodejs</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><BiLogoReact size={25}/></div> 
+                                <div className="card-grid-title">React.js</div>
+                            </div>
+                        </div>  
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><SiNextdotjs size={25}/></div> 
+                                <div className="card-grid-title">Next.js</div>
+                            </div>
+                        </div>                                              
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><BiLogoPhp size={25}/></div> 
+                                <div className="card-grid-title">PHP</div>
+                            </div>
+                        </div>  
                     </div>
                 </div>
 
                 <div>
                     <h5>Concept</h5>
-                    <div className="grid grid-cols-2 md:grid-cols-2 gap-5 my-5">
-                        <div className="card-sample text-center"> [ICON] CMS / Wordpress </div>
-                        <div className="card-sample text-center"> [ICON] HeadlessCMS </div>
-                        <div className="card-sample text-center"> [ICON] RWD </div>
-                        <div className="card-sample text-center"> [ICON] Frontend Development</div>
-                        <div className="card-sample text-center"> [ICON] UX User Experience</div>
-                        <div className="card-sample text-center"> [ICON] UI User Interface</div>
-                        <div className="card-sample text-center"> [ICON] Motion</div>
-                        <div className="card-sample text-center"> [ICON] Typeface</div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><BsWordpress size={25}/></div> 
+                                <div className="card-grid-title">Wordpress</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"></div> 
+                                <div className="card-grid-title">CMS/HeadlessCMS</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"></div> 
+                                <div className="card-grid-title">RWD</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"></div> 
+                                <div className="card-grid-title">Frontend Development</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"></div> 
+                                <div className="card-grid-title">UX User Experience</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"></div> 
+                                <div className="card-grid-title">UI User Interface</div>
+                            </div>
+                        </div>                                                                        
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"></div> 
+                                <div className="card-grid-title">Motion</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><BsFonts size={25}/></div> 
+                                <div className="card-grid-title">Typeface</div>
+                            </div>
+                        </div>                         
+
                     </div>
                 </div>
 
                 <div>
                     <h5>CSS Framework</h5>
-                        <div className="grid grid-cols-2 md:grid-cols-2 gap-5 my-5">
-                            <div className="card-sample text-center"> [ICON] Bootstrap</div>
-                            <div className="card-sample text-center"> [ICON] Tailwind CSS</div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><FaBootstrap size={25}/></div> 
+                                <div className="card-grid-title">Bootstrap</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><BiLogoTailwindCss size={25}/></div> 
+                                <div className="card-grid-title">Tailwind CSS</div>
+                            </div>
+                        </div>
                         </div>
                 </div>
 
 
                 <div>
                     <h5>Design</h5>
-                    <div className="grid grid-cols-2 md:grid-cols-2 gap-5 my-5">
-                            <div className="card-sample text-center"> [ICON] Adobe Creative Cloud Suite </div>
-                            <div className="card-sample text-center"> [ICON] Canva </div>
-                            <div className="card-sample text-center"> [ICON] Figma </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
+                        <div className="card-sample"> 
+                                <div className="card-sample-grid gap-2">
+                                    <div className="card-grid-icon"><SiAdobecreativecloud size={25}/></div> 
+                                    <div className="card-grid-title">Adobe Creative Cloud</div>
+                                </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><SiCanva size={25}/></div> 
+                                <div className="card-grid-title">Canva</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><FaFigma size={25}/></div> 
+                                <div className="card-grid-title">Figma</div>
+                            </div>
+                        </div>
                     </div>                    
                 </div>
                 <div>
                     <h5>OS (Operating System)</h5>
-                    <div className="grid grid-cols-2 md:grid-cols-2 gap-5 my-5">
-                            <div className="card-sample text-center"> [ICON] Windows</div>
-                            <div className="card-sample text-center"> [ICON] MacOS</div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
+                    <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><FaWindows size={25}/></div> 
+                                <div className="card-grid-title">Window</div>
+                            </div>
+                        </div>
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><FaApple size={25}/></div> 
+                                <div className="card-grid-title">MacOS</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 </div>
@@ -138,33 +263,8 @@ export default function AboutMe(){
    
             </div>
         </section>
-        <section className="mb-20">
-            <h2 className="uppercase md:text-5xl pb-2 border-b my-10">Services</h2>
-            <div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 my-5">
-                        <div className="card-sample text-center"> [ICON] Web Development</div>
-                        <div className="card-sample text-center"> [ICON] Web Design (UI / UX)</div>
-                        <div className="card-sample text-center"> [ICON] Motion Design</div>
-                        <div className="card-sample text-center"> [ICON] Graphic Design</div>
-                        <div className="card-sample text-center"> [ICON] Social Media</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 className="uppercase md:text-5xl">If you want to know more about...</h2>
-            <div className="my-5">
-
-            </div>
-        </section>
-    
-
-        <section>
-        <h2 className="uppercase md:text-5xl">Github</h2>
-            <div className="my-5">
-
-            </div>
-        </section>
+ 
+ 
 
 
 

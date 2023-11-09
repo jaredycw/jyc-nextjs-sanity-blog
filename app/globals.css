@@ -464,9 +464,6 @@ section {
     vertical-align: bottom;
 }
 
-article a:before{
-    content: "\e923";
-}
 
 .image-caption:before{
     content: "\e927";
@@ -683,7 +680,7 @@ form .form-button{
     position: absolute;
     z-index: 1;
     backdrop-filter: (50px);
-    background-image: url(images/juno.jpg);
+    background-image: url(https://cdn.sanity.io/images/mrzc8peh/production/ce7155a8059009bd07a68fc13f809b9fec467973-733x1472.jpg);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -1331,6 +1328,15 @@ form .form-button{
 .card-sample{
    padding:1rem 2rem;
    border-radius:var(--jy-card-radius);
+}
+.card-sample-grid{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.card-grid-title{
+    font-size: 1rem;
+    font-weight: 600;
 }
 .now-playing:hover, .card-sample:hover, .article-sample:hover{
     box-shadow:var(--jy-shadow);

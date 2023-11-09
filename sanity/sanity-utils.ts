@@ -1,6 +1,5 @@
 import { createClient, groq } from "next-sanity";
 import { Post } from "@/types/Post";
-import { Page } from "@/types/Page";
 import { Course } from "@/types/Course";
 import { Book } from "@/types/Book";
 import { Movie } from "@/types/Movie";
@@ -134,134 +133,41 @@ export async function getCourses(): Promise<Course[]>{
     );
 }
 
-export async function getCourse(): Promise<Course>{ 
- 
-
-    return createClient(clientConfig).fetch(
-
-        groq`*[_type == "course"]{
-            _id,
-            "slug": slug.current,
-            title,
-            content
-        }`
-    );
-}
-
-export async function getPages(): Promise<Page[]> {
-    return createClient(clientConfig).fetch(
-      groq`*[_type == "page"]{
-        _id,
-        _createdAt,
-        title,
-        "slug": slug.current
-      }`
-    )
-  }
-  
-  export async function getPage(slug: string): Promise<Page> {
-    return createClient(clientConfig).fetch(
-      groq`*[_type == "page" && slug.current == $slug][0]{
-        _id,
-        _createdAt,
-        title, 
-        "slug": slug.current,
-        content
-      }`,{slug}
-    )
-  }
 
 export async function getBooks(): Promise<Book[]>{
 
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="book"][0..1-1]{
+        groq`*[_type=="book"][0..1-1]| order(_createdAt desc){
             _id,
-            "slug": slug.current,
-            title, bookAuthor,"cover":cover.asset -> url,
+            link,
+            title,
+            "cover":cover.asset -> url,
+            "coverAlt": cover.alt,
+            bookAuthor,
             'lqip': cover.asset->metadata.lqip,
         }`
     );
 }
 
-export async function getBook(slug: string): Promise<Book>{
-
-    return createClient(clientConfig).fetch(
-
-        groq`*[_type=="book" && slug.current == $slug][0]{
-            _id,
-            "slug": slug.current,
-            "author": author -> title,
-            "authorImage": author ->image.asset-> url,
-            'authorLqip': author-> image.asset->metadata.lqip,
-            "authorBio": author -> bio,
-            title, bookAuthor, genre, page,
-            year,list,content, publishedOn,
-            "numberOfCharacters": length(pt::text(content)),
-            "estimatedWordCount": round(length(pt::text(content)) / 5),
-            "estimatedReadingTime": round(length(pt::text(content)) / 5 / 100 ),
-            "cover":cover.asset->url,
-            "categories": categories[]->,
-            'lqip': cover.asset->metadata.lqip,
-            content[]{
-                ...,
-                _type == "image" =>{
-                  "lqip":@.asset->metadata.lqip
-                },
-                _type == "youtube" => {
-                    "youtubelink":@.url,
-                    "youtubetitle":@.title,
-                    "youtubealt":@.alt
-                },
-                _type == "instagramPost" => {
-                    "igpost":@.url
-                },
-                _type == "myCodeField" =>{
-                    language,code,filename
-                },
-            },
-            googleBooks,
-        }`,{slug}
-    );
-}
 
 export async function getMovies(): Promise<Movie[]>{
 
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="movie"][0..7]{
+        groq`*[_type=="movie"][0..3]| order(_updatedAt desc){
             _id,
-            "slug": slug.current,
-            title,"poster":poster.asset -> url,
-            director,genre,duration,year,list,publishedOn,
+            link,
+            title,
+            "poster":poster.asset -> url,
+            "posterAlt":poster.alt,
             "categories": categories[]->,
             'lqip': poster.asset->metadata.lqip
         }`
     );
 }
 
-export async function getMovie(slug: string): Promise<Movie>{
 
-    return createClient(clientConfig).fetch(
-
-        groq`*[_type=="movie" && slug.current == $slug][0]{
-            _id,
-            "slug": slug.current,
-            "author": author -> title,
-            "authorImage": author ->image.asset-> url,
-            'authorLqip': author-> image.asset->metadata.lqip,
-            "authorBio": author -> bio,
-            title,"poster":poster.asset -> url,
-            director,genre,duration,year,list,publishedOn,
-            "categories": categories[]->,
-            "numberOfCharacters": length(pt::text(content)),
-            "estimatedWordCount": round(length(pt::text(content)) / 5),
-            "estimatedReadingTime": round(length(pt::text(content)) / 5 / 100 ),
-            'lqip': poster.asset->metadata.lqip,content
-        }`,
-        {slug}
-    );
-}
 
 export async function getWorks(): Promise<Work[]>{
 

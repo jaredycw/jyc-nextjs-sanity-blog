@@ -22,8 +22,8 @@ export default function PreLoader() {
               height: 0,
               transition: {
                 when: "afterChildren",
-                duration: 1.5,
-                delay:2.5,
+                duration: 1,
+                delay:2,
                 ease: [0.87, 0, 0.13, 1],
               },
             },
@@ -45,10 +45,10 @@ export default function PreLoader() {
         <m.div className="preloader-container text-center">
           <m.h1 className="preloader-text text-center text-9xl"
                 initial={{ scale: 0.25 }}
-                animate={{ scale: 1 }}
+                animate={{ scale: 1}}
                 transition={{
                   when: "afterChildren",
-                  duration: 1.8,
+                  duration: 1.1,
                   ease: [0.87, 0, 0.13, 1],
                 }}
           >

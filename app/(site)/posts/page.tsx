@@ -1,8 +1,13 @@
 import { getArchivePosts } from "@/sanity/sanity-utils";
 import ArchivePost from "@/app/component/archivepost";
- 
- 
+import type { Metadata } from 'next'
+import { metadata } from "../layout";
 
+export function generateMetadata(): Metadata {
+  return {
+      title: 'Blog - ' + metadata.title
+  }
+}
 
 export default async function Post(props:any){
 

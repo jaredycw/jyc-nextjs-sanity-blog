@@ -81,10 +81,9 @@ export default async function Experiment({ params }: any){
                             )}
 
                 <span className="overlay"></span>
-                <div className="featured-title">{experiment.title}</div>
                 <div className="top-left">{experiment.publishedOn}</div>
-                <div className="top-right">{experiment.mainImageAlt}</div>
-                <div className="bottom-right">{experiment.mainImageCaption}</div>
+                <div className="top-right">{experiment.mainImageAlt || "Alt"}</div>
+                <div className="bottom-right">{experiment.mainImageCaption || "Caption"}</div>
             </div>
 
             <div className="post-heading-box">
@@ -92,12 +91,12 @@ export default async function Experiment({ params }: any){
                 <div className="post-infor-wrapper">
                     <div className="post-author">{experiment.author}</div>
                     <div className="post-date">{experiment.publishedOn}</div>
-                    <div className="post-reading">{experiment.estimatedReadingTime} mins</div> 
+                    <div className="post-reading">{experiment.estimatedReadingTime  || "0"} mins</div> 
                 </div>
                 <div className="exp-infor-wrapper">
-                    <div className="post-skill">Required Skills: {experiment.skills}</div>
-                    <div className="post-industry">Industry: {experiment.skills}</div>
-                    <div className="post-duration">Duration: {experiment.skills}</div>
+                    <div className="post-skill">Required Skills: {experiment.skills  || "Null"}</div>
+                    <div className="post-industry">Industry: {experiment.industries || "Null"}</div>
+                    <div className="post-duration">Duration: {experiment.workingTime || "Null"}</div>
                 </div>
             </div>
 

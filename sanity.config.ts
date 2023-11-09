@@ -2,8 +2,7 @@ import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import { visionTool } from '@sanity/vision'
 import schemas from "./sanity/schemas";
-import { codeInput } from "@sanity/code-input";
- 
+import {media} from 'sanity-plugin-media'
 
 
  
@@ -16,13 +15,13 @@ const config = defineConfig({
 
     title: "JYZ",
 
-    apiVersion: "2023-08-28",
+    apiVersion: "2023-09-11",
 
-    useCdn: false,
+    useCdn: true,
 
     basePath: "/admin",
 
-    plugins: [deskTool(),visionTool(),codeInput()],
+    plugins: [deskTool(),visionTool(),media()],
 
     schema: {types: schemas },
     

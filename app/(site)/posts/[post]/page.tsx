@@ -80,10 +80,9 @@ export default async function Post({ params }: any){
                             )}
 
                 <span className="overlay"></span>
-                <div className="featured-title">{post.title}</div>
                 <div className="top-left">{post.publishedOn}</div>
-                <div className="top-right">{post.mainImageAlt}</div>
-                <div className="bottom-right">{post.mainImageCaption}</div>
+                <div className="top-right">{post.mainImageAlt || "Alt"}</div>
+                <div className="bottom-right">{post.mainImageCaption || "Caption"}</div>
             </div>
 
             <div className="post-heading-box">

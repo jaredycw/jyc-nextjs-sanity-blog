@@ -37,7 +37,7 @@ export const bestSeller = async () => {
     return fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=section_name:%22Movies%22%20AND%20type_of_material:%22Review%22&sort=newest&page=0&api-key=${api}`, {
         headers: {
           'Content-Type': 'application/json',
-          'cache-control': 'public, s-maxage=43200, stale-while-revalidate=26600'
+          'cache-control': 'public, s-maxage=86400, stale-while-revalidate=43200'
         },
       })
 

@@ -101,9 +101,6 @@ const post = {
               },
               {
                 type: 'instagramPost'
-              },
-              {
-                type: 'myCodeField'
               }
             ]
         }

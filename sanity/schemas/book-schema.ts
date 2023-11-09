@@ -15,6 +15,13 @@ const book = {
             options: {
               hotspot: true,
             },
+            fields:[
+                {
+                    name: "alt",
+                    title: "Alt",
+                    type: "string"
+                }
+            ]
         },
         {
             name: 'title',
@@ -22,109 +29,14 @@ const book = {
             type: 'string'
         },
         {
-            name: 'slug',
-            title: 'Slug',
-            type: 'slug',
-            options: {
-              source: 'title',
-              maxLength: 96,
-            }
-        },
-        {
-            name: 'googleBooks',
-            title: 'Google Books Lists',
-            type: 'string',
-        },
-        {
-            name: 'author',
-            title: 'Author',
-            type: 'reference',
-            to: [{type: 'author'}]
+            name: 'link',
+            title: 'Link',
+            type: 'url'
         },
         {
             name: 'bookAuthor',
             title: 'Book Author',
             type: 'string',
-        },
-        {
-            name: 'genre',
-            title: 'Genre',
-            type: 'string'
-        },
-        {
-            name: 'page',
-            title: 'Page',
-            type: 'number'
-        },
-        {
-            name: 'year',
-            title: 'Year',
-            type: 'number'
-        },
-        {
-            name: 'categories',
-            title: 'Categories',
-            type: 'array',
-            of: [
-                    {
-                        type: 'reference', 
-                        to: [
-                            {type: 'category'}
-                        ]
-                    }
-                ]
-        },
-        {
-            name: 'list',
-            title: 'List',
-            type: 'string'
-        },
-        {
-            name: 'publishedOn',
-            title: 'Published On',
-            type: 'date',
-        },
-        {
-            name: 'content',
-            type: 'array',
-            title: 'Content',
-            of: [
-              {
-                type: 'block'
-              },
-              {
-                name:'image',
-                type: 'image',
-                title:'Image',
-                options: { metadata: ['lqip'] },
-                fields:[
-                    {
-                        name: 'alt',
-                        type: 'string',
-                        title: 'Alternative text'
-                    },
-                    {
-                        name:'caption',
-                        type:'string',
-                        title:'Caption'
-                    },
-                    {
-                        name:'link',
-                        type:'url',
-                        title:'Link'
-                    }
-                ]
-              },
-              {
-                type: 'youtube'
-              },
-              {
-                type: 'instagramPost'
-              },
-              {
-                type: 'myCodeField'
-              },
-            ]
         },
 
 

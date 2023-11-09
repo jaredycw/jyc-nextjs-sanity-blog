@@ -1,6 +1,14 @@
 import { getArchiveExps } from "@/sanity/sanity-utils";
 import ArchiveExperiments from "@/app/component/archivexps";
- 
+import type { Metadata } from 'next'
+import { metadata } from "../layout";
+
+export function generateMetadata(): Metadata {
+  return {
+      title: 'Experiments - ' + metadata.title
+  }
+}
+
  
 
 

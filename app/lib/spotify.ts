@@ -28,6 +28,8 @@ export const topTracks = async () => {
   return fetch("https://api.spotify.com/v1/me/top/tracks?time_range=short_term", {
     headers: {
       Authorization: `Bearer ${access_token}`,
+      'content-type': 'application/json',
+      'cache-control': 'public, s-maxage=86400, stale-while-revalidate=43200'
     },
   });
 
@@ -39,6 +41,9 @@ export const topArtists = async () => {
   return fetch("https://api.spotify.com/v1/me/top/artists?time_range=short_term", {
     headers: {
       Authorization: `Bearer ${access_token}`,
+      'content-type': 'application/json',
+      'cache-control': 'public, s-maxage=86400, stale-while-revalidate=43200'
+      
     },
   });
 
@@ -50,7 +55,10 @@ export const newReleases = async () => {
 
   return fetch("https://api.spotify.com/v1/browse/new-releases?country=HK&limit=10", {
     headers: {
-      Authorization: `Bearer ${access_token}`,
+      Authorization: `Bearer ${access_token}`,  
+      'content-type': 'application/json',
+      'cache-control': 'public, s-maxage=604800, stale-while-revalidate=302400'
+      
     },
   });
 };

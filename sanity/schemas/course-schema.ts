@@ -31,56 +31,7 @@ const course = {
                     type: "string"
                 }
             ]
-        },
-        {
-            name: 'slug',
-            title: 'Slug',
-            type: 'slug',
-            options: {
-              source: 'title',
-              maxLength: 96,
-            }
-        },
-        {
-            name: 'list',
-            title: 'List',
-            type: 'string'
-        },
-        {
-            name: 'duration',
-            title: 'Duration',
-            type: 'string'
-        },
-        {
-            name: 'categories',
-            title: 'Categories',
-            type: 'array',
-            of: [
-                    {
-                        type: 'reference', 
-                        to: [
-                            {type: 'category'}
-                        ]
-                    }
-                ]
-        },
-        {
-            name: 'studiedOn',
-            title: 'Studied On',
-            type: 'date',
-        },
-        {
-            name: 'publishedOn',
-            title: 'Published On',
-            type: 'date',
-        },
-        {
-            name:"content",
-            title:"Content",
-            type: "blockContent",
         }
-
-
     ]
 };
 

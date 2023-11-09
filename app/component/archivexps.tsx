@@ -9,10 +9,10 @@ export default function ArchiveExperiments({ experiments }: any) {
     
  
 
-      const [ catNum, setCatNum] = useState(3); // Default number of posts dislplayed
+      const [ catNum, setCatNum] = useState(6); // Default number of posts dislplayed
 
       function handleClick() {
-        setCatNum(prevCatNum => prevCatNum + 3) // 6 is the number of posts you want to load per click
+        setCatNum(prevCatNum => prevCatNum + 6) // 6 is the number of posts you want to load per click
       }
       
       const hasMoreCats = catNum < experiments.length; // Check if there are more posts to load

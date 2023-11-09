@@ -1,5 +1,14 @@
-import Link
- from "next/link"
+import Link from "next/link"
+import type { Metadata } from 'next'
+import { metadata } from "../layout";
+
+export function generateMetadata(): Metadata {
+  return {
+      title: 'Contact Me - ' + metadata.title
+  }
+}
+
+
 export default function ContactMe(){
 
  

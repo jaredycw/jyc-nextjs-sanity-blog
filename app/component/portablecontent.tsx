@@ -63,18 +63,104 @@ const InstagramComponent = ({value}:any) =>{
   )
 }
 
- 
- 
+const editLink = ({value, children}:any)  =>{
+  const target = (value?.href || '').startsWith('http') ? '_blank' : undefined
+      return (
+        <><span className="icon-link mr-1"></span>
+        <a href={value.href} target={target}>
+         {children}
+        </a>
+        </>
+      )
+}
+
+const editHeading = (children: any): any => {
+  if (typeof children === "string") {
+    return children.toLowerCase().replace(/ /g, "-");
+  } else if (Array.isArray(children)) {
+    return children.map((child) =>
+      typeof child === "string" ? child.toLowerCase().replace(/ /g, "-") : child
+    );
+  }
+  return children;
+};
+const editH1 = ({children}: any) => {
+  const lowercaseChildren = editHeading(children);
+
+  return (
+    <h1 id={lowercaseChildren}>
+      {children}
+    </h1>
+  );
+};
+
+const editH2 = ({children}: any) => {
+  const lowercaseChildren = editHeading(children);
+
+  return (
+    <h2 id={lowercaseChildren}>
+      {children}
+    </h2>
+  );
+};
+
+const editH3 = ({children}: any) => {
+  const lowercaseChildren = editHeading(children);
+
+  return (
+    <h3 id={lowercaseChildren}>
+      {children}
+    </h3>
+  );
+};
+
+const editH4 = ({children}: any) => {
+  const lowercaseChildren = editHeading(children);
+  return (
+    <h4 id={lowercaseChildren}>
+      {children}
+    </h4>
+  );
+};
+const editH5 = ({children}: any) => {
+  const lowercaseChildren = editHeading(children);
+
+  return (
+    <h5 id={lowercaseChildren}>
+      {children}
+    </h5>
+  );
+};
+const editH6 = ({children}: any) => {
+  const lowercaseChildren = editHeading(children);
+
+  return (
+    <h6 id={lowercaseChildren}>
+      {children}
+    </h6>
+  );
+};
+
+
 
 const components = {
   types: {
     image: SampleImageComponent,
     youtube: SampleYouTubeComponent,
     instagramPost: InstagramComponent,
- 
     // Any other custom types you have in your content
     // Examples: mapLocation, contactForm, code, featuredProjects, latestNews, etc.
-   
+  },
+  marks:{
+    link: editLink,
+  },
+  block:{
+    h1: editH1,
+    h2: editH2,
+    h3: editH3,
+    h4: editH4,
+    h5: editH5,
+    h6: editH6,
   }
 }
 

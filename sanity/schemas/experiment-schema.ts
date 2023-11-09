@@ -89,9 +89,6 @@ const experiment = {
               },
               {
                 type: 'instagramPost'
-              },
-              {
-                type: 'myCodeField'
               }
             ]
         },

@@ -1,5 +1,5 @@
 "use client"
-import HeroImage from '../../images/hero-img.jpg'
+ 
 import logoA from '../../images/svg/logo-a.svg'
 import logoB from '../../images/svg/logo-b.svg'
 import Link from 'next/link';
@@ -8,6 +8,9 @@ import { LazyMotion, domAnimation, m } from "framer-motion"
 
 export default function HeroSection() {
 
+  const HeroImage = "https://cdn.sanity.io/images/mrzc8peh/production/af424b3f44f8455f6d5f74ff61e593a2ea42eaed-1170x1879.jpg"
+  const HeroImageLqip = "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYDBAcF/8QAJhAAAQMDAwQCAwAAAAAAAAAAAQIDBQAEEQYSURQhIkEHMRMjcf/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAHhEAAQQCAwEAAAAAAAAAAAAAAgABAxEEIQUxoSL/2gAMAwEAAhEDEQA/AMgZkUQ0iOpcyyU5Ozvk+jUL+qbVa8oQ5jd9Hir/AMhxaJDVN8uFjXLawZeLRwd2TyB6Fc+70S81Fu3RcCVIG4DkUEiiBmCR99KmLTnZxjrtOcPbIubBt5KikL8gD2orOo6RfVapDl2sFB2gDgUUEsSS3o/EweQjpvj1agJ1voJqT6ZTSGgUkqOQtdKdvqpi+hXGXFFBUP2Z+gKr6l1LFu6EYjItaw6Vj8iVjyPJNKcOwHI+8Hckt7hj1ikR4zSMUhtT2jyZhx1GD21bXLdWA6sNqOzJx/KKhoqnSk2v/9k="
+  
   return (
      
         <div className="hero-wrapper container mx-auto">
@@ -67,9 +70,16 @@ export default function HeroSection() {
                   }}
               >
                 <div className="hero-image-wrapper">
-                  <div className="hero-image-container"><Image src={HeroImage} width={150} height={150} alt="Weirdo Image" className="hero-image" loading="lazy" /></div>
-                  <div className="logo-svg-a"><Image src={logoA} width={25} height={25} alt="Logo SVG A" /></div>
-                  <div className="logo-svg-b"><Image src={logoB} width={25} height={25} alt="Logo SVG B"  /></div>
+                  <div className="hero-image-container">
+                    <Image src={HeroImage} width={150} height={150} alt=" Me - Icon Image" className="hero-image" loading="lazy" blurDataURL={HeroImageLqip} placeholder='blur' />
+                  </div>
+                  <div className="logo-svg-a">
+                    <Image src={logoA} width={25} height={25} alt="Logo SVG A" />
+                  </div>
+                  <div className="logo-svg-b">
+                    <Image src={logoB} width={25} height={25} alt="Logo SVG B"  />
+                  </div>
+                  
                 </div>
               </m.div>
                   

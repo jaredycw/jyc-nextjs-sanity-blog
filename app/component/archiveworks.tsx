@@ -8,10 +8,10 @@ import Image from 'next/image';
 export default function ArchiveWorks({ works }: any) {
     
  
-      const [ catNum, setCatNum] = useState(3); // Default number of posts dislplayed
+      const [ catNum, setCatNum] = useState(6); // Default number of posts dislplayed
 
       function handleClick() {
-        setCatNum(prevCatNum => prevCatNum + 3) // 6 is the number of posts you want to load per click
+        setCatNum(prevCatNum => prevCatNum + 6) // 6 is the number of posts you want to load per click
       }
       
       const hasMoreCats = catNum < works.length; // Check if there are more posts to load

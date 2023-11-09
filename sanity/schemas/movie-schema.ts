@@ -15,6 +15,13 @@ const movie = {
             options: {
               hotspot: true,
             },
+            fields:[
+                {
+                    name: "alt",
+                    title: "Alt",
+                    type: "string"
+                }
+            ]
         },
         {
             name: 'title',
@@ -22,63 +29,10 @@ const movie = {
             type: 'string',
         },
         {
-            name: 'slug',
-            title: 'Slug',
-            type: 'slug',
-            options: {
-              source: 'title',
-              maxLength: 96,
-            },
+            name: 'link',
+            title: 'Link',
+            type: 'url'
         },
-        {
-            name: 'author',
-            title: 'Author',
-            type: 'reference',
-            to: [{type: 'author'}]
-        },
-        {
-            name: 'director',
-            title: 'Director',
-            type: 'string',
-        },
-        {
-            name: 'genre',
-            title: 'Genre',
-            type: 'string',
-        },
-
-        {
-            name: 'duration',
-            title: 'Duration',
-            type: 'string',
-        },
-        {
-            name: 'year',
-            title: 'Year',
-            type: 'number',
-        },
-        {
-            name: 'list',
-            title: 'List',
-            type: 'string',
-        },
-        {
-            name: 'categories',
-            title: 'Categories',
-            type: 'array',
-            of: [{type: 'reference', to: {type: 'category'}}],
-        },
-        {
-            name: 'publishedOn',
-            title: 'Published On',
-            type: 'date',
-        },
-        {           
-            name:"content",
-            title:"Content",
-            type: "blockContent",
-        }
-
 
     ],
     initialValue: () => ({

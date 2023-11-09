@@ -18,7 +18,7 @@ export default async function HobbySection() {
                             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-10 mb-20" key={book._id} >
 
                                 <div className="book m-auto">
-                                  <Link href={`/books/${book.slug}`} key={book._id}>
+                                  <Link href={book.link} key={book._id} target="_blank" >
                                     <div className="book-name">
                                       {book.title}
                                     </div>
@@ -26,7 +26,7 @@ export default async function HobbySection() {
                                   </Link>
                                 </div>
                                 <div className="book-cover">
-                                <Link href={`/books/${book.slug}`} key={book._id}>
+                                <Link href={book.link} key={book._id} target="_blank">
                                     {book.cover && (<Image src={book.cover} alt={book.title} width={200} height={270} loading="lazy" className="post-wrapper-img" blurDataURL={book.lqip} placeholder='blur'/>)}
                                 </Link>
                                 </div>

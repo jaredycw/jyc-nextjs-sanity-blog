@@ -16,10 +16,6 @@ export async function GET(request: Request) {
 
     return new Response(JSON.stringify({ artists }), {
       status: 200,
-      headers: {
-        'content-type': 'application/json',
-        'cache-control': 'public, s-maxage=86400, stale-while-revalidate=43200'
-      }
     });
   } catch (error :any) {
     // Handle the error appropriately, log it, and return an error response

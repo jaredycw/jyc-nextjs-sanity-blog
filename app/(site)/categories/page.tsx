@@ -1,6 +1,14 @@
 import { getCategories } from "@/sanity/sanity-utils";
 import ArchiveCategories from "@/app/component/archivecategories";
- 
+import type { Metadata } from 'next'
+import { metadata } from "../layout";
+
+export function generateMetadata(): Metadata {
+  return {
+      title: 'Categories - ' + metadata.title
+  }
+}
+
  
 
 

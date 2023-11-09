@@ -75,10 +75,9 @@ export default async function Work({ params }:any){
                             )}
 
                 <span className="overlay"></span>
-                <div className="featured-title">{work.title}</div>
                 <div className="top-left">{work.publishedOn}</div>
-                <div className="top-right">{work.mainImageAlt}</div>
-                <div className="bottom-right">{work.mainImageCaption}</div>
+                <div className="top-right">{work.mainImageAlt || "Alt"}</div>
+                <div className="bottom-right">{work.mainImageCaption || "Caption"}</div>
             </div>
 
             <div className="post-heading-box">
@@ -86,12 +85,12 @@ export default async function Work({ params }:any){
                 <div className="post-infor-wrapper">
                     <div className="post-author">{work.author}</div>
                     <div className="post-date">{work.publishedOn}</div>
-                    <div className="post-reading">{work.estimatedReadingTime} mins</div> 
+                    <div className="post-reading">{work.estimatedReadingTime || "0"} mins</div> 
                 </div>
                 <div className="work-infor-wrapper">
-                    <div className="post-skill">Required Skills: {work.skills}</div>
-                    <div className="post-industry">Industry: {work.skills}</div>
-                    <div className="post-duration">Duration: {work.skills}</div>
+                    <div className="post-skill">Required Skills: {work.skills || "Null"}</div>
+                    <div className="post-industry">Industry: {work.industries || "Null"}</div>
+                    <div className="post-duration">Duration: {work.workingTime || "Null"}</div>
                 </div>
             </div>
 

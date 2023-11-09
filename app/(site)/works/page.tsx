@@ -1,6 +1,14 @@
 import { getArchiveWorks } from "@/sanity/sanity-utils";
 import ArchiveWorks from "@/app/component/archiveworks";
- 
+import type { Metadata } from 'next'
+import { metadata } from "../layout";
+
+export function generateMetadata(): Metadata {
+  return {
+      title: 'Works/Design - ' + metadata.title
+  }
+}
+
  
 export default async function Work(props:any){
 

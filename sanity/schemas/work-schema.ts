@@ -89,9 +89,6 @@ const work = {
               },
               {
                 type: 'instagramPost'
-              },
-              {
-                type: 'myCodeField'
               }
             ]
         },
