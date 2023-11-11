@@ -11,7 +11,7 @@ export default async function HobbySection() {
     <div className="grid grid-cols-1 gap-0 xl:grid-cols-2 hobby-border">
 
               <div>
-                <div className="hobby-title">Recent Reading</div>
+                <div className="hobby-title">Currently Reading</div>
                 
                       
                           {books.map((book) => (
@@ -38,7 +38,7 @@ export default async function HobbySection() {
               </div>
 
               <div className="ml-0 py-0 xl:ml-10">
-                <div className="hobby-title">Recent Studying</div>
+                <div className="hobby-title">Currently Studying</div>
                 <div className="study-list-wrapper mx-0 xl:mx-10">
                          <ul className="study-list my-14 pb-7 md:my-20 md:pb-10">
                          {courses.map((course : any) =>(
