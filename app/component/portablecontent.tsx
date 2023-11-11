@@ -3,6 +3,7 @@ import { PortableText } from '@portabletext/react';
 import urlBuilder from '@sanity/image-url';
 import {getImageDimensions} from '@sanity/asset-utils'
 import Image from 'next/image';
+import Link from 'next/link';
 import { InstagramEmbed } from 'react-social-media-embed';
 import { YouTubeEmbed } from 'react-social-media-embed';
  
@@ -13,10 +14,12 @@ export default function PortableContent(props:any) {
 // Barebones lazy-loaded image component
 const SampleImageComponent = ({value, isInline}:any) => {
   const {width, height} = getImageDimensions(value)
- 
+
+  if (value.size == "fullwidth"){
   return (
     
     <div className="my-10">
+
     <Image
       src={urlBuilder()
           .image(value)
@@ -25,8 +28,8 @@ const SampleImageComponent = ({value, isInline}:any) => {
           .auto('format')
           .fit('max')
           .url()}
-          width={1920}
-          height={1080}
+          width={3840}
+          height={2160}
           alt={value.alt || ' '}
           loading="lazy"
           blurDataURL={value.lqip}
@@ -39,10 +42,44 @@ const SampleImageComponent = ({value, isInline}:any) => {
             }
           }
     />
-    <p className="text-center text-gray-400 my-5 image-caption">{value.caption}</p>
+    <p className="text-center text-gray-400 my-3 image-caption">{value.caption}</p>
     </div>
     
   )
+  }
+  else{
+    return<div className="grid grid-flow-col">
+      <div></div>
+      <div>
+        <Image
+          src={urlBuilder()
+              .image(value)
+              .projectId('mrzc8peh')
+              .dataset('production')
+              .auto('format')
+              .fit('max')
+              .url()}
+              width={600}
+              height={400}
+              alt={value.alt || ' '}
+              loading="lazy"
+              blurDataURL={value.lqip}
+              placeholder="blur"
+              style={{
+                  // Display alongside text if image appears inside a block text span
+                  display: isInline ? 'inline-block' : 'block',
+                  // Avoid jumping around with aspect-ratio CSS property
+                  aspectRatio: width / height,
+                }
+              }
+        />
+      <p className="text-center text-gray-400 my-3 image-caption">{value.caption}</p>
+      </div>
+      <div></div>
+  </div>
+ 
+  }
+
 }
 
 const SampleYouTubeComponent = ({value}:any) =>{

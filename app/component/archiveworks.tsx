@@ -23,7 +23,7 @@ export default function ArchiveWorks({ works }: any) {
             {works.slice(0, catNum).map((work : any) =>(
               <Link href={`/works/${work.slug}`} key={work._id}>
                 <div className="jy-card">
-                            {work.mainImage && (<Image src={work.mainImage} alt={work.title} width={450} height={300} 
+                            {work.mainImage && (<Image src={work.mainImage} alt={work.title} width={1920} height={1080} 
                             blurDataURL={work.lqip} placeholder='blur'/>)}
                 </div>
               </Link>

@@ -17,7 +17,7 @@ export default async function WorkImage() {
                     {works.map((work: any) => (
                       <div className="slider-card" key={work._id}>
                         <Link href={`/works/${work.slug}`} key={work._id}>
-                          {work.mainImage && (<Image src={work.mainImage} alt={work.title} width={450} height={300} 
+                          {work.mainImage && (<Image src={work.mainImage} alt={work.title} width={1920} height={1080} 
                           blurDataURL={work.lqip} placeholder="blur" loading="lazy" />)}
                         </Link>
                       </div>

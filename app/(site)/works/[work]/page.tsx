@@ -108,8 +108,6 @@ export default async function Work({ params }:any){
         </article>
         <section className="page-featured">
 
-        <DisqusPart url={url} id={work._id} title={work.title} /> 
-        
         <MottoSection />   
         <AuthorSection authorImage={work.authorImage} author={work.author} authorBio={work.authorBio} authorLqip={work.authorLqip}  />
 
