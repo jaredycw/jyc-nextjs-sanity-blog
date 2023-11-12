@@ -18,7 +18,7 @@ const SampleImageComponent = ({value, isInline}:any) => {
   if (value.size == "fullwidth"){
   return (
     <div>
-      <div className="mt-10 mb-5 content-image">
+      <div className="my-5 content-image">
 
         <Image
           src={urlBuilder()
@@ -57,7 +57,7 @@ const SampleImageComponent = ({value, isInline}:any) => {
       <div></div>
 
       <div>
-      <div className="mt-10 mb-5 content-image">
+      <div className="my-5 content-image">
         <Image
           src={urlBuilder()
               .image(value)
