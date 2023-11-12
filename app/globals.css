@@ -115,7 +115,9 @@ img {
     width: 100%;
     height:auto;
 }
+/**
 article img {
+ 
     box-shadow: var(--jy-shadow);
     transform: none;
     transition: all 0.3s ease-in-out;
@@ -125,6 +127,7 @@ article img:hover {
     box-shadow: var(--jy-shadow-hover);
     transform: var(--jy-3d-box);
 } 
+**/
 article a, .ugly-blue {
     color: var(--jy-uglylink);
     text-decoration: none;
@@ -1341,6 +1344,40 @@ form .form-button{
 .now-playing:hover, .card-sample:hover, .article-sample:hover{
     box-shadow:var(--jy-shadow);
 }
+/** Portable Content **/
+ .content-image{
+    box-shadow: var(--jy-shadow);
+    transform: none;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 1.5s;
+    position: relative;
+}
+
+.content-image:hover {
+    box-shadow: var(--jy-shadow-hover);
+    transform: var(--jy-3d-box);
+} 
+
+.content-image:hover .image-watermark {
+    opacity: 0;
+} 
+.watermark-container{
+    position: absolute;
+    inset: 0;
+}
+.image-watermark{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 286px;
+    height: 150px;
+    opacity: 0.1;
+    background: url(../app/images/logo.svg) no-repeat;
+    background-size: contain;
+    transition: all 1s cubic-bezier(.25, 1, .30, 1);
+}
+ 
 
 /** Widgets **/
 /** --- Back to Top **/

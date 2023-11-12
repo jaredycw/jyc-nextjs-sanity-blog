@@ -185,7 +185,7 @@ export async function getArchiveWorks(): Promise<Work[]>{
 
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="work"]| order(_createdAt desc){
+        groq`*[_type=="work"]| order(_updatedAt desc){
             "count": count(*[_type == "work"]),
             _id,
             "slug": slug.current,

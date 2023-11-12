@@ -17,32 +17,37 @@ const SampleImageComponent = ({value, isInline}:any) => {
 
   if (value.size == "fullwidth"){
   return (
-    
-    <div className="my-10">
+    <div>
+      <div className="mt-10 mb-5 content-image">
 
-    <Image
-      src={urlBuilder()
-          .image(value)
-          .projectId('mrzc8peh')
-          .dataset('production')
-          .auto('format')
-          .fit('max')
-          .url()}
-          width={3840}
-          height={2160}
-          alt={value.alt || ' '}
-          loading="lazy"
-          blurDataURL={value.lqip}
-          placeholder="blur"
-          style={{
-              // Display alongside text if image appears inside a block text span
-              display: isInline ? 'inline-block' : 'block',
-              // Avoid jumping around with aspect-ratio CSS property
-              aspectRatio: width / height,
-            }
-          }
-    />
-    <p className="text-center text-gray-400 my-3 image-caption">{value.caption}</p>
+        <Image
+          src={urlBuilder()
+              .image(value)
+              .projectId('mrzc8peh')
+              .dataset('production')
+              .auto('format')
+              .fit('max')
+              .url()}
+              width={3840}
+              height={2160}
+              alt={value.alt || ' '}
+              loading="lazy"
+              blurDataURL={value.lqip}
+              placeholder="blur"
+              style={{
+                  // Display alongside text if image appears inside a block text span
+                  display: isInline ? 'inline-block' : 'block',
+                  // Avoid jumping around with aspect-ratio CSS property
+                  aspectRatio: width / height,
+                }
+              }
+        />
+        <div className="watermark-container">
+          <span className="image-watermark"></span>
+        </div>
+        </div>
+        <p className="text-center text-gray-400 image-caption">{value.caption}</p>
+      
     </div>
     
   )
@@ -50,7 +55,9 @@ const SampleImageComponent = ({value, isInline}:any) => {
   else{
     return<div className="grid grid-flow-col">
       <div></div>
+
       <div>
+      <div className="mt-10 mb-5 content-image">
         <Image
           src={urlBuilder()
               .image(value)
@@ -73,8 +80,13 @@ const SampleImageComponent = ({value, isInline}:any) => {
                 }
               }
         />
-      <p className="text-center text-gray-400 my-3 image-caption">{value.caption}</p>
+        <div className="watermark-container">
+          <span className="image-watermark"></span>
+        </div>
+        </div>
+      <p className="text-center text-gray-400 image-caption">{value.caption}</p>
       </div>
+
       <div></div>
   </div>
  
