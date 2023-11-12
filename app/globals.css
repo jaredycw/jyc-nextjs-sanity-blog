@@ -128,6 +128,13 @@ article img:hover {
     transform: var(--jy-3d-box);
 } 
 **/
+article menu, article ol, article ul{
+    margin-left: 20px;
+    list-style: unset;
+}
+article li{
+    margin-bottom: 10px;
+}
 article a, .ugly-blue {
     color: var(--jy-uglylink);
     text-decoration: none;
