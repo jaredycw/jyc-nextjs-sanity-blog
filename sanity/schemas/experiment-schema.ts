@@ -78,6 +78,18 @@ const experiment = {
                         title:'Caption'
                     },
                     {
+                        title: 'Size',
+                        name: 'size',
+                        type: 'string',
+                        options: {
+                          list: [
+                            {title: 'Full-width', value: 'fullwidth'},
+                            {title: 'Small', value: 'small'}
+                          ], // <-- predefined values
+                          layout: 'radio' // <-- defaults to 'dropdown'
+                        }
+                    },
+                    {
                         name:'link',
                         type:'url',
                         title:'Link'
