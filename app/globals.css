@@ -137,6 +137,7 @@ article li{
 }
 article a, .ugly-blue {
     color: var(--jy-uglylink);
+    cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 }
@@ -220,11 +221,6 @@ section {
 .section-wrapper{
     overflow: hidden;
 }
-.post-wrapper img {
-  
-  transition: .5s;
-  animation: fadeIn 1s;
-}
 
 .section-title{
 	width:100%;
@@ -273,6 +269,7 @@ section {
     position: relative;
     max-width: 1300px;
     width: 100%;
+    height: 60px;
     margin: 0 auto;
     background: rgba(181, 181, 181, 0.1);
  
@@ -289,9 +286,9 @@ section {
     background:transparent;
     max-width: 1250px;
     width:100%;
+    height: 60px;   
     padding:0 1.5rem;
     margin: 0 auto;
-    height: 60px;
     display: flex;
     text-transform: uppercase;
     justify-content: space-between;
@@ -1365,14 +1362,14 @@ form .form-button{
     transform: var(--jy-3d-box);
 } 
 
-.content-image:hover .image-watermark {
+.jyc-content .content-image:hover .image-watermark {
     opacity: 0;
 } 
-.watermark-container{
+.jyc-content .watermark-container{
     position: absolute;
     inset: 0;
 }
-.image-watermark{
+.jyc-content .image-watermark{
     position: absolute;
     top: 50%;
     left: 50%;

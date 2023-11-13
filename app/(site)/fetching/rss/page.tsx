@@ -4,6 +4,14 @@ import CodecademyPart from "@/app/component/rss/codecademy";
 import CourseraPart from "@/app/component/rss/coursera";
 import OpenCulturePart from "@/app/component/rss/openculture";
 import Link from "next/link";
+import type { Metadata } from 'next'
+import { metadata } from "../../layout"
+
+export function generateMetadata(): Metadata {
+  return {
+      title: 'Fetching RSS to JSON - ' + metadata.title
+  }
+}
 
 
 export default function FetchingRSS(){

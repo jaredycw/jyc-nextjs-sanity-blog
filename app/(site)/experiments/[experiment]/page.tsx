@@ -22,7 +22,7 @@ export async function generateMetadata({ params } : any){
     const experiment = await getExp(slug);
     const host_name = process.env.HOST_NAME;
 
-    const url = host_name + "experiments/" + experiment.slug;
+    const url = host_name + "experiments/" + experiment;
 
     if (experiment !== null) {
     return {
@@ -107,7 +107,7 @@ export default async function Experiment({ params }: any){
         </section>
                    
 
-        <article className="type-post">
+        <article className="type-post jyc-content">
           <PortableContent content={experiment.content}  />
         </article>
         <section className="page-featured">

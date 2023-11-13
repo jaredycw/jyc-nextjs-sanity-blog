@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: any){
     const post = await getPost(slug);
     const host_name = process.env.HOST_NAME;
     
-    const url = host_name + "posts/" + post.slug;
+    const url = host_name + "posts/" + post;
 
     if (post !== null) {
     return {

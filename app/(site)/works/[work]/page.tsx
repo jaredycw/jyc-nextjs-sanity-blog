@@ -12,16 +12,19 @@ import ArchiveMotionWorks from "@/app/component/motionframe/archivemworks";
 import WorkImage from "@/app/component/workimage";
 import SkillSection from "@/app/component/skillsection";
 import IndustrySection from "@/app/component/industrysection";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }:any){
-
     const slug = params.work;
     const work = await getWork(slug);
-    const host_name = process.env.HOST_NAME;
-    const url = host_name + "works/" + work.slug;
 
-    if (work !== null) {
+   
+    const host_name = process.env.HOST_NAME;
+    const url = host_name + "works/" + work;
+ 
+    if (work !== null){
     return {
+        
         title: work.title + ` — ` + metadata.title ,
         description: work.title,
         generator: work._id,
@@ -103,7 +106,7 @@ export default async function Work({ params }:any){
         </section>
                    
 
-        <article className="type-post">
+        <article className="type-post jyc-content">
           <PortableContent content={work.content}  />
         </article>
         <section className="page-featured">
