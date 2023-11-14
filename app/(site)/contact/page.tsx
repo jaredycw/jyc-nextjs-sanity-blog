@@ -1,6 +1,8 @@
+
 import Link from "next/link"
 import type { Metadata } from 'next'
 import { metadata } from "../layout";
+import ContactForm from "@/app/component/form/contactform";
 
 export function generateMetadata(): Metadata {
   return {
@@ -8,6 +10,8 @@ export function generateMetadata(): Metadata {
   }
 }
 
+
+  
 
 export default function ContactMe(){
 
@@ -21,8 +25,8 @@ export default function ContactMe(){
             <div className="self-center">
                 <div>
                     <div className="mb-5">
-                       <p>Feel free to contact me 🔥<br></br>
-                        chat, copyrights, technical issues, opportunities, freelance services...</p>
+                       <p>Feel free to contact me 🔥</p>
+                        <p>chat, copyrights, technical issues, opportunities, freelance services...</p>
                     </div>
                     <div className="mb-10">
                         <span className="icon-email mr-2"></span>
@@ -38,27 +42,7 @@ export default function ContactMe(){
                     </ul>
                 </div>
             </div>
-
-            <div className="self-center">
-            <form className="flex flex-col">
-                <h1>Message Me (Coming Soon)🖖</h1>
-
-                <label className="text-black mt-4">Username<span className="text-red-500 dark:text-gray-50"> *</span></label>
-                <input type="text" name="fullname" className="bg-transparent border-b py-2 pl-3 focus:outline-none focus:rounded-md focus:ring-1 ring-[var(--jy-black)] text-[var(--jy-black)]" />
-
-                <label className="text-black mt-4">E-mail<span className="text-red-500"> *</span></label>
-                <input type="email" name="email" className="bg-transparent border-b py-2 pl-3 focus:outline-none focus:rounded-md focus:ring-1 ring-[var(--jy-black)] text-[var(--jy-black)]" />
-
-                <label  className="text-black mt-4">Message<span className="text-red-500"> *</span></label>
-                <textarea name="message" className="bg-transparent border-b py-2 pl-3 focus:outline-none focus:rounded-md focus:ring-1 ring-[var(--jy-black)] text-[var(--jy-black)]"></textarea>
-                <div className="flex flex-row items-center justify-center md:justify-start  mt-10">
-                    <button className="form-button">
-                        Send 
-                    </button>
-                </div>
-            </form>
-
-            </div>
+            <ContactForm/>
 
         </div>
         </div>

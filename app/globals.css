@@ -1381,7 +1381,12 @@ form .form-button{
     background-size: contain;
     transition: all 1s cubic-bezier(.25, 1, .30, 1);
 }
- 
+.error-field{
+    transition: 0.5s all ease-in-out;
+}
+body[data-theme="dark"] .error-field{
+    filter: invert(99%) sepia(3%) saturate(105%) hue-rotate(82deg) brightness(114%) contrast(80%);
+}
 
 /** Widgets **/
 /** --- Back to Top **/

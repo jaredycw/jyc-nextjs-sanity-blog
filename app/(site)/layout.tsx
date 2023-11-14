@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: 'JYC',   
     description: 'Jared Yeung Creative - Blog and Portfolio',
     images: [{
-        url: "https://cdn.sanity.io/images/mrzc8peh/production/75f336fa906ddece5c960ff120f03c039a2659d5-801x501.jpg"
+        url: "https://cdn.sanity.io/images/mrzc8peh/production/926db6f7d5b119da2e8fa0572415c94880ddf40e-3334x2084.jpg"
     }
     ]
   },
