@@ -114,7 +114,7 @@ const InstagramComponent = ({value}:any) =>{
 const editLink = ({value, children}:any)  =>{
   const target = (value?.href || '').startsWith('http') ? '_blank' : undefined
       return (
-        <><span className="icon-link mr-1"></span>
+        <>
         <a href={value.href} target={target}>
          {children}
         </a>

@@ -6,6 +6,7 @@ import { Inter } from 'next/font/google'
 import Header from '../component/header/header'
 import Footer from '../component/footer/footer'
 import BacktoTop from '../component/widgets/backtotop'
+import { Analytics } from '@vercel/analytics/react';
 export const revalidate = 60;
 const inter = Inter({ subsets: ['latin'] })
 const host_name = process.env.HOST_NAME;
@@ -44,6 +45,7 @@ export default function RootLayout({
         </main>
         <BacktoTop />
         <Footer />
+        <Analytics />
       </body>
     </html>
   )

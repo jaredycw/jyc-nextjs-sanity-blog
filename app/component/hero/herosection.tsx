@@ -31,7 +31,7 @@ export default function HeroSection() {
             </m.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10 hero-section justify-items-center md:justify-items-stretch mb-10 md:mb-7">
               <m.div
-              className="self-center float-right"
+              className="self-center"
               initial={{ x:-500 }}
               animate={{ x:0 }}
               transition={{
@@ -54,7 +54,7 @@ export default function HeroSection() {
                   </Link>
               </m.div>
               <m.div
-                  className="self-center"
+                  className="self-center "
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{
@@ -69,7 +69,7 @@ export default function HeroSection() {
                     }
                   }}
               >
-                <div className="hero-image-wrapper">
+                <div className="hero-image-wrapper float-right">
                   <div className="hero-image-container">
                     <Image src={HeroImage} width={150} height={150} alt=" Me - Icon Image" className="hero-image" loading="lazy" blurDataURL={HeroImageLqip} placeholder='blur' />
                   </div>

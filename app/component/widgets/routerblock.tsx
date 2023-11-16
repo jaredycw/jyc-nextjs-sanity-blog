@@ -18,7 +18,7 @@ export default function RouterBlock() {
 
   return (
     <div>
-        <div onClick={handleGoBack} className="ugly-blue">Go back</div>
+        <div onClick={handleGoBack} className="ugly-blue">Go Back</div>
         <div onClick={handleGoHome} className="ugly-blue">Go Homepage</div>
     </div>
     )

@@ -19,8 +19,10 @@ export function generateMetadata(): Metadata {
 }
 
 export default function AboutMe(){
-
- 
+    const HeroImage2 = "https://cdn.sanity.io/images/mrzc8peh/production/40a19833467baaa41140e3639ddf53639525447c-566x745.jpg"
+    const HeroImage3 = "https://cdn.sanity.io/images/mrzc8peh/production/2d6293e1c460799b7e63ee1d92c66b9b49c2d50f-826x884.jpg"
+    const resume = "https://cdn.sanity.io/files/mrzc8peh/production/f1cb5044dbd070fe3c123a4b89703ce4a155bb0d.pdf"
+    
     return (
        
         <div className="container mx-auto mt-5 mb-10 pb-10 ab-me">
@@ -28,10 +30,10 @@ export default function AboutMe(){
             <h1 className="uppercase md:text-5xl mb-3">Welcome! Hello! </h1>
             <h1 className="uppercase md:text-8xl">I&rsquo;m Jared Yeung 👨🏻‍💻💤</h1>
             <span className="float-right">
-                (TL;DR <Link href="#resume-part" className="ugly-blue">#Resume</Link>)
+                (TL;DR <Link href={resume} target="_blank" className="ugly-blue">#Resume</Link>)
             </span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center md:justify-items-stretch gap-20 md:gap-0 my-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-0 my-10">
                 <div className="self-center">
                     <div className="bg-[var(--jy-cloudy)] text-[var(--jy-black)] jy-border-radius p-8 mb-10">
                     <p className="text-base md:text-lg leading-7 md:leading-9 mb-6">A self-taught web designer and developer driven by a deep passion for design and development.
@@ -50,8 +52,8 @@ export default function AboutMe(){
                     
                 </div>
                 <div className="self-center">
-                    <div className="hero-image-wrapper ">
-                    <div className="hero-image-container"><Image src={HeroImage} width={150} height={150} alt="Weirdo Image" className="hero-image" loading="lazy" /></div>
+                    <div className="hero-image-wrapper float-right">
+                    <div className="hero-image-container"><Image src={HeroImage} width={150} height={150} alt="baby" className="hero-image" loading="lazy" /></div>
                     <div className="logo-svg-a"><Image src={logoA} width={25} height={25} alt="Logo SVG A" /></div>
                     <div className="logo-svg-b"><Image src={logoB} width={25} height={25} alt="Logo SVG B"  /></div>
                     </div>
@@ -60,27 +62,62 @@ export default function AboutMe(){
         <section className="mt-20">
             <h2 className="uppercase md:text-5xl">Story</h2>
             <h3 className="border-b">(TL;DR - Graduate &#8594; Self-Learner &#8594; Web Designer & 2nd degree &#8594; ? )</h3>
-            <div className="my-5 leading-9">
-                <p>
-                    In 2020, I graduated in 🎓 Social Sciences.
-                    Then, COVID-19 hit, making jobs hard to find for humanities majors. 
-                    So, I turned to the digital world for more chances and progress. Eager to enter the digital world, I started by learning more about IT. 
-                    My first practical experience came from handling website admin and design in e-commerce. 
-                    This got me hooked on technology, and I wanted to grasp it inside out. I craved to be tech-savvy!
-                    <br></br>
-                    Eventually, I became a web designer 👨🏻‍💻 in Mirum. 
-                    Though I enjoyed the work, I hungered for more challenge 🧗. 
-                </p>
-                <p>
-                    In June 2023, I started creating <Link href="https://jyz.vercel.app/" target="_blank" className="ugly-blue">my portfolio and blog website</Link>. 
-                    I was thrilled to display my improving skills and projects. 
-                    I used the newest tech(for me) like the concept of Headless CMS, Node.js, React.js, and Next.js to craft a platform that shows my love for being inventive. 
-                    Every bit of code I wrote was like taking a step towards not just making a website but also creating my path in the digital world. There are several platforms: <Link href="https://chat.openai.com/" target="_blank" className="ugly-blue">ChatGPT</Link>, <Link href="https://www.freecodecamp.org/" target="_blank" className="ugly-blue">Freecodecamp</Link> , <Link href="https://www.coursera.org/" target="_blank" className="ugly-blue">Coursera</Link> , and <Link href="https://www.codecademy.com/" target="_blank" className="ugly-blue">Codecademy</Link> have been helping me a lot for learning digital world.
-                </p>
-                <p>
-                    Lastly, I enrolled in my second bachelor degree Computer Science. Im working towards mastering technology. Getting a Master&rsquo;s degree in Computer Science is a big goal I&rsquo;m aiming for 🎈.
-                </p>
+ 
+            <div className="story-background-container py-10">
+                <div 
+                className="story-background"
+                style={{backgroundImage: 'url(https://cdn.sanity.io/images/mrzc8peh/production/287d32a0d9160a8e440430f44684c2e5ef330374-1334x890.jpg)'}} 
+                >
+                </div>
             </div>
+
+
+            <div className="grid grid-cols-1 md:grid-cols-3 mt-5">
+                <div className="self-center my-10 md:my-5">
+                    <div className="hero-image-wrapper">
+                    <div className="hero-image-container"><Image src={HeroImage2} width={150} height={150} alt="Weirdo Image" className="hero-image" loading="lazy" /></div>
+                    <div className="logo-svg-a"><Image src={logoA} width={25} height={25} alt="Logo SVG A" /></div>
+                    <div className="logo-svg-b"><Image src={logoB} width={25} height={25} alt="Logo SVG B"  /></div>
+                    </div>
+                </div>
+                <div className="my-5 leading-9 self-center col-span-2">
+                    <p>
+                        In 2020, I graduated in 🎓 Social Sciences.
+                        Then, COVID-19 hit, making jobs hard to find for humanities majors. 
+                        So, I turned to the digital world for more chances and progress. Eager to enter the digital world, I started by learning more about IT. 
+                        <br></br>
+                        My first practical experience came from handling website admin and design in e-commerce. 
+                        This got me hooked on technology, and I wanted to grasp it inside out. I craved to be tech-savvy!
+                        <br></br>
+                        Eventually, I became a web designer 👨🏻‍💻 in Mirum. 
+                        Though I enjoyed the work, I hungered for more challenge 🧗. 
+                    </p>
+                </div>
+            </div>
+
+
+            <div className="grid grid-cols-1 md:grid-cols-3 mb-5">
+                <div className="my-5 leading-9 self-center col-span-2">
+                    <p>
+                        In June 2023, I started creating <Link href="https://jyz.vercel.app/" target="_blank" className="ugly-blue">my portfolio and blog website</Link>. 
+                        I was thrilled to display my improving skills and projects. 
+                        I used the newest tech(for me) like the concept of Headless CMS, Node.js, React.js, and Next.js to craft a platform that shows my love for being inventive. 
+                        Every bit of code I wrote was like taking a step towards not just making a website but also creating my path in the digital world. There are several platforms: <Link href="https://chat.openai.com/" target="_blank" className="ugly-blue">ChatGPT</Link>, <Link href="https://www.freecodecamp.org/" target="_blank" className="ugly-blue">Freecodecamp</Link> , <Link href="https://www.coursera.org/" target="_blank" className="ugly-blue">Coursera</Link> , and <Link href="https://www.codecademy.com/" target="_blank" className="ugly-blue">Codecademy</Link> have been helping me a lot for learning digital world.
+                    </p>
+                    <p>
+                        Lastly, I have enrolled in my second bachelor degree Computer Science while working full time job.
+                    </p>
+                </div>
+                <div className="self-center mt-10 mb-10 md:mt-0">
+                    <div className="hero-image-wrapper float-right">
+                    <div className="hero-image-container"><Image src={HeroImage3} width={150} height={150} alt="Weirdo Image" className="hero-image" loading="lazy" /></div>
+                    <div className="logo-svg-a"><Image src={logoA} width={25} height={25} alt="Logo SVG A" /></div>
+                    <div className="logo-svg-b"><Image src={logoB} width={25} height={25} alt="Logo SVG B"  /></div>
+                    </div>
+                </div>
+            </div>
+
+
         </section>
 
  
@@ -263,6 +300,23 @@ export default function AboutMe(){
    
             </div>
         </section>
+
+        <div className="story-background-container py-10">
+                <div 
+                className="story-background"
+                style={{backgroundImage: 'url(https://cdn.sanity.io/images/mrzc8peh/production/35e47756cd4f20c3650346128daf307c89c7e11e-1024x768.jpg)'}} 
+                >
+                </div>
+        </div>
+        
+        <div className="story-background-container py-10">
+                <div 
+                className="story-background"
+                style={{backgroundImage: 'url(https://cdn.sanity.io/images/mrzc8peh/production/644cbd127277831caffb7d3b1e8156cf32d52f44-1454x1057.jpg)'}} 
+                >
+                </div>
+        </div>
+
  
  
 

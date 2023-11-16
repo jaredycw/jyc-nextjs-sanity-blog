@@ -173,7 +173,7 @@ export async function getWorks(): Promise<Work[]>{
 
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="work"][0..9]| order(_createdAt desc){
+        groq`*[_type=="work"][0..9]| order(postOrder desc){
             _id,
             "slug": slug.current,
             title,"mainImage":mainImage.asset->url,
@@ -185,7 +185,7 @@ export async function getArchiveWorks(): Promise<Work[]>{
 
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="work"]| order(_updatedAt desc){
+        groq`*[_type=="work"]| order(postOrder desc){
             "count": count(*[_type == "work"]),
             _id,
             "slug": slug.current,
@@ -242,7 +242,7 @@ export async function getExps(): Promise<Experiment[]>{
 
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="experiment"][0..9]| order(_createdAt desc){
+        groq`*[_type=="experiment"][0..9]| order(orderPost desc){
             _id,
             "slug": slug.current,
             title,"mainImage":mainImage.asset->url,
@@ -255,7 +255,7 @@ export async function getArchiveExps(): Promise<Experiment[]>{
 
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="experiment"]| order(_createdAt desc){
+        groq`*[_type=="experiment"]| order(orderPost desc){
             "count": count(*[_type == "experiment"]),
             _id,
             "slug": slug.current,
