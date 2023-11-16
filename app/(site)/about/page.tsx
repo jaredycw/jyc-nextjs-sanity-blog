@@ -62,14 +62,7 @@ export default function AboutMe(){
         <section className="mt-20">
             <h2 className="uppercase md:text-5xl">Story</h2>
             <h3 className="border-b">(TL;DR - Graduate &#8594; Self-Learner &#8594; Web Designer & 2nd degree &#8594; ? )</h3>
- 
-            <div className="story-background-container py-10">
-                <div 
-                className="story-background"
-                style={{backgroundImage: 'url(https://cdn.sanity.io/images/mrzc8peh/production/287d32a0d9160a8e440430f44684c2e5ef330374-1334x890.jpg)'}} 
-                >
-                </div>
-            </div>
+
 
 
             <div className="grid grid-cols-1 md:grid-cols-3 mt-5">
@@ -300,7 +293,14 @@ export default function AboutMe(){
    
             </div>
         </section>
-
+ 
+        <div className="story-background-container py-10">
+                <div 
+                className="story-background"
+                style={{backgroundImage: 'url(https://cdn.sanity.io/images/mrzc8peh/production/287d32a0d9160a8e440430f44684c2e5ef330374-1334x890.jpg)'}} 
+                >
+                </div>
+        </div>
         <div className="story-background-container py-10">
                 <div 
                 className="story-background"
