@@ -242,7 +242,7 @@ export async function getExps(): Promise<Experiment[]>{
 
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="experiment"][0..9]| order(orderPost desc){
+        groq`*[_type=="experiment"][0..9]| order(postOrder desc){
             _id,
             "slug": slug.current,
             title,"mainImage":mainImage.asset->url,
@@ -255,7 +255,7 @@ export async function getArchiveExps(): Promise<Experiment[]>{
 
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="experiment"]| order(orderPost desc){
+        groq`*[_type=="experiment"]| order(postOrder desc){
             "count": count(*[_type == "experiment"]),
             _id,
             "slug": slug.current,
