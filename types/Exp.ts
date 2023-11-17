@@ -2,6 +2,7 @@ import { PortableTextBlock } from "sanity";
 export type Experiment = {
     _id: string,
     publishedOn: string,
+    parentPage: string,
     author:string,
     authorImage: string,
     authorBio: string,

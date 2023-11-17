@@ -8,7 +8,75 @@ import { Experiment } from "@/types/Exp";
 import { Category } from "@/types/Category";
 import clientConfig from "./config/client-config";
 import { Motto } from "@/types/Motto";
- 
+import { Skill } from "@/types/Skill";
+import { Industry } from "@/types/Industry";
+
+export async function getSkills(): Promise<Skill[]>{
+
+    return createClient(clientConfig).fetch(
+
+        groq`*[_type=="skill"]| order(title asc){
+            _id,
+            title,
+            "slug": slug.current,
+            description
+        }`
+    );
+}
+
+export async function getSkill(slug: string): Promise<Skill>{
+
+    return createClient(clientConfig).fetch(
+
+        groq`*[_type=="skill" && slug.current == $slug][0]{
+            title,
+            "slug": slug.current,
+            description,
+            "cards": *[_type in ["work", "experiment"] && references(^._id) ]| order(_createdAt desc){
+            _id,
+            title,
+            parentPage,
+            "slug": slug.current,
+            "mainImage":mainImage.asset->url,
+            'lqip': mainImage.asset->metadata.lqip
+          }        
+        }`,{slug}
+    );
+}
+
+
+export async function getIndustries(): Promise<Industry[]>{
+
+    return createClient(clientConfig).fetch(
+
+        groq`*[_type=="industry"]| order(title asc){
+            _id,
+            title,
+            "slug": slug.current,
+            description
+        }`
+    );
+}
+export async function getIndustry(slug: string): Promise<Industry>{
+
+    return createClient(clientConfig).fetch(
+
+        groq`*[_type=="industry" && slug.current == $slug][0]{
+            title,
+            "slug": slug.current,
+            description,
+            "cards": *[_type in ["work", "experiment"] && references(^._id) ]| order(_createdAt desc){
+            _id,
+            title,
+            parentPage,
+            "slug": slug.current,
+            "mainImage":mainImage.asset->url,
+            'lqip': mainImage.asset->metadata.lqip
+          }        
+        }`,{slug}
+    );
+}
+
 
 
 export async function getCategories(): Promise<Category[]>{
@@ -282,7 +350,8 @@ export async function getExp(slug: string): Promise<Experiment>{
             "mainImageAlt":mainImage.alt,
             "mainImageCaption":mainImage.caption,
             'lqip': mainImage.asset->metadata.lqip,
-            "skills": skills[]->title,
+            "skills": skills[]->,
+            "industries": industries[]->,
             "numberOfCharacters": length(pt::text(content)),
             "estimatedWordCount": round(length(pt::text(content)) / 5),
             "estimatedReadingTime": round(length(pt::text(content)) / 5 / 100 ),

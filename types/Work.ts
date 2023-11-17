@@ -1,6 +1,7 @@
 import { PortableTextBlock } from "sanity";
 export type Work = {
     _id: string,
+    parentPage:string,
     publishedOn: string,
     author:string,
     authorImage:string,

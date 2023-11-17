@@ -1,30 +1,29 @@
-import { getCategories } from "@/sanity/sanity-utils";
+import {  getSkills } from "@/sanity/sanity-utils";
 import ArchiveCategories from "@/app/component/archivecategories";
 import type { Metadata } from 'next'
 import { metadata } from "../layout";
-import Link from "next/link";  
+import ArchiveSkills from "@/app/component/archiveskills";
 
 export function generateMetadata(): Metadata {
   return {
-      title: 'Categories - ' + metadata.title
+      title: 'Skills - ' + metadata.title
   }
 }
 
  
 
 
-export default async function Category(props : any){
+export default async function Skills(props : any){
 
-  const categories = await getCategories();
+  const skills = await getSkills();
 
-  if (categories !== null) {
+  if (skills !== null) {
     return (
       <div className="container mx-auto mb-10">
                 <div className="section-title">
-                  <span className="section-name">Tags</span>
+                  <span className="section-name">Skills</span>
                 </div>
-          <ArchiveCategories categories={categories} />
-
+          <ArchiveSkills skills={skills} />
       </div>
     )
   } else {
@@ -33,9 +32,9 @@ export default async function Category(props : any){
 
       <div className="container mx-auto mb-10">
         <div className="section-title">
-          <span className="section-name">Tags</span>
+          <span className="section-name">Skills</span>
         </div>
-        <p>Sorry! There are no items</p>
+        <p>Sorry! There are no skill items</p>
       </div>
 
     )

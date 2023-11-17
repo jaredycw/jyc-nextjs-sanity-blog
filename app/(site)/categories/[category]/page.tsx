@@ -1,17 +1,13 @@
-import { getCategories, getCategory } from "@/sanity/sanity-utils";
-import { getArchivePosts } from "@/sanity/sanity-utils";
-import Image from "next/image";
-import Link from "next/link";
+import { getCategory } from "@/sanity/sanity-utils";
 import ArchivePost from "@/app/component/archivepost";
 import NotFound from "../../not-found";
- 
+
 
 
 export default async function Category({ params }: any){
 
   const slug = params.category;
   const category = await getCategory(slug);
-  const posts = await getArchivePosts();
 
   if (category !== null) {
     return (
@@ -21,6 +17,7 @@ export default async function Category({ params }: any){
           {category.description}
         </div>
           <ArchivePost posts={category.posts} />
+          
       </div>
     )
   } else {

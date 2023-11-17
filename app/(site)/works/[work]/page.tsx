@@ -1,18 +1,16 @@
 import { getWork } from "@/sanity/sanity-utils";
 import Image from "next/image";
-import PostSection from "@/app/component/postsection";
 import AuthorSection from "@/app/component/authorsection";
 import MottoSection from "@/app/component/mottosection";
 import PortableContent from "@/app/component/portablecontent";
 import NotFound from "../../not-found";
 import SnsWidget from "@/app/component/snswidget";
 import { metadata } from "../../layout";
-import DisqusPart from "@/app/component/disquspart";
 import ArchiveMotionWorks from "@/app/component/motionframe/archivemworks";
 import WorkImage from "@/app/component/workimage";
 import SkillSection from "@/app/component/skillsection";
 import IndustrySection from "@/app/component/industrysection";
-import { notFound } from "next/navigation";
+ 
 
 export async function generateMetadata({ params }:any){
     const slug = params.work;
@@ -93,7 +91,7 @@ export default async function Work({ params }:any){
                     <div className="post-reading">{work.estimatedReadingTime || "0"} mins</div> 
                 </div>
                 <div className="work-infor-wrapper">
-                    <div className="post-skill">Required Skills: <SkillSection skills={work.skills} />
+                    <div className="post-skill">Required Skills:  <SkillSection skills={work.skills} />
                     </div>
                     <div className="post-industry">Industry: <IndustrySection industries={work.industries}/> </div>
                     <div className="post-duration">Duration: {work.workingTime || "Null"}</div>

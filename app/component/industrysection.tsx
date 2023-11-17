@@ -8,7 +8,7 @@ export default async function IndustrySection(props: any){
 
         {props.industries.map((industry: any, index: number) => (
           <span key={industry.title}>
-            {industry.title}
+            <Link href={`/industries/${industry.slug.current}`} key={industry._id} className="ugly-blue"> {industry.title}</Link>
             {index !== props.industries.length - 1 ? ", " : ""}
           </span>
         ))}
@@ -20,7 +20,7 @@ export default async function IndustrySection(props: any){
     return(
     <>
 
-    No industries included
+    No Industries included
     
     </>);
   }

@@ -9,6 +9,11 @@ const experiment = {
 
     fields: [
         {
+            name: 'parentPage',
+            title: 'Parent Page',
+            type: 'string',
+        },
+        {
             name: 'postOrder',
             title: 'Post Order',
             type: 'number',
@@ -147,6 +152,7 @@ const experiment = {
     ],
     initialValue: () => ({
         publishedOn: (new Date()).toISOString().substring(0, 10),
+        parentPage: "experiments",
         author: {
             _ref: "64251850-6351-4a3d-8554-86650c505451",
             _type: "reference"

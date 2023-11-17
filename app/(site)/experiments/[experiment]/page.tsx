@@ -1,20 +1,19 @@
 import { getExp } from "@/sanity/sanity-utils";
 import Image from "next/image";
-import Link from "next/link";
-import PostSection from "@/app/component/postsection";
 import AuthorSection from "@/app/component/authorsection";
-import TagSection from "@/app/component/tagsection";
 import MottoSection from "@/app/component/mottosection";
 import PortableContent from "@/app/component/portablecontent";
 import NotFound from "../../not-found";
 import SnsWidget from "@/app/component/snswidget";
-import { Metadata, ResolvingMetadata } from 'next';
 import { metadata } from "../../layout";
 import DisqusPart from "@/app/component/disquspart";
 import ExperimentImage from "@/app/component/expimage";
 import ArchiveMotionExperiments from "@/app/component/motionframe/archivemexps";
 import AdsPart from "@/app/component/adpart";
- 
+import SkillSection from "@/app/component/skillsection";
+import IndustrySection from "@/app/component/industrysection";
+
+
 
 export async function generateMetadata({ params } : any){
 
@@ -94,8 +93,8 @@ export default async function Experiment({ params }: any){
                     <div className="post-reading">{experiment.estimatedReadingTime  || "0"} mins</div> 
                 </div>
                 <div className="exp-infor-wrapper">
-                    <div className="post-skill">Required Skills: {experiment.skills  || "Null"}</div>
-                    <div className="post-industry">Industry: {experiment.industries || "Null"}</div>
+                    <div className="post-skill">Required Skills: <SkillSection skills={experiment.skills} /></div>
+                    <div className="post-industry">Industry: <IndustrySection industries={experiment.industries}/> </div>
                     <div className="post-duration">Duration: {experiment.workingTime || "Null"}</div>
                 </div>
             </div>
