@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://use.typekit.net/alm4ysv.css");
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
  
 .jy-tester{
     letter-spacing: -0.45rem;
@@ -44,7 +43,8 @@ body[data-theme="light"] {
     --jy-overlay-box-hover:rgba(29, 29, 31, 0.9);
     --jy-white: #ffffff;
     --jy-cloudy: #F5F5F5;
-    --jy-grey: #BEBEBE;
+    --jy-grey: #bebebe;
+    --jy-dark-grey: #777777;
     --jy-menu-hover:rgba(190,190,190,0.35);
     --jy-line: #E1E1E1;
     --jy-uglylink: #0800FF;
@@ -67,10 +67,12 @@ body[data-theme="dark"] {
     --jy-logo: invert(99%) sepia(9%) saturate(342%) hue-rotate(280deg) brightness(115%) contrast(80%);
     --jy-hover-logo-svg: invert(99%) sepia(9%) saturate(342%) hue-rotate(280deg) brightness(115%) contrast(80%) blur(3px);
     --jy-black: #e5e5e5;
+    --jy-white: #1d1d1f;
     --jy-rgba:rgba(229,229,229,0.6);
     --jy-cloudy:#2c2c2c;
     --jy-cloudy-rgba:rgba(44,44,44, 0.6);
-    --jy-grey:#bbbbbb;
+    --jy-grey:#acacac;
+    --jy-dark-grey: #bbb;
     --jy-hover:#141414;
     --jy-background:#1D1D1F;
     --jy-uglylink:#6a65f9;
@@ -617,7 +619,7 @@ section {
     margin-right:1rem;
 }
 .motto-wrapper .motto-capper{
-    color:var(--jy-grey);
+    color:var(--jy-dark-grey);
     text-transform:capitalize;
 }
 
@@ -635,7 +637,7 @@ section {
     padding: 0.4rem 2.8rem;
     margin: 1rem;
     font-size: calc(var(--jy-p) * 1.15);
-    font-weight: 600;
+    font-weight: 700;
     font-family: var(--jy-hfont);
     text-transform: capitalize;
     background: var(--jy-cloudy);
@@ -1433,9 +1435,9 @@ body[data-theme="dark"] .error-field{
     background-color:var(--jy-rgba);
     transition: all 0.5s ease-in-out;
 }
-.bktop-btn span{
+/**.bktop-btn span{
     overflow: hidden;
-}
+}**/
 .bktop-btn:hover {
     color:var(--jy-black);
     background: var(--jy-cloudy-rgba);
@@ -1540,7 +1542,7 @@ body[data-theme="dark"] .error-field{
     }
     .buttons-list .button, .form-button, .explore-wrapper button{
         padding: 0.5rem 2.6rem;
-        letter-spacing: 0.05rem;
+        letter-spacing: 0.02rem;
         margin: 1rem;
         font-size: calc(var(--jy-p) * 1.2);
     }

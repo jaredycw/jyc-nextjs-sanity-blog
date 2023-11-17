@@ -17,7 +17,7 @@ const config = defineConfig({
 
     apiVersion: "2023-09-11",
 
-    useCdn: true,
+    useCdn: false,
 
     basePath: "/admin",
 

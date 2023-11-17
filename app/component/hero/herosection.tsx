@@ -49,7 +49,7 @@ export default function HeroSection() {
                   <h1 className="hero-title">Jared Yeung</h1>
                   <p className="hero-description ">Web Designer & Developer, Self Learner<br></br>Digital Design & Developing Field
                       <br></br>#Open to Work #Freelance</p>
-                  <Link href="/contact">
+                  <Link href="/contact" aria-label="Contact me">
                   <button className="tag">Contact Me  <span className="icon-down"></span></button>
                   </Link>
               </m.div>
@@ -89,7 +89,7 @@ export default function HeroSection() {
           </m.div>
           </LazyMotion>
 
-          <Link href="#jyz-post-list">
+          <Link href="#jyz-post-list" aria-label="Scrolling down after clicking">
           <div className="icon-scroll" ></div>
           </Link>
 

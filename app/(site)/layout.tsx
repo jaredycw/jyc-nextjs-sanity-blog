@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: 'Jared Yeung Creative - Blog and Portfolio',
   openGraph: {
     title: 'JYC',   
-    description: 'Jared Yeung Creative - Blog and Portfolio',
+    description: 'Jared Yeung Creative - Blog and Portfolio, Web Designer & Developer, Self Learner',
     images: [{
         url: "https://cdn.sanity.io/images/mrzc8peh/production/926db6f7d5b119da2e8fa0572415c94880ddf40e-3334x2084.jpg"
     }

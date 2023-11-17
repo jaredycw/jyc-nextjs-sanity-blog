@@ -8,7 +8,7 @@ export default async function PostSection() {
   return (
             <div className="grid grid-cols-1 gap-0 md:gap-5 xl:grid-cols-3">
                 {posts.map((post) =>(
-                            <Link href={`/posts/${post.slug}`} key={post._id}>
+                            <Link href={`/posts/${post.slug}`} key={post._id} aria-label={`Read more ${post.title}`}>
                                 <div className="post-wrapper" key={post._id}>
                                   <div className="thumbnail">{post.mainImage !== null ? (
                         <Image src={post.mainImage} alt={post.title} width={400} height={250} className="post-wrapper-img"

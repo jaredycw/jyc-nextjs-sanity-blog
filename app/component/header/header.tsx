@@ -56,14 +56,14 @@ export default function Header(){
                       className="theme-toggle uppercase" 
                       id="theme-toggle" 
                       title="Toggles light & dark" 
-                      aria-label="auto" 
+                      aria-label="Toggles light & dark" 
                       aria-live="polite"
                       >
                        {activeTheme === 'dark' ? 'Light' : 'Dark'}
                       </button>
                   </div>
                   <div className="jydeco-line"></div>
-                  <Link href='/'>
+                  <Link href='/' aria-label={`Home page`}>
                     <div className="logo">
                           <Image
                               priority
@@ -105,12 +105,12 @@ export default function Header(){
                 </div>
                 <nav className="overlay-nav" >
                   <ul className="overlay-menu">
-                    <li><Link href="/about">About</Link></li>
-                    <li><Link href="/posts">Blog</Link></li>
-                    <li><Link href="/categories" >Categories</Link></li>
-                    <li><Link href="/works">Design</Link></li>
-                    <li><Link href="/experiments">Experiment</Link></li>
-                    <li><Link href="/fetching">Fetching</Link></li>
+                    <li><Link href="/about" aria-label={`Read more about me`}>About</Link></li>
+                    <li><Link href="/posts" aria-label={`Read more posts`}>Blog</Link></li>
+                    <li><Link href="/categories"  aria-label={`Read more categories`}>Categories</Link></li>
+                    <li><Link href="/works" aria-label={`Read more works and design`}>Design</Link></li>
+                    <li><Link href="/experiments" aria-label={`Read more experiments/stuffs/`}>Experiment</Link></li>
+                    <li><Link href="/fetching" aria-label={`Read more about API`}>Fetching</Link></li>
                   </ul>
                 </nav>
 

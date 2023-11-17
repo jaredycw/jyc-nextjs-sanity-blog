@@ -18,7 +18,7 @@ export default async function HobbySection() {
                             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-10 mb-20" key={book._id} >
 
                                 <div className="book m-auto">
-                                  <Link href={book.link} key={book._id} target="_blank" >
+                                  <Link href={book.link} key={book._id} target="_blank" aria-label={`Read more ${book.link}`}>
                                     <div className="book-name">
                                       {book.title}
                                     </div>
@@ -26,7 +26,7 @@ export default async function HobbySection() {
                                   </Link>
                                 </div>
                                 <div className="book-cover">
-                                <Link href={book.link} key={book._id} target="_blank">
+                                <Link href={book.link} key={book._id} target="_blank" aria-label={`Read more ${book.link}`}>
                                     {book.cover && (<Image src={book.cover} alt={book.title} width={200} height={270} loading="lazy" className="post-wrapper-img" blurDataURL={book.lqip} placeholder='blur'/>)}
                                 </Link>
                                 </div>
@@ -42,9 +42,9 @@ export default async function HobbySection() {
                 <div className="study-list-wrapper mx-0 xl:mx-10">
                          <ul className="study-list my-14 pb-7 md:my-20 md:pb-10">
                          {courses.map((course : any) =>(
-                          <Link href={course.link} key={course._id} target="_blank">
-                            <li key={course._id}>{course.title}</li>
-                          </Link>
+                          
+                            <li key={course._id}><Link href={course.link} key={course._id} target="_blank" aria-label={`Read more ${course.link}`}>{course.title}</Link></li>
+                          
                          ))}
                          </ul>
                     </div>

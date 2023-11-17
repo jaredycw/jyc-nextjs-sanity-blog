@@ -8,7 +8,7 @@ export default function PreLoader() {
     const rounded = useTransform(count, Math.round);
 
     useEffect(() => {
-        const animation = animate(count, 100, { duration: 2 });
+        const animation = animate(count, 100, { duration: 1.5 });
         return animation.stop;
         // eslint-disable-next-line react-hooks/exhaustive-deps  
       }, []);

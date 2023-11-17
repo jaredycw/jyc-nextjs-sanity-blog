@@ -11,7 +11,7 @@ export default async function MovieSection() {
                 <div className="watching-wrapper">
                     {movies.map((movie : any) => (
                     <div key={movie._id}>
-                        <Link href={movie.link} key={movie._id} target="_blank">
+                        <Link href={movie.link} key={movie._id} target="_blank" aria-label={`Read more ${movie.link}`}>
                         {movie.poster && (<Image src={movie.poster} alt={movie.title} width={200} height={270} loading="lazy" className="post-wrapper-img"
                         blurDataURL={movie.lqip} placeholder="blur" />)}
                         </Link>

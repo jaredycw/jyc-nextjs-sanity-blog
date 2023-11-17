@@ -8,6 +8,11 @@ const post = {
     icon: ThListIcon,
     fields: [
         {
+            name: 'postOrder',
+            title: 'Post Order',
+            type: 'number',
+        },
+        {
             name: 'title',
             title: 'Title',
             type: 'string'
