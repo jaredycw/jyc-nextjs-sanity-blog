@@ -47,7 +47,7 @@ body[data-theme="light"] {
     --jy-dark-grey: #777777;
     --jy-menu-hover:rgba(190,190,190,0.35);
     --jy-line: #E1E1E1;
-    --jy-uglylink: #0800FF;
+    --jy-uglylink: #1D438A;
     --jy-shadow: 2px 0px 15px 0px rgba(0, 0, 0, 0.10);
     --jy-shadow-hover: 3px 0px 15px 0px rgba(0, 0, 0, 0.35);
     --jy-3d-box:scale3d(1.01,1.01,1.01);
@@ -140,12 +140,12 @@ article li{
 article a, .ugly-blue {
     color: var(--jy-uglylink);
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: underline; 
+    text-underline-offset: 0.35rem;
     transition: all 0.3s ease-in-out;
 }
 article a:hover, .ugly-blue:hover{
-    text-decoration: underline;
-    text-underline-offset: 0.35rem;
+    text-decoration: none;
 }
 br {
     margin-bottom: calc(var(--jy-lh) * 0.4rem);
@@ -641,7 +641,7 @@ section {
     font-family: var(--jy-hfont);
     text-transform: capitalize;
     background: var(--jy-cloudy);
-    color: var(--jy-grey);
+    color: var(--jy-dark-grey);
     opacity: 1;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -907,13 +907,13 @@ form .form-button{
     list-style: none;
     position: relative;
 }
-.study-list li{
+.study-list div{
     color: var(--jy-black);
     padding: 1rem 0 ;
     font-size:calc(var(--jy-p) * 1.15);
     border-bottom: solid 0.06rem var(--jy-line);
 }
-.study-list li::after{
+.study-list div::after{
     content: "\e91a";
     position: absolute;
     float: right;
@@ -922,7 +922,7 @@ form .form-button{
     transition: all 0.3s ease-in-out;
 
 }
-.study-list li:hover::after{
+.study-list div:hover::after{
     right: 1.5rem;
 }
 #section-watching {
@@ -1526,7 +1526,7 @@ body[data-theme="dark"] .error-field{
     #section-hobby .book-author{
         font-size:calc(var(--jy-p) * 1.25);
     }
-    .study-list li{
+    .study-list div{
         padding: 1.25rem 0;
         font-size:calc(var(--jy-p) * 1.25);
     }

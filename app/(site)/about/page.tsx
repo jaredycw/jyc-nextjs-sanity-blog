@@ -128,7 +128,7 @@ export default function AboutMe(){
             <div className="my-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 gap-y-5">
                 <div>
-                <h5>Coding</h5>
+                <h4>Coding</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
                         <div className="card-sample"> 
                             <div className="card-sample-grid gap-2">
@@ -182,7 +182,7 @@ export default function AboutMe(){
                 </div>
 
                 <div>
-                    <h5>Concept</h5>
+                    <h4>Concept</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
                         <div className="card-sample"> 
                             <div className="card-sample-grid gap-2">
@@ -237,7 +237,7 @@ export default function AboutMe(){
                 </div>
 
                 <div>
-                    <h5>CSS Framework</h5>
+                    <h4>CSS Framework</h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
                         <div className="card-sample"> 
                             <div className="card-sample-grid gap-2">

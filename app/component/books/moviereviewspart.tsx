@@ -18,7 +18,7 @@ export default function MovieReviewsPart(){
             <div className="top-articles mt-10">
               <h1>Movie Reviews</h1>
               <p>Data provided by The New York Times (Cache:a Day ago)</p>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
               {topArticles.articles ? (
                   topArticles.articles?.map((article : any, index: number) => (
                     <Link href={article.url} target="_blank" key={index}>
@@ -34,14 +34,14 @@ export default function MovieReviewsPart(){
                     </div>
 
                     <div className="p-7 md:p-6">
-                        <p className="jy-font-sans font-bold m-0">
+                        <p className="jy-font-sans font-bold leading-6 mb-1">
                             {article.title}
                         </p>
-                        <p className="jy-font-sans mb-5">
+                        <p className="jy-font-sans font-bold text-sm text-gray-500 mb-5">
                         - {article.byline}
                         </p>
                         <div>
-                        <p className="leading-6">{article.abstract}</p>
+                        <p className="jy-font-sans leading-6">{article.abstract}</p>
                         </div>
                     </div>
                   </div>

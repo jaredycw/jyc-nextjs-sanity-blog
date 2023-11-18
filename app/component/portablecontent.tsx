@@ -46,7 +46,7 @@ const SampleImageComponent = ({value, isInline}:any) => {
           <span className="image-watermark"></span>
         </div>
         </div>
-        <p className="text-center text-gray-400 image-caption">{value.caption}</p>
+        <p className="text-center text-gray-500 image-caption">{value.caption}</p>
       
     </div>
     
@@ -84,7 +84,7 @@ const SampleImageComponent = ({value, isInline}:any) => {
           <span className="image-watermark"></span>
         </div>
         </div>
-      <p className="text-center text-gray-400 image-caption">{value.caption}</p>
+      <p className="text-center text-gray-500 image-caption">{value.caption}</p>
       </div>
 
       <div></div>

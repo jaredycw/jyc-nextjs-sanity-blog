@@ -12,7 +12,7 @@ export default async function ExperimentImage() {
                 {exps.map((exp) => (
                     <div className="slider-card" key={exp._id}>
                         <Link href={`/experiments/${exp.slug}`} key={exp._id} aria-label={`Read more ${exp.title}`}>
-                            {exp.mainImage && (<Image src={exp.mainImage} alt={exp.title} width={1920} height={1080} 
+                            {exp.mainImage && (<Image src={exp.mainImage} alt={exp.title} width={600} height={400} 
                             blurDataURL={exp.lqip} placeholder='blur' loading="lazy" />)}
                         </Link>
                     </div>

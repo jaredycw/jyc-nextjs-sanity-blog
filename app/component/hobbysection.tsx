@@ -40,13 +40,13 @@ export default async function HobbySection() {
               <div className="ml-0 py-0 xl:ml-10">
                 <div className="hobby-title">Currently Studying</div>
                 <div className="study-list-wrapper mx-0 xl:mx-10">
-                         <ul className="study-list my-14 pb-7 md:my-20 md:pb-10">
+                         <div className="study-list my-14 pb-7 md:my-20 md:pb-10">
                          {courses.map((course : any) =>(
-                          
-                            <li key={course._id}><Link href={course.link} key={course._id} target="_blank" aria-label={`Read more ${course.link}`}>{course.title}</Link></li>
-                          
+                          <Link href={course.link} key={course._id} target="_blank" aria-label={`Read more ${course.link}`}>
+                            <div key={course._id}>{course.title}</div>
+                          </Link>
                          ))}
-                         </ul>
+                         </div>
                     </div>
               </div>
 

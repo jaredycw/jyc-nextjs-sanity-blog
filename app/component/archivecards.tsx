@@ -24,7 +24,7 @@ export default function ArchiveCards({ cards }: any) {
                 <Link href={`/${card.parentPage}/${card.slug}`} key={card._id}>
                   <div className="jy-card">
                       
-                              {card.mainImage && (<Image src={card.mainImage} alt={card.title} width={1920} height={1080} 
+                              {card.mainImage && (<Image src={card.mainImage} alt={card.title} width={600} height={400} 
                               blurDataURL={card.lqip} placeholder='blur'/>)}
                   </div>
                 </Link>

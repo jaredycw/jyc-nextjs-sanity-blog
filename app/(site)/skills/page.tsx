@@ -1,5 +1,4 @@
 import {  getSkills } from "@/sanity/sanity-utils";
-import ArchiveCategories from "@/app/component/archivecategories";
 import type { Metadata } from 'next'
 import { metadata } from "../layout";
 import ArchiveSkills from "@/app/component/archiveskills";

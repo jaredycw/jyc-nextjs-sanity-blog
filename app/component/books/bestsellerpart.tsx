@@ -22,7 +22,7 @@ export default function BestSellerPart(){
               {topBooks.books ? (
                   topBooks.books?.map((book :any, index: number) => (
                     <div className="flex flex-wrap flex-col md:flex-row items-center p-6 article-sample my-5" key={book.isbn13}>
-                    <div className="flex-none w-14 ml-0 md:ml-5 mb-5 md:mb-0"><h1 className="text-center md:text-left">{index + 1}</h1></div>
+                    <div className="flex-none w-14 ml-0 md:ml-5 mb-5 md:mb-0"><h2 className="text-center md:text-left">{index + 1}</h2></div>
                     <div className="flex-none ml-0 md:ml-5 mb-5 md:mb-0">
                       <Image
                       className='shadow-sm'
@@ -34,14 +34,14 @@ export default function BestSellerPart(){
                       />
                     </div>
                     <div className='flex-1 flex-wrap ml-0 md:ml-10'>
-                    <h1 className="fw-bold text-center md:text-left">
+                    <h2 className="fw-bold text-center md:text-left">
                         {book.title}
-                    </h1>
-                    <h5 className="text-center md:text-left">
+                    </h2>
+                    <p className="text-center md:text-left jy-font-sans font-bold text-xl text-gray-500 ">
                       {book.author}
-                    </h5>
+                    </p>
                   </div>
-                  <div className='flex-none w-25 pt-10 md:p-5 uppercase text-gray-400'>- NYT - </div>
+                  <div className='flex-none w-25 pt-10 md:p-5 uppercase text-gray-500'>- NYT - </div>
                   </div>
                   ))
                 ) : (

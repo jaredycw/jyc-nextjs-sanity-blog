@@ -11,18 +11,18 @@ export default async function PostSection() {
                             <Link href={`/posts/${post.slug}`} key={post._id} aria-label={`Read more ${post.title}`}>
                                 <div className="post-wrapper" key={post._id}>
                                   <div className="thumbnail">{post.mainImage !== null ? (
-                        <Image src={post.mainImage} alt={post.title} width={400} height={250} className="post-wrapper-img"
+                        <Image src={post.mainImage} alt={post.title} width={600} height={400} className="post-wrapper-img"
                         blurDataURL={post.lqip} placeholder="blur" loading="lazy"
                         />
                         ) : (
                             <Image
-                              src="https://cdn.sanity.io/images/mrzc8peh/production/33310bca93339ace486b6d58c50f461ee81e04f4-6000x4000.jpg"
+                              src="https://cdn.sanity.io/images/mrzc8peh/production/926db6f7d5b119da2e8fa0572415c94880ddf40e-3334x2084.jpg"
                               alt="Default photo"
-                              width={400}
-                              height={250}
+                              width={600}
+                              height={400}
                               loading="lazy"
                               className="post-wrapper-img"
-                              blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGQABAQEAAwAAAAAAAAAAAAAAAAMEAQUI/8QAHxAAAgICAgMBAAAAAAAAAAAAAQIAAwQRBRIhIjFB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/xAAWEQEBAQAAAAAAAAAAAAAAAAAAASH/2gAMAwEAAhEDEQA/APMdQBOjLWIqrsEGTpUFLCfwbEU+7EMfGjEJEeYgxJNmFj2XdkrXbMNAS54nKx1Z7KyFA+yXH5T4790PsJts5bItrZHbakahpjpyhBicM57GIh//2Q=="
+                              blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAQUAAAAAAAAAAAAAAAAAAAECBAUH/8QAHhAAAgICAwEBAAAAAAAAAAAAAQIAAwURBBJRITH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMLweMfLZBeLXYlZIJ7P+DUkZHBX8Him+22pl7EAKdn5Kmt3rbtWzK3oOorWO2+zsd+mUMhCED//2Q=="
                               placeholder="blur"
                             />
                           )}</div>

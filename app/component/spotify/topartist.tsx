@@ -27,7 +27,7 @@ export default function TopArtists(){
               {topArtists.artists ? ( 
                     topArtists.artists?.map((artist: SpotifyArtist, index: number) => (
                       <Link href={artist.url} target="_blank" className="flex flex-wrap flex-col md:flex-row items-center p-6 article-sample my-5" key={index}>
-                        <div className="flex-none w-14 ml-0 md:ml-5 mb-5 md:mb-0"><h1 className="text-center md:text-left">{index + 1}</h1></div>
+                        <div className="flex-none w-14 ml-0 md:ml-5 mb-5 md:mb-0"><h2 className="text-center md:text-left">{index + 1}</h2></div>
                         <div className="flex-none ml-0 md:ml-5 mb-5 md:mb-0">
                           <Image
                           className='shadow-sm'
@@ -39,15 +39,15 @@ export default function TopArtists(){
                           />
                         </div>
                         <div className='flex-1 flex-wrap ml-0 md:ml-10'>
-                        <h1 className="fw-bold text-center md:text-left">
+                        <h2 className="fw-bold text-center md:text-left">
                             {artist.name}
-                        </h1>
+                        </h2>
                         <div className="text-center md:text-left my-5 md:my-1">
-                            <p className="mr-0 md:mr-10 capitalize blcok md:inline text-center md:text-left">Popularity: {artist.popularity}</p> 
-                            <p className="capitalize blcok md:inline text-center md:text-left">Genre: {artist.genre} </p>
+                            <p className="mr-0 md:mr-10 capitalize blcok md:inline text-center md:text-left jy-font-sans font-bold text-xl text-gray-500">Popularity: {artist.popularity}</p> 
+                            <p className="capitalize blcok md:inline text-center md:text-left jy-font-sans font-bold text-xl text-gray-500">Genre: {artist.genre} </p>
                         </div>
                       </div>
-                      <div className='flex-none w-25 pt-10 md:p-5 uppercase text-gray-400'>- Spotify - </div>
+                      <div className='flex-none w-25 pt-10 md:p-5 uppercase text-gray-500'>- Spotify - </div>
                       </Link>
                     ))
                   ) : (

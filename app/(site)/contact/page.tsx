@@ -35,10 +35,10 @@ export default function ContactMe(){
                         jaredycw@gmail.com
                         </Link>
                     </div>   
-                    <ul className="sns-widget grid gap-2">
-                        <Link href="https://instagram.com/jared_ycw" target="_blank"><li><i className="icon-ig"></i></li></Link>
-                        <Link href="https://www.linkedin.com/in/jared-yeung-318714208/" target="_blank"><li><i className="icon-in"></i></li></Link>
-                        <Link href="https://github.com/jaredycw" target="_blank"><li><i className="icon-github"></i></li></Link>
+                    <ul className="sns-widget grid gap-2" aria-labelledby="instagramLabel linkedinLabel githubLabel">
+                    <li><Link href="https://instagram.com/jared_ycw" target="_blank" aria-label="Instagram"><i className="icon-ig"></i></Link></li>
+                    <li><Link href="https://www.linkedin.com/in/jared-yeung-318714208/" target="_blank" aria-label="Linkedin"><i className="icon-in"></i></Link></li>
+                    <li><Link href="https://github.com/jaredycw" target="_blank"><i className="icon-github" aria-label="Github"></i></Link></li>
                     </ul>
                 </div>
             </div>

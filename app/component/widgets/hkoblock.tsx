@@ -23,17 +23,17 @@ export default function HKOWeatherWidget(){
  
                 
                 <div className='flex-1 flex-wrap ml-0 md:ml-10'>            
-                    <h5>Temperature: {hkoWeather.hkoTemperature} °C </h5>
-                    <p>Place: {hkoWeather.hkoPlace} | Time: {hkoWeather.TemperatureTime}</p>
-                    <h5>Hudimity: {hkoWeather.humidity} %</h5>
-                    <p>Time: {hkoWeather.humidityTime} </p>
-                    <h5>UV Index: {hkoWeather.uvIndex}</h5>
-                    <p>Place: {hkoWeather.uvPlace} | <span className="capitalize">{hkoWeather.uvTimeDesc}</span> | <span className="uppercase">{hkoWeather.uvDesc}</span></p>
-                    <h5 className="mt-6">Warning</h5>
-                    <p>{hkoWeather.warningMessage}</p>
+                    <h2 className='text-xl2 uppercase'>Temperature: {hkoWeather.hkoTemperature} °C </h2>
+                    <p className='text-center md:text-left jy-font-sans font-bold text-lg text-gray-500'>Place: {hkoWeather.hkoPlace} | Time: {hkoWeather.TemperatureTime}</p>
+                    <h2 className='text-xl2 uppercase'>Hudimity: {hkoWeather.humidity} %</h2>
+                    <p className='text-center md:text-left jy-font-sans font-bold text-lg text-gray-500'>Time: {hkoWeather.humidityTime} </p>
+                    <h2 className='text-xl2 uppercase'>UV Index: {hkoWeather.uvIndex}</h2>
+                    <p className='text-center md:text-left jy-font-sans font-bold text-lg text-gray-500'>Place: {hkoWeather.uvPlace} | <span className="capitalize">{hkoWeather.uvTimeDesc}</span> | <span className="uppercase">{hkoWeather.uvDesc}</span></p>
+                    <h2 className='text-xl2 uppercase'>Warning</h2>
+                    <p className='text-center md:text-left jy-font-sans font-bold text-lg text-gray-500'>{hkoWeather.warningMessage}</p>
                     
                 </div>
-                <div className='flex-none w-25 pt-10 md:p-5 uppercase text-gray-400'>- HKO - </div>     
+                <div className='flex-none w-25 pt-10 md:p-5 uppercase text-gray-500'>- HKO - </div>     
             </div>
         </div>
 

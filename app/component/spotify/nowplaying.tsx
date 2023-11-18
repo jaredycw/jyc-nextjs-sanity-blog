@@ -18,7 +18,7 @@ export default function NowPlaying(){
           {console.log('Now Playing is', nowPlaying)}
           </>
 
-            <div className="now-playing-section">
+            <div className="now-playing-section mb-20">
               <h1>Now Playing</h1>
               <Link href={
                 nowPlaying?.isPlaying
@@ -42,14 +42,14 @@ export default function NowPlaying(){
                   <div className="flex-none ml-0 md:ml-5 mb-5 md:mb-0"><span className="icon-music text-7xl "></span></div>
                 )}
                 <div className='flex-1 flex-wrap ml-0 md:ml-10'>
-                  <h1 className="fw-bold text-center md:text-left">
+                  <h2 className="fw-bold text-center md:text-left">
                       {nowPlaying?.isPlaying ? nowPlaying.title : "Probably Sleeping or Working"}
-                  </h1>
-                  <h5 className="text-center md:text-left">
+                  </h2>
+                  <p className="text-center md:text-left jy-font-sans font-bold text-xl text-gray-500">
                     {nowPlaying?.isPlaying ? nowPlaying.artist : "Not Listening - Jared Yeung's Life"}
-                  </h5>
+                  </p>
                 </div>
-                <div className='flex-none w-25 pt-10 md:p-5 uppercase text-gray-400'>- Spotify - </div>
+                <div className='flex-none w-25 pt-10 md:p-5 uppercase text-gray-500'>- Spotify - </div>
               
               </Link>
 
