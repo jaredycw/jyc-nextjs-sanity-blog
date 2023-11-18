@@ -1,5 +1,6 @@
 
 import Link from "next/link"
+import Image from "next/image";
 import type { Metadata } from 'next'
 import { metadata } from "../layout";
 import ContactForm from "@/app/component/form/contactform";
@@ -14,7 +15,7 @@ export function generateMetadata(): Metadata {
   
 
 export default function ContactMe(){
-
+    const Avator = "https://cdn.sanity.io/images/mrzc8peh/production/0f415fc9433ba73b29425b89a3205b6fc4fbeaa1-10x12.svg"
  
     return (
        
@@ -25,6 +26,9 @@ export default function ContactMe(){
             <div className="self-center">
                 <div>
                     <div className="mb-5">
+                        <div className="w-56 my-10 mx-auto">
+                        <Image src={Avator} width={1} height={1} alt="contact me avatar icon" />
+                        </div>
                        <p>Feel free to contact me 🔥</p>
                         <p>chat, copyrights, technical issues, opportunities, freelance services...</p>
                     </div>
