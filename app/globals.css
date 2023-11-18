@@ -75,7 +75,7 @@ body[data-theme="dark"] {
     --jy-dark-grey: #bbb;
     --jy-hover:#141414;
     --jy-background:#1D1D1F;
-    --jy-uglylink:#6a65f9;
+    --jy-uglylink:#2f42f0;
     --jy-line: #666666;
     --jy-shadow: 2px 0px 15px 0px rgba(255, 255, 255, 0.1);
     --jy-shadow-hover: 3px 0px 15px 0px rgba(255, 255, 255, 0.35);
@@ -438,11 +438,12 @@ section {
     font-weight: 700;
     color:var(--jy-black);
     line-height: 1.2;
-    line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 1;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 .post-wrapper .post-meta .post-date{
     font-size: calc(var(--jy-p) * 0.9);
@@ -655,7 +656,7 @@ form .form-button{
 }
 .buttons-list .button:hover , .form-button:hover , .explore-wrapper button:hover{
     background-color: var(--jy-hover);
-    color:var(--jy-white);
+    color:var(--jy-dark-grey);
 }
 /** hero section **/
  

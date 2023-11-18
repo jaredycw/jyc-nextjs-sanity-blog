@@ -47,7 +47,9 @@ export default function AboutMe(){
                     </p>
                     </div>
                     <div className="bg-[var(--jy-cloudy)] text-[var(--jy-black)] jy-border-radius px-8 py-5 m-0">
-                        <span><span className="icon-tag"></span> #Full-Time #Freelance(Commercial/NGO) #Volunteering</span>
+                        <span>#Full-Time #Freelance(Commercial/NGO) #Volunteering  #Website #Design <br></br>#Web Design & Developing
+                        #Cyber Security #Machine Learning #Artificial Intelligence
+                        </span>
                     </div>
                     
                 </div>
