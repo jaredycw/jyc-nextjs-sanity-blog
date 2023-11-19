@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /_vercel/
 Sitemap: https://jaredyeung.com/sitemap.xml
