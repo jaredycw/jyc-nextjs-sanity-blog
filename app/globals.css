@@ -1404,7 +1404,7 @@ form .form-button{
     width: 286px;
     height: 150px;
     opacity: 0.1;
-    background: url(../app/images/svg/logo_v1.svg) no-repeat;
+    background: url(../app/images/svg/logo_v2.svg) no-repeat;
     background-size: contain;
     transition: all 1s cubic-bezier(.25, 1, .30, 1);
 }

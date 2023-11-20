@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import logo from "../../images/svg/logo_v1.svg"
+import logo from "../../images/svg/logo_v2.svg"
 import React from "react"
 import { useState, useEffect } from "react"
  
@@ -66,7 +66,6 @@ export default function Header(){
                   <Link href='/' aria-label={`Home page`}>
                     <div className="logo">
                           <Image
-                              priority
                               src={logo}
                               width={63}
                               height={33}

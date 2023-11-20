@@ -1,12 +1,19 @@
 "use client"
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { LazyMotion, domAnimation, m } from "framer-motion"
 import { useMotionValue, useTransform, animate } from "framer-motion";
 
 export default function PreLoader() {
     const count = useMotionValue(0);
     const rounded = useTransform(count, Math.round);
+    const [shouldHide, setShouldHide] = useState(false);
 
+    const handleAnimationComplete = () => {
+      setTimeout(() => {
+        setShouldHide(true);
+      }, 2000); // Delay in milliseconds before hiding the element
+    };
+  
     useEffect(() => {
         const animation = animate(count, 100, { duration: 1.5 });
         return animation.stop;
@@ -43,14 +50,19 @@ export default function PreLoader() {
         }
       >
         <m.div className="preloader-container text-center">
-          <m.h1 className="preloader-text text-center text-9xl"
-                initial={{ scale: 0.25 }}
-                animate={{ scale: 1}}
-                transition={{
-                  when: "afterChildren",
-                  duration: 1.1,
-                  ease: [0.87, 0, 0.13, 1],
-                }}
+          <m.h1
+            className={`preloader-text text-center text-9xl ${
+              shouldHide ? "hidden" : ""
+            }`}
+            initial={{ scale: 0.25 }}
+            animate={{ scale: 1,
+            }}
+            transition={{
+              when: "afterChildren",
+              duration: 1.1,
+              ease: [0.87, 0, 0.13, 1],
+            }}
+            onAnimationComplete={handleAnimationComplete}
           >
             {rounded}
           </m.h1>
