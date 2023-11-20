@@ -1,6 +1,6 @@
 import { getSkill } from "@/sanity/sanity-utils";
-import NotFound from "../../not-found";
 import ArchiveCards from "@/app/component/archivecards";
+import { notFound } from "next/navigation";
  
 
 
@@ -22,7 +22,7 @@ export default async function Category({ params }: any){
     )
   } else {
 
-    return NotFound();
+    return notFound();
   }
 
 }

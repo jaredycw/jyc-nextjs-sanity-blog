@@ -3,13 +3,13 @@ import Image from "next/image";
 import AuthorSection from "@/app/component/authorsection";
 import MottoSection from "@/app/component/mottosection";
 import PortableContent from "@/app/component/portablecontent";
-import NotFound from "../../not-found";
 import SnsWidget from "@/app/component/snswidget";
 import { metadata } from "../../layout";
 import ArchiveMotionWorks from "@/app/component/motionframe/archivemworks";
 import WorkImage from "@/app/component/workimage";
 import SkillSection from "@/app/component/skillsection";
 import IndustrySection from "@/app/component/industrysection";
+import { notFound } from "next/navigation";
  
 
 export async function generateMetadata({ params }:any){
@@ -130,7 +130,7 @@ export default async function Work({ params }:any){
     );
     }
     else{
-        return NotFound();
+        return notFound();
     }
 
 }

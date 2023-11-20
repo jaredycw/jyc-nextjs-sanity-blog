@@ -6,11 +6,11 @@ import AuthorSection from "@/app/component/authorsection";
 import TagSection from "@/app/component/tagsection";
 import MottoSection from "@/app/component/mottosection";
 import PortableContent from "@/app/component/portablecontent";
-import NotFound from "../../not-found";
 import SnsWidget from "@/app/component/snswidget";
 import { metadata } from "../../layout";
 import DisqusPart from "@/app/component/disquspart";
 import AdsPart from "@/app/component/adpart";
+import { notFound } from "next/navigation";
  
 
 export async function generateMetadata({ params }: any){
@@ -130,7 +130,7 @@ export default async function Post({ params }: any){
     );
     }
     else{
-        return NotFound();
+        return notFound();
     }
 
 }

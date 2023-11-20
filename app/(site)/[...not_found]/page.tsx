@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import NotFound from '../not-found'
-import { Metadata } from 'next'
+
+ 
 import { metadata } from '../layout'
+import { notFound } from 'next/navigation';
 
 
 export async function generateMetadata() {
@@ -11,5 +11,5 @@ export async function generateMetadata() {
 }
 
 export default function NotFoundCatchAll() {
-  return NotFound()
+  return notFound();
 }

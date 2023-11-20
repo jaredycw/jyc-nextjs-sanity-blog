@@ -3,7 +3,6 @@ import Image from "next/image";
 import AuthorSection from "@/app/component/authorsection";
 import MottoSection from "@/app/component/mottosection";
 import PortableContent from "@/app/component/portablecontent";
-import NotFound from "../../not-found";
 import SnsWidget from "@/app/component/snswidget";
 import { metadata } from "../../layout";
 import DisqusPart from "@/app/component/disquspart";
@@ -12,6 +11,7 @@ import ArchiveMotionExperiments from "@/app/component/motionframe/archivemexps";
 import AdsPart from "@/app/component/adpart";
 import SkillSection from "@/app/component/skillsection";
 import IndustrySection from "@/app/component/industrysection";
+import { notFound } from "next/navigation";
 
 
 
@@ -135,7 +135,7 @@ export default async function Experiment({ params }: any){
     );
     }
     else{
-        return NotFound();
+        return notFound();
     }
 
 }

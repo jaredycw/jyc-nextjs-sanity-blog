@@ -1,8 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import { Metadata } from 'next'
 import { metadata } from './layout'
-import RouterBlock from '../component/widgets/routerblock'
+import RouterBlock from '@/app/component/widgets/routerblock'
 
 export async function generateMetadata() {
   return {

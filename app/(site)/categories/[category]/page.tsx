@@ -1,6 +1,6 @@
 import { getCategory } from "@/sanity/sanity-utils";
 import ArchivePost from "@/app/component/archivepost";
-import NotFound from "../../not-found";
+import { notFound } from "next/navigation";
 
 
 
@@ -22,7 +22,7 @@ export default async function Category({ params }: any){
     )
   } else {
 
-    return NotFound();
+    return notFound();
   }
 
 }
