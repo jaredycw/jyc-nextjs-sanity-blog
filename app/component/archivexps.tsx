@@ -24,7 +24,7 @@ export default function ArchiveExperiments({ experiments }: any) {
             {experiments.slice(0, catNum).map((experiment : any) =>(
               <Link href={`/experiments/${experiment.slug}`} key={experiment._id}>
                 <div className="jy-card">
-                            {experiment.mainImage && (<Image src={experiment.mainImage} alt={experiment.title} width={600} height={400} 
+                            {experiment.mainImage && (<Image src={experiment.mainImage} alt={experiment.title} width={1080} height={1080} 
                             blurDataURL={experiment.lqip} placeholder='blur'/>)}
                 </div>
               </Link>

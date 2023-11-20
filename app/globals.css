@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://use.typekit.net/alm4ysv.css");
- 
+
 .jy-tester{
     letter-spacing: -0.45rem;
     font-size: 2.5rem;
@@ -53,8 +53,8 @@ body[data-theme="light"] {
     --jy-3d-box:scale3d(1.01,1.01,1.01);
     --jy-p: 1rem;
     --jy-lh: 1.8;
-    --jy-hfont:  "neue-haas-grotesk-display" , "Chiron Sung HK WS", sans-serif;
-    --jy-tfont: "merriweather", "Chiron Hei HK WS", serif;
+    --jy-hfont: "neue-haas-grotesk-display", Arial, "????" , "Chiron Sung HK WS", "????" , sans-serif;
+    --jy-tfont: "merriweather","????", "Chiron Hei HK WS", serif;
     --jy-card-width:25rem;
     --jy-card-height:35rem;
     --jy-card-radius:1.25rem;
@@ -297,7 +297,7 @@ section {
     position: relative;
 }
 .menu-bar .logo {
-    max-width: 3.5rem;
+    max-width: 3.9rem;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -1404,7 +1404,7 @@ form .form-button{
     width: 286px;
     height: 150px;
     opacity: 0.1;
-    background: url(../app/images/logo.svg) no-repeat;
+    background: url(../app/images/svg/logo_v1.svg) no-repeat;
     background-size: contain;
     transition: all 1s cubic-bezier(.25, 1, .30, 1);
 }

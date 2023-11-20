@@ -71,7 +71,7 @@ export default function HeroSection() {
               >
                 <div className="hero-image-wrapper float-right">
                   <div className="hero-image-container">
-                    <Image src={HeroImage} width={100} height={100} alt=" Me - Icon Image" className="hero-image" loading="lazy" blurDataURL={HeroImageLqip} placeholder='blur' />
+                    <Image src={HeroImage} width={224} height={360} alt=" Me - Icon Image" className="hero-image" priority blurDataURL={HeroImageLqip} placeholder='blur' />
                   </div>
                   <div className="logo-svg-a">
                     <Image src={logoA} width={25} height={25} alt="Logo SVG A" />

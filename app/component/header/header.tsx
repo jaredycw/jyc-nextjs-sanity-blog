@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import logo from "../../images/svg/logo.svg"
+import logo from "../../images/svg/logo_v1.svg"
 import React from "react"
 import { useState, useEffect } from "react"
  
@@ -68,8 +68,8 @@ export default function Header(){
                           <Image
                               priority
                               src={logo}
-                              width={200}
-                              height={200}
+                              width={63}
+                              height={33}
                               alt="Logo"
                               className="logo-svg"
                           />     

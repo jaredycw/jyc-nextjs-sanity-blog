@@ -27,7 +27,7 @@ export default async function HobbySection() {
                                 </div>
                                 <div className="book-cover">
                                 <Link href={book.link} key={book._id} target="_blank" aria-label={`Read more ${book.link}`}>
-                                    {book.cover && (<Image src={book.cover} alt={book.title} width={200} height={270} loading="lazy" className="post-wrapper-img" blurDataURL={book.lqip} placeholder='blur'/>)}
+                                    {book.cover && (<Image src={book.cover} alt={book.title} width={200} height={280} loading="lazy" className="post-wrapper-img" blurDataURL={book.lqip} placeholder='blur'/>)}
                                 </Link>
                                 </div>
                     

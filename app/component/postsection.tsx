@@ -11,15 +11,15 @@ export default async function PostSection() {
                             <Link href={`/posts/${post.slug}`} key={post._id} aria-label={`Read more ${post.title}`}>
                                 <div className="post-wrapper" key={post._id}>
                                   <div className="thumbnail">{post.mainImage !== null ? (
-                        <Image src={post.mainImage} alt={post.title} width={600} height={400} className="post-wrapper-img"
+                        <Image src={post.mainImage} alt={post.title} width={1080} height={1080} className="post-wrapper-img"
                         blurDataURL={post.lqip} placeholder="blur" loading="lazy"
                         />
                         ) : (
                             <Image
                               src="https://cdn.sanity.io/images/mrzc8peh/production/926db6f7d5b119da2e8fa0572415c94880ddf40e-3334x2084.jpg"
                               alt="Default photo"
-                              width={600}
-                              height={400}
+                              width={1080}
+                              height={1080}
                               loading="lazy"
                               className="post-wrapper-img"
                               blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAQUAAAAAAAAAAAAAAAAAAAECBAUH/8QAHhAAAgICAwEBAAAAAAAAAAAAAQIAAwURBBJRITH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMLweMfLZBeLXYlZIJ7P+DUkZHBX8Him+22pl7EAKdn5Kmt3rbtWzK3oOorWO2+zsd+mUMhCED//2Q=="

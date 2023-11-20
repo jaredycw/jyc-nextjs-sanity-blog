@@ -12,7 +12,7 @@ export default async function MovieSection() {
                     {movies.map((movie : any) => (
                     <div key={movie._id}>
                         <Link href={movie.link} key={movie._id} target="_blank" aria-label={`Read more ${movie.link}`}>
-                        {movie.poster && (<Image src={movie.poster} alt={movie.title} width={100} height={100} loading="lazy" className="post-wrapper-img"
+                        {movie.poster && (<Image src={movie.poster} alt={movie.title} width={224} height={333} loading="lazy" className="post-wrapper-img"
                         blurDataURL={movie.lqip} placeholder="blur" />)}
                         </Link>
                     </div>

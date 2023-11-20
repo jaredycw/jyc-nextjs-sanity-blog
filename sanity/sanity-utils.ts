@@ -118,6 +118,7 @@ export async function getPosts(): Promise<Post[]>{
 
         groq`*[_type=="post"]| order(postOrder desc)[0..5]{
             _id,
+            _updatedAt,
             publishedOn,
             title,
             "slug": slug.current,
@@ -246,6 +247,7 @@ export async function getWorks(): Promise<Work[]>{
             "slug": slug.current,
             title,"mainImage":mainImage.asset->url,
             'lqip': mainImage.asset->metadata.lqip,
+            _updatedAt
         }`
     );
 }
@@ -314,7 +316,8 @@ export async function getExps(): Promise<Experiment[]>{
             _id,
             "slug": slug.current,
             title,"mainImage":mainImage.asset->url,
-            'lqip': mainImage.asset->metadata.lqip
+            'lqip': mainImage.asset->metadata.lqip,
+            _updatedAt
             
         }`
     );
