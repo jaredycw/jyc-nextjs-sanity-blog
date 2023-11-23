@@ -105,7 +105,7 @@ body[data-theme="dark"] {
     background: var(--jy-background);
     font-family: var(--jy-hfont);
     font-size: var(--jy-p);
-    transition: all 3s cubic-bezier(.25, 1, .30, 1);
+    transition: all 2s cubic-bezier(.25, 1, .30, 1);
  
 }
 html{
@@ -258,14 +258,14 @@ section {
     left:0;
     z-index: 999;
     background-color: transparent;
-    transition: all 0.3s ease-in-out;
+    /*transition: all 0.3s ease-in-out;*/
 }
 .menu-bar-supper{
     width: 100%;
     padding: 1rem 2%;
     margin: 0;
-    background: transparent;
-    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
   }
 .menu-bar-wrapper {
     position: relative;
@@ -273,19 +273,20 @@ section {
     width: 100%;
     height: 60px;
     margin: 0 auto;
-    background: rgba(181, 181, 181, 0.1);
- 
+    background-color: rgba(181, 181, 181, 0.1);
    /* Set a semi-transparent background color */
-    backdrop-filter: blur(1.5rem);
+    backdrop-filter: blur(1.5rem) opacity(1);
    /* Apply the backdrop filter effect */
-    -webkit-backdrop-filter: blur(1.5rem);
+    -webkit-backdrop-filter: blur(1.5rem) opacity(1);
    /* Add vendor prefix for WebKit browsers */
     border-radius: 1.3rem;
     box-shadow: var(--jy-shadow);
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out,
+                backdrop-filter 0.3s ease-in-out,
+                box-shadow 0.3s ease-in-out;
 }
 .menu-bar {
-    background:transparent;
+    background-color:transparent;
     max-width: 1250px;
     width:100%;
     height: 60px;   
@@ -302,11 +303,11 @@ section {
     margin: 0;
     padding: 0;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
 }
 .menu-bar .logo-svg{
     filter: var(--jy-logo);
-    transition: all 0.3s ease-in-out;
+    transition: filter 0.3s ease-in-out;
 }
 .menu-bar .logo-svg:hover{
     opacity: 0.7;
@@ -336,7 +337,7 @@ section {
 
 .header-wrapper{
     height: 5.5rem;
-    transition:all 1.5s cubic-bezier(.25, 1, .30, 1);
+    transition: all 1.5s cubic-bezier(.25, 1, .30, 1);
 }
 .overlay-menu-wrapper{
     visibility: hidden;
@@ -363,12 +364,15 @@ section {
   opacity: 0;
 }
 .overlay-menu li a{
-  color: inherit;
+  color: var(--jy-black);
   padding: 0.5rem 2rem;
+  background-color:transparent;
   opacity: 1;
   border-radius: var(--jy-card-radius);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.1s ease-in-out,
+              background-color 0.3s ease-in-out;
 }
+ 
 .overlay-menu li a:hover{
   background-color: var(--jy-menu-hover);
 }
@@ -377,7 +381,7 @@ section {
     opacity: 0;
     width: 0%;
     margin: 0 1.5rem;
-    transition: all 1.5s cubic-bezier(.25, 1, .30, 1);
+    transition: all 0.5s ease-in-out;
 }
 .sticky-header.active .jydeco-line{
     width: 100%;
@@ -391,11 +395,10 @@ section {
 }
 
 .sticky-header.active .header-wrapper .menu-bar-wrapper{
-    box-shadow: unset;
-    backdrop-filter:unset;
-    -webkit-backdrop-filter: unset;
+    box-shadow: none;
+    backdrop-filter: blur(4px) opacity(0);
+    -webkit-backdrop-filter: blur(4px) opacity(0);
     background: transparent;
-    transition: all 0.3s ease-in-out;
   }
 .sticky-header.active .header-wrapper{
     position: fixed;
@@ -711,7 +714,7 @@ form .form-button{
 }
 .logo-svg-a, .logo-svg-b{
     filter: var(--jy-logo);
-    transition: all 1s ease-in-out;
+    transition: filter 1s ease-in-out;
 }
 .logo-svg-a {
     position: absolute;
@@ -821,7 +824,7 @@ form .form-button{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     border-radius: var(--jy-card-radius);
     transition: all 0.5s ease-in-out;
 }
@@ -1406,12 +1409,12 @@ form .form-button{
     opacity: 0.1;
     background: url(../app/images/svg/logo_v2.svg) no-repeat;
     background-size: contain;
-    transition: all 1s cubic-bezier(.25, 1, .30, 1);
+    transition: opacity 1s cubic-bezier(.25, 1, .30, 1);
 }
-.error-field{
-    transition: 0.5s all ease-in-out;
+.error-field, .avatar-icon{
+    transition: filter 0.3s  ease-in-out;
 }
-body[data-theme="dark"] .error-field{
+body[data-theme="dark"] .error-field, body[data-theme="dark"] .avatar-icon{
     filter: invert(99%) sepia(3%) saturate(105%) hue-rotate(82deg) brightness(114%) contrast(80%);
 }
 
@@ -1591,5 +1594,10 @@ body[data-theme="dark"] .error-field{
     }
     .hobbies-heading .creator{
         font-size: calc(var(--jy-p) * 1.8);
+    }
+    .story-background {
+
+        background-attachment: fixed;
+
     }
 }

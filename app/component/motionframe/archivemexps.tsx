@@ -54,7 +54,7 @@ export default function ArchiveMotionExperiments({
                         <div className="slider-mask-right"></div>
                       
                       </div>
-                      <div className="container mx-auto"><ExploreMoreBtn target="experiments" /> </div>    
+                      <div className="container mx-auto"><ExploreMoreBtn target="/experiments" /> </div>    
                 
                     </m.div>  
                   </LazyMotion>

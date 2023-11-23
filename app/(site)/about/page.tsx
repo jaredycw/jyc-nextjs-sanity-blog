@@ -14,7 +14,15 @@ import { metadata } from "../layout"
 
 export function generateMetadata(): Metadata {
     return {
-        title: 'About Myself - ' + metadata.title
+        title: 'About Myself - ' + metadata.title,
+        description: 
+        'A self-taught web designer and developer driven by a deep passion for design and development. I am currently employed as a web designer at Mirum in Hong Kong.',
+        openGraph: {
+            images: [{
+                url: "https://cdn.sanity.io/images/mrzc8peh/production/287d32a0d9160a8e440430f44684c2e5ef330374-1334x890.jpg"
+            }
+            ]
+          },
     }
 }
 

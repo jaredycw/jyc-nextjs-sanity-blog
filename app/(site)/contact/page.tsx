@@ -7,7 +7,16 @@ import ContactForm from "@/app/component/form/contactform";
 
 export function generateMetadata(): Metadata {
   return {
-      title: 'Contact Me - ' + metadata.title
+      title: 'Contact Me - ' + metadata.title,
+      description: 
+      'Instagram, Linkedin, Github, e-mail, and contact form',
+      openGraph: {
+        images: [{
+            url: "https://cdn.sanity.io/images/mrzc8peh/production/51b97fdc02a5b94beb3929c215c3519528078091-4501x4501.jpg"
+        }
+        ]
+      },
+        
   }
 }
 
