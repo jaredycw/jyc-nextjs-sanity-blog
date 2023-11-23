@@ -3,7 +3,6 @@ import { PortableText } from '@portabletext/react';
 import urlBuilder from '@sanity/image-url';
 import {getImageDimensions} from '@sanity/asset-utils'
 import Image from 'next/image';
-import Link from 'next/link';
 import { InstagramEmbed } from 'react-social-media-embed';
 import { YouTubeEmbed } from 'react-social-media-embed';
  

@@ -131,11 +131,16 @@ article img:hover {
 } 
 **/
 article menu, article ol, article ul{
-    margin-left: 20px;
-    list-style: unset;
+    margin-left: 1.5rem;
+}
+article ul{
+    list-style: disc;
+}
+article li>ul{
+    list-style: circle inside;
 }
 article li{
-    margin-bottom: 10px;
+    margin-top: 1rem;
 }
 article a, .ugly-blue {
     color: var(--jy-uglylink);
@@ -147,6 +152,54 @@ article a, .ugly-blue {
 article a:hover, .ugly-blue:hover{
     text-decoration: none;
 }
+article h1, article h2, article h3, article h4, article h5, article h6 {
+    margin: 1rem 0;
+
+}
+
+article .modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1001; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+article .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1400px;
+}
+/* Add Animation */
+.modal-content, #caption {  
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.8s;
+    animation-name: fadeIn;
+    animation-duration: 0.8s;
+}
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
 br {
     margin-bottom: calc(var(--jy-lh) * 0.4rem);
 }

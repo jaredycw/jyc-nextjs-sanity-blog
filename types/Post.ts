@@ -3,6 +3,7 @@ export type Post = {
     count: number,
     _id: string,
     publishedOn: string,
+    excerpt: string,
     author:string,
     authorImage:string,
     authorBio:string,

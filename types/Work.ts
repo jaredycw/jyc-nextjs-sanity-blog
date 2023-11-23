@@ -3,6 +3,7 @@ export type Work = {
     _id: string,
     parentPage:string,
     publishedOn: string,
+    excerpt: string,
     author:string,
     authorImage:string,
     authorBio:string,

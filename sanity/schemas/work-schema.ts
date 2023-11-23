@@ -64,6 +64,15 @@ const work = {
             type: 'date',
         },
         {
+            name: 'excerpt',
+            title: 'Excerpt',
+            type: 'string',
+            options: {
+              maxLength: 160,
+            },
+            description: 'Make it for SEO Meta Description'
+        },
+        {
             name: 'content',
             type: 'array',
             title: 'Content',
@@ -158,7 +167,7 @@ const work = {
             _ref: "64251850-6351-4a3d-8554-86650c505451",
             _type: "reference"
           },
-        source: "Photo"
+ 
     
     })
 };

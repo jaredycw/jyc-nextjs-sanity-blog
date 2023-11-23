@@ -11,11 +11,12 @@ const post = {
             name: 'postOrder',
             title: 'Post Order',
             type: 'number',
+            description: 'Post Order Under Work Page'
         },
         {
             name: 'title',
             title: 'Title',
-            type: 'string'
+            type: 'string',
         },
         {
             name: 'slug',
@@ -69,6 +70,15 @@ const post = {
             name: 'publishedOn',
             title: 'Published On',
             type: 'date'
+        },
+        {
+            name: 'excerpt',
+            title: 'Excerpt',
+            type: 'string',
+            options: {
+              maxLength: 160,
+            },
+            description: 'Make it for SEO Meta Description'
         },
         {
             name: 'content',
