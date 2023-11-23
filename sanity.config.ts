@@ -5,7 +5,7 @@ import schemas from "./sanity/schemas";
 import {media} from 'sanity-plugin-media'
 import { giphyAssetSourcePlugin } from "sanity-plugin-asset-source-giphy";
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
- 
+import { structure } from "./sanity/structure";
 
 const config = defineConfig({
 
@@ -21,7 +21,7 @@ const config = defineConfig({
 
     basePath: "/admin",
 
-    plugins: [deskTool(),visionTool(),media(),unsplashImageAsset(),
+    plugins: [deskTool({structure}),visionTool(),media(),unsplashImageAsset(),
         giphyAssetSourcePlugin({
             apiKey: "J1fvKpflwHfaZcicawRBGZc56R7738bC"
           }),
@@ -36,3 +36,4 @@ const config = defineConfig({
 })
 
 export default config;
+

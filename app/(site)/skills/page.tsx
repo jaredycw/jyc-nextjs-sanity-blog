@@ -1,4 +1,4 @@
-import {  getSkills } from "@/sanity/sanity-utils";
+import {  getSkills, getSkillsCount } from "@/sanity/sanity-utils";
 import type { Metadata } from 'next'
 import { metadata } from "../layout";
 import ArchiveSkills from "@/app/component/archiveskills";
@@ -15,14 +15,15 @@ export function generateMetadata(): Metadata {
 export default async function Skills(props : any){
 
   const skills = await getSkills();
+  const count = await getSkillsCount();
 
   if (skills !== null) {
     return (
       <div className="container mx-auto mb-10">
                 <div className="section-title">
-                  <span className="section-name">Skills</span>
+                  <span className="section-name">Skills ( {count} ) </span>
                 </div>
-          <ArchiveSkills skills={skills} />
+          <ArchiveSkills skills={skills}/>
       </div>
     )
   } else {

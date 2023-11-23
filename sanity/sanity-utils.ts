@@ -11,6 +11,12 @@ import { Motto } from "@/types/Motto";
 import { Skill } from "@/types/Skill";
 import { Industry } from "@/types/Industry";
 
+export async function getSkillsCount(){
+    return createClient(clientConfig).fetch(
+      groq`count(*[_type=="skill"])`  
+    );
+}
+
 export async function getSkills(): Promise<Skill[]>{
 
     return createClient(clientConfig).fetch(
@@ -19,10 +25,12 @@ export async function getSkills(): Promise<Skill[]>{
             _id,
             title,
             "slug": slug.current,
-            description
+            description,
+            "cardsCount": count(*[_type in ["work", "experiment"] && references(^._id) ]),
         }`
     );
 }
+
 
 export async function getSkill(slug: string): Promise<Skill>{
 
@@ -44,6 +52,11 @@ export async function getSkill(slug: string): Promise<Skill>{
     );
 }
 
+export async function getIndustriesCount(){
+    return createClient(clientConfig).fetch(
+      groq`count(*[_type=="industry"])`  
+    );
+}
 
 export async function getIndustries(): Promise<Industry[]>{
 
@@ -53,7 +66,8 @@ export async function getIndustries(): Promise<Industry[]>{
             _id,
             title,
             "slug": slug.current,
-            description
+            description,
+            "cardsCount": count(*[_type in ["work", "experiment"] && references(^._id) ]),
         }`
     );
 }
@@ -77,7 +91,11 @@ export async function getIndustry(slug: string): Promise<Industry>{
     );
 }
 
-
+export async function getCategoriesCount(){
+    return createClient(clientConfig).fetch(
+      groq`count(*[_type=="category"])`  
+    );
+}
 
 export async function getCategories(): Promise<Category[]>{
 
@@ -87,7 +105,9 @@ export async function getCategories(): Promise<Category[]>{
             _id,
             title,
             "slug": slug.current,
-            description
+            description,
+            "cardsCount": count(*[_type == "post" && references(^._id)]),
+            
         }`
     );
 }
@@ -109,6 +129,12 @@ export async function getCategory(slug: string): Promise<Category>{
             'lqip': mainImage.asset->metadata.lqip
           }        
         }`,{slug}
+    );
+}
+
+export async function getPostsCount(){
+    return createClient(clientConfig).fetch(
+      groq`count(*[_type=="post"])`  
     );
 }
 
@@ -236,6 +262,11 @@ export async function getMovies(): Promise<Movie[]>{
     );
 }
 
+export async function getWorksCount(){
+    return createClient(clientConfig).fetch(
+      groq`count(*[_type=="work"])`  
+    );
+}
 
 
 export async function getWorks(): Promise<Work[]>{
@@ -305,6 +336,12 @@ export async function getWork(slug: string): Promise<Work>{
             }
 
         }`,{slug}
+    );
+}
+
+export async function getExpsCount(){
+    return createClient(clientConfig).fetch(
+      groq`count(*[_type=="experiment"])`  
     );
 }
 

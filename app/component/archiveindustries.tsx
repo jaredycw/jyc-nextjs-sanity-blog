@@ -27,7 +27,11 @@ export default function ArchiveIndustries({ industries }: any) {
                   
                     <div className="tag-box">
                         <div className="tag-box-icon"><i className="icon-industry"></i></div>
-                        <div className="tag-box-infor">{industry.title}</div>
+                        <div className="tag-box-infor">{industry.title}
+                        <br></br>
+                        <span>( {industry.cardsCount} )</span>
+                        
+                        </div>
                     </div>
                 </div>
               </Link>

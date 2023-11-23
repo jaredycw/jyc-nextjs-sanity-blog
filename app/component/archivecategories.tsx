@@ -27,7 +27,10 @@ export default function ArchiveCategories({ categories }: any) {
                   
                     <div className="tag-box">
                         <div className="tag-box-icon"><i className="icon-tag"></i></div>
-                        <div className="tag-box-infor">{category.title}</div>
+                        <div className="tag-box-infor">{category.title}
+                        <br></br>
+                        <span>( {category.cardsCount} )</span>
+                        </div>
                     </div>
                 </div>
               </Link>

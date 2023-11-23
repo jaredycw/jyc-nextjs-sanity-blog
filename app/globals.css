@@ -73,10 +73,10 @@ body[data-theme="dark"] {
     --jy-cloudy-rgba:rgba(44,44,44, 0.6);
     --jy-grey:#acacac;
     --jy-dark-grey: #bbb;
-    --jy-hover:#141414;
+    --jy-hover:#d4d4d4;
     --jy-background:#1D1D1F;
     --jy-uglylink:#2f42f0;
-    --jy-line: #666666;
+    --jy-line: #3b3b3b;
     --jy-shadow: 2px 0px 15px 0px rgba(255, 255, 255, 0.1);
     --jy-shadow-hover: 3px 0px 15px 0px rgba(255, 255, 255, 0.35);
     --jy-slider-mask-left:linear-gradient(90deg, rgba(29,29,31,0.8) 0%, rgba(0,0,0,0) 100%);
@@ -697,8 +697,8 @@ section {
     font-weight: 700;
     font-family: var(--jy-hfont);
     text-transform: capitalize;
-    background: var(--jy-cloudy);
-    color: var(--jy-dark-grey);
+    background: var(--jy-rgba);
+    color: var(--jy-cloudy);
     opacity: 1;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -707,12 +707,14 @@ form .form-button{
     margin: 0;
     width: 100%;
     max-width: 10rem;
-    color:var(--jy-black);
+    color:var(--jy-cloudy);
 
 }
 .buttons-list .button:hover , .form-button:hover , .explore-wrapper button:hover{
-    background-color: var(--jy-hover);
-    color:var(--jy-dark-grey);
+    background-color: var(--jy-cloudy-rgba);
+    color:var(--jy-black);
+    box-shadow: var(--jy-shadow-hover);
+    
 }
 /** hero section **/
  
@@ -1087,8 +1089,8 @@ form .form-button{
     position: absolute;
     top: 45%;
     z-index:3;
-    background-color: var(--jy-overlay-box);
-    color:var(--jy-white);
+    background-color: var(--jy-rgba);
+    color:var(--jy-cloudy);
     padding:1rem;
     border-radius:50%;
     user-select: none;
@@ -1114,6 +1116,7 @@ form .form-button{
 }
 .slider-container .control-prev-btn:hover,.slider-container .control-next-btn:hover{
     background-color: var(--jy-overlay-box-hover);
+    color:var(--jy-black);
 }
 
 

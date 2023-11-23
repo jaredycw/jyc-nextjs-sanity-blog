@@ -4,7 +4,7 @@ import Link from 'next/link';
  
 
 
-export default function ArchiveSkills({ skills }: any) {
+export default function ArchiveSkills({ skills, count}: any) {
     
  
 
@@ -26,7 +26,9 @@ export default function ArchiveSkills({ skills }: any) {
                   
                     <div className="tag-box">
                         <div className="tag-box-icon"><i className="icon-skill"></i></div>
-                        <div className="tag-box-infor">{skill.title}</div>
+                        <div className="tag-box-infor">{skill.title}
+                        <br></br>
+                        <span>( {skill.cardsCount} )</span></div>
                     </div>
                 </div>
               </Link>

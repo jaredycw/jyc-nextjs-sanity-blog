@@ -1,4 +1,5 @@
 import { getArchivePosts } from "@/sanity/sanity-utils";
+import { getPostsCount } from "@/sanity/sanity-utils";
 import ArchivePost from "@/app/component/archivepost";
 import type { Metadata } from 'next'
 import { metadata } from "../layout";
@@ -12,12 +13,13 @@ export function generateMetadata(): Metadata {
 export default async function Post(props:any){
 
   const posts = await getArchivePosts();
+  const count = await getPostsCount();
 
   if (posts !== null) {
     return (
       <div className="container mx-auto">
                 <div className="section-title">
-                  <span className="section-name">Blog</span> 
+                  <span className="section-name">Blog ( {count} ) </span>
                 </div>
           <ArchivePost posts={posts} />
       </div>
