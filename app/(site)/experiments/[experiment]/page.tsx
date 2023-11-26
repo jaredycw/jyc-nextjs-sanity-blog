@@ -26,6 +26,7 @@ export async function generateMetadata({ params } : any){
     if (experiment !== null) {
     return {
         title: experiment.title + ` — ` + metadata.title ,
+        description: experiment.excerpt,
         generator: experiment._id,
         openGraph: {
             title: experiment.title + ` — ` + metadata.title ,    

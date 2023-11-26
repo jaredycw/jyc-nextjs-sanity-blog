@@ -23,6 +23,7 @@ export type Experiment = {
     workingTime: number,
     igpost: string,
     estimatedReadingTime: string,
+    excerpt: string,
     content: PortableTextBlock[];
 }
 
