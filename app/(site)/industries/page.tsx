@@ -1,25 +1,15 @@
-import { getIndustries, getIndustriesCount, getIndustry } from "@/sanity/sanity-utils";
+import { getIndustries, getIndustriesCount } from "@/sanity/sanity-utils";
  
-import { metadata } from "../layout";
 import ArchiveIndustries from "@/app/component/archiveindustries";
+import { metadata } from "../layout";
 
-export async function generateMetadata({params}:any) {
-  const slug = params.category;
-  const industry = await getIndustry(slug);
-
-  if (industry !== null) {
-    return {
-        title:  industry.title + ' - Industries - ' + metadata.title,
-        description: industry.description,
-        generator: industry._id,
-      };
-    } else {
-        return {
-            title: `404 Page not Found` + ` — ` + metadata.title
-        };
-    }
+export function generateMetadata() {
+  return {
+      title: 'Industries - ' + metadata.title
+  }
 }
 
+ 
  
 
 

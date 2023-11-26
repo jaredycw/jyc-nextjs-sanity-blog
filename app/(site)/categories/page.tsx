@@ -1,10 +1,9 @@
 import { getCategories, getCategoriesCount } from "@/sanity/sanity-utils";
 import ArchiveCategories from "@/app/component/archivecategories";
-import type { Metadata } from 'next'
 import { metadata } from "../layout";
 import Link from "next/link";  
 
-export function generateMetadata(): Metadata {
+export function generateMetadata(){
   return {
       title: 'Categories - ' + metadata.title
   }
