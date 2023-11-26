@@ -18,17 +18,15 @@ export async function generateMetadata({ params }:any){
 
    
     const host_name = process.env.HOST_NAME;
-    const url = host_name + "works/" + work;
+    const url = host_name + "works/" + slug;
  
     if (work !== null){
     return {
         
         title: work.title + ` — ` + metadata.title ,
-        description: work.title,
         generator: work._id,
         openGraph: {
             title: work.title + ` — ` + metadata.title ,    
-            description: work.title,
             url: url,
             siteName: metadata.title ,
             images: [{

@@ -132,7 +132,12 @@ article img:hover {
 **/
 article menu, article ol, article ul{
     margin-left: 1.5rem;
+    font-family: var(--jy-tfont);
 }
+article ol{
+    list-style: decimal;
+}
+
 article ul{
     list-style: disc;
 }
@@ -141,6 +146,9 @@ article li>ul{
 }
 article li{
     margin-top: 1rem;
+}
+article li:last-child{
+    margin-bottom: 1.5rem;
 }
 article a, .ugly-blue {
     color: var(--jy-uglylink);

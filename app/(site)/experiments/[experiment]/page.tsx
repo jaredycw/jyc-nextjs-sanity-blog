@@ -21,16 +21,14 @@ export async function generateMetadata({ params } : any){
     const experiment = await getExp(slug);
     const host_name = process.env.HOST_NAME;
 
-    const url = host_name + "experiments/" + experiment;
+    const url = host_name + "experiments/" + slug;
 
     if (experiment !== null) {
     return {
         title: experiment.title + ` — ` + metadata.title ,
-        description: experiment.title,
         generator: experiment._id,
         openGraph: {
             title: experiment.title + ` — ` + metadata.title ,    
-            description: experiment.title,
             url: url,
             siteName: metadata.title ,
             images: [{

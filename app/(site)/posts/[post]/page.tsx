@@ -19,16 +19,14 @@ export async function generateMetadata({ params }: any){
     const post = await getPost(slug);
     const host_name = process.env.HOST_NAME;
     
-    const url = host_name + "posts/" + post;
+    const url = host_name + "posts/" + slug;
 
     if (post !== null) {
     return {
         title: post.title + ` — ` + metadata.title ,
-        description: post.title,
         generator: post._id,
         openGraph: {
             title: post.title + ` — ` + metadata.title ,    
-            description: post.title,
             url: url,
             siteName: metadata.title ,
             images: [{
