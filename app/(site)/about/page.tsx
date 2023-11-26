@@ -88,7 +88,7 @@ export default function AboutMe(){
             </div>
 
 
-            <div className="grid grid-cols-1 md:grid-cols-3 mt-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 mt-10">
                 <div className="self-center my-10 md:my-5">
                     <div className="hero-image-wrapper">
                     <div className="hero-image-container"><Image src={HeroImage2} width={150} height={150} alt="Weirdo Image" className="hero-image" loading="lazy" /></div>
@@ -314,6 +314,34 @@ export default function AboutMe(){
                 </div>
                 
    
+            </div>
+        </section>
+        <section className="my-10">
+            <h2 className="uppercase md:text-5xl">More...</h2>
+            <h3 className="border-b">If you want to know more about myself</h3>
+            <div className="my-5 grid grid-cols-1 md:grid-cols-3">
+                <div>
+                    <ul>
+                        <li>🖤  Computer</li>
+                        <li>🤍  Black / White Color</li>
+                        <li>🖤  Black Coffee / Americano / Flate White </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>🤍  Art (Contemporary Art / Artificial Intelligence Art)</li>
+                        <li>🖤  Tattoo (Black & White & No Text) </li>
+                        <li>🤍  Music - <Link href="/fetching/" className="ugly-blue">daily</Link></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>🤍 Movie ( Horror / Crime ) - <Link href="/#section-hobby" className="ugly-blue">this year</Link></li>
+                        <li>🖤 Beer Day n Night & Travelling & Visiting Gallery</li>
+                        <li>🤍 Exploring...</li>
+ 
+                    </ul>
+                </div>
             </div>
         </section>
 
