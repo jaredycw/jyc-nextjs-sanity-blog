@@ -1,8 +1,25 @@
 import { getSkill } from "@/sanity/sanity-utils";
 import ArchiveCards from "@/app/component/archivecards";
 import { notFound } from "next/navigation";
- 
+import { metadata } from "../../layout";
 
+
+export async function generateMetadata({params}:any) {
+  const slug = params.category;
+  const skill = await getSkill(slug);
+
+  if (skill !== null) {
+    return {
+        title:  skill.title + ' - Skills - ' + metadata.title,
+        description: skill.description,
+        generator: skill._id,
+      };
+    } else {
+        return {
+            title: `404 Page not Found` + ` — ` + metadata.title
+        };
+    }
+}
 
 export default async function Category({ params }: any){
 

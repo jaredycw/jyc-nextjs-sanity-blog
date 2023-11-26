@@ -1,16 +1,19 @@
 
 import Link from "next/link"
 import Image from "next/image";
-import type { Metadata } from 'next'
 import { metadata } from "../layout";
 import ContactForm from "@/app/component/form/contactform";
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({params}:any){
+    const host_name = process.env.HOST_NAME;
+    const url = host_name + "/contact/";
+
   return {
       title: 'Contact Me - ' + metadata.title,
       description: 
       'Instagram, Linkedin, Github, e-mail, and contact form',
       openGraph: {
+        url: url,
         images: [{
             url: "https://cdn.sanity.io/images/mrzc8peh/production/51b97fdc02a5b94beb3929c215c3519528078091-4501x4501.jpg"
         }
