@@ -1,4 +1,6 @@
 import {PresentationIcon} from '@sanity/icons'
+ 
+import React from 'react'
 
 const growth = {
 
@@ -56,7 +58,35 @@ const growth = {
             title: 'External Logo Alt',
             type: 'string',
         }
-    ]
+    ],
+    orderings: [
+        {
+          title: 'Completed On',
+          name: 'completedOn',
+          by: [
+            {field: 'completedOn', direction: 'desc'}
+          ]
+        }
+    ],
+    preview: {
+        select: {
+            title: "title",
+            externalLogo: "externalLogo",
+            summary: 'institution',
+        },
+        prepare ({ title, summary, externalLogo }:any){
+    
+
+          return {
+            title: title,
+            subtitle: summary,
+            media:  React.createElement('img', { src: externalLogo })
+
+          }
+        }
+      }
+    
+
 };
 
 export default growth;
