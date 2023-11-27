@@ -1,5 +1,6 @@
 import {CaseIcon} from '@sanity/icons'
-
+import { createClient } from 'next-sanity';
+import clientConfig from "../config/client-config";
 const work = {
 
     name: 'work',
@@ -62,6 +63,9 @@ const work = {
             name: 'publishedOn',
             title: 'Published On',
             type: 'date',
+            options: {
+                dateFormat: 'DD MMMM, YYYY',
+            }
         },
         {
             name: 'excerpt',
@@ -159,16 +163,25 @@ const work = {
 
 
     ],
-    initialValue: () => ({
-        
+    orderings: [
+        {
+          title: 'Post Order',
+          name: 'postOrder',
+          by: [
+            {field: 'postOrder', direction: 'desc'}
+          ]
+        }
+    ],
+    initialValue: async () => ({
         publishedOn: (new Date()).toISOString().substring(0, 10),
-        parentPage: "work",
+        parentPage: "works",
         author: {
             _ref: "64251850-6351-4a3d-8554-86650c505451",
             _type: "reference"
           },
- 
-    
+        postOrder: await createClient(clientConfig).fetch(`
+        count(*[_type=="work"])
+      `) + 1
     })
 };
 

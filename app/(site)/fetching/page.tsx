@@ -8,10 +8,10 @@ import MovieReviewsPart from "@/app/component/books/moviereviewspart";
 import HackerNewsWidget from "@/app/component/widgets/hackernewsblock";
 import NewReleases from "@/app/component/spotify/newreleases";
 import HKOWeatherWidget from "@/app/component/widgets/hkoblock";
-import type { Metadata } from 'next'
+
 import { metadata } from "../layout";
 
-export function generateMetadata(): Metadata {
+export function generateMetadata(){
   return {
       title: 'Fetching News - ' + metadata.title
   }

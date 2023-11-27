@@ -110,6 +110,7 @@ export default function Header(){
                     <li><Link href="/works" aria-label={`Read more works and design`}>Design</Link></li>
                     <li><Link href="/experiments" aria-label={`Read more experiments/stuffs/`}>Experiment</Link></li>
                     <li><Link href="/fetching" aria-label={`Read more about API`}>Fetching</Link></li>
+                    <li><Link href="/growth" aria-label={`Read more about courses, certificates, and growth`}>Growth</Link></li>
                   </ul>
                 </nav>
 

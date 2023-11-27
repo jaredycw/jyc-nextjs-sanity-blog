@@ -12,8 +12,9 @@ import industry from "./industry-schema";
 import quote from "./quote-schema";
 import youtube from "./youtube"; 
 import instagramPost from "./instagramPost"
+import growth from "./growth-schema";
 
-const schemas = [post,work, experiment,book,course,movie,
+const schemas = [post,work, experiment,book,course, growth,movie,
 author,category,skill,industry,quote,youtube,instagramPost];
 
 export default schemas;

@@ -1,4 +1,6 @@
 import {ThListIcon} from '@sanity/icons'
+import { createClient } from 'next-sanity';
+import clientConfig from "../config/client-config";
 
 const post = {
 
@@ -69,7 +71,11 @@ const post = {
         {
             name: 'publishedOn',
             title: 'Published On',
-            type: 'date'
+            type: 'date',
+            options: {
+                dateFormat: 'DD MMMM, YYYY',
+            }
+
         },
         {
             name: 'excerpt',
@@ -134,14 +140,24 @@ const post = {
 
 
     ],
-    initialValue: () => ({
+    orderings: [
+      {
+        title: 'Post Order',
+        name: 'postOrder',
+        by: [
+          {field: 'postOrder', direction: 'desc'}
+        ]
+      }
+    ],
+    initialValue: async () => ({
         publishedOn: (new Date()).toISOString().substring(0, 10),
         author: {
             _ref: "64251850-6351-4a3d-8554-86650c505451",
             _type: "reference"
           },
-        source: "Photo"
-    
+        postOrder: await createClient(clientConfig).fetch(`
+        count(*[_type=="post"])
+      `) + 1
     })
 };
 

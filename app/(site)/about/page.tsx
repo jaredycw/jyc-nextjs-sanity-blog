@@ -8,11 +8,10 @@ import { BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoTypescript, BiLogoPhp,
 import { BsWordpress, BsFonts } from 'react-icons/bs'
 import { FaHtml5, FaBootstrap, FaFigma, FaWindows, FaApple } from 'react-icons/fa'
 import { SiNextdotjs, SiNodedotjs, SiCanva, SiAdobecreativecloud } from 'react-icons/si'
-import type { Metadata } from 'next'
 import { metadata } from "../layout"
 
 
-export function generateMetadata(): Metadata {
+export function generateMetadata() {
     const host_name = process.env.HOST_NAME;
     
     const url = host_name + "/about/";
@@ -336,9 +335,9 @@ export default function AboutMe(){
                 </div>
                 <div>
                     <ul>
-                        <li>🤍 Movie ( Horror / Crime ) - <Link href="/#section-hobby" className="ugly-blue">this year</Link></li>
-                        <li>🖤 Beer Day n Night & Travelling & Visiting Gallery</li>
-                        <li>🤍 Exploring...</li>
+                        <li>🖤 Movie ( Horror / Crime ) - <Link href="/#section-hobby" className="ugly-blue">this year</Link></li>
+                        <li>🤍 Beer Day n Night & Travelling & Visiting Gallery</li>
+                        <li>🖤 Exploring...</li>
  
                     </ul>
                 </div>

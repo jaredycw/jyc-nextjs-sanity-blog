@@ -510,8 +510,8 @@ section {
     -webkit-box-orient: vertical;
 }
 .post-wrapper .post-meta .post-date{
-    font-size: calc(var(--jy-p) * 0.9);
-    color: var(--jy-grey);
+    font-size: calc(var(--jy-p) * 0.95);
+    color: var(--jy-dark-grey);
 }
 
 .featured-wrapper:hover, .jy-card:hover, .post-wrapper:hover{
@@ -528,14 +528,13 @@ section {
 }
 
 /** icon **/
-.icon-email::before{
-    vertical-align: align-bottom;
+[class^="icon-"], [class*=" icon-"]{
+    vertical-align: text-top;
 }
 .post-infor-wrapper .post-author:before, .post-date:before, .post-skill:before, .post-industry:before, .post-duration:before,
 .post-infor-wrapper .post-visit:before, .image-caption:before, article a:before, .post-reading:before{
     font-family: 'icomoon' !important;
     margin-right:0.5rem;
-    vertical-align: bottom;
 }
 
 
@@ -1247,7 +1246,8 @@ form .form-button{
     display:inline-block;
     width:2.5rem;
     height: 0.1rem;
-    margin:0 0.5rem;
+    margin:0 0.8rem;
+    margin-bottom: 0.5rem;
     vertical-align: middle;
     border-bottom:solid 0.1rem var(--jy-black);
 }

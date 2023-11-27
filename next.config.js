@@ -8,7 +8,9 @@ const nextConfig = {
         'books.google.com',
         'static01.nyt.com',
         'nytimes.com',
-        'www.hko.gov.hk'
+        'www.hko.gov.hk',
+        'd3njjcbhbojbot.cloudfront.net',
+        'media.licdn.com'
       ],
       remotePatterns: [
           {
@@ -24,7 +26,7 @@ const nextConfig = {
 		    SPOTIFY_REFRESH_TOKEN: process.env.SPOTIFY_REFRESH_TOKEN,
         SPOTIFY_CLIENT_SECRET: process.env.SPOTIFY_CLIENT_SECRET,
         SPOTIFY_CLIENT_ID: process.env.SPOTIFY_CLIENT_ID,
-		NYT_API_KEY: process.env.NYT_API_KEY,
+		    NYT_API_KEY: process.env.NYT_API_KEY,
             
 		  }
  

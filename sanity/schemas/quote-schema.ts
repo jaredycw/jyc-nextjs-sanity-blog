@@ -1,11 +1,11 @@
-import {OlistIcon} from '@sanity/icons'
+import {BlockquoteIcon} from '@sanity/icons'
 
 const industry = {
 
     name: 'quote',
     title: 'Quote',
     type: 'document',
-    icon: OlistIcon,
+    icon: BlockquoteIcon,
     fields:[
         {
             name: 'blackWording',

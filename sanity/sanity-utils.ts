@@ -1,4 +1,5 @@
 import { createClient, groq } from "next-sanity";
+import clientConfig from "./config/client-config";
 import { Post } from "@/types/Post";
 import { Course } from "@/types/Course";
 import { Book } from "@/types/Book";
@@ -6,10 +7,28 @@ import { Movie } from "@/types/Movie";
 import { Work } from "@/types/Work";
 import { Experiment } from "@/types/Exp";
 import { Category } from "@/types/Category";
-import clientConfig from "./config/client-config";
 import { Motto } from "@/types/Motto";
 import { Skill } from "@/types/Skill";
 import { Industry } from "@/types/Industry";
+import { Growth } from "@/types/Growth";
+
+ 
+export async function getGrowths(): Promise<Growth[]>{
+
+    return createClient(clientConfig).fetch(
+
+        groq`*[_type=="growth"]| order(completedOn desc){
+            _id,
+            title,
+            institution,
+            completedOn,
+            link,
+            "logo":logo.asset->url,
+            externalLogo,
+            externalLogoAlt,
+        }`
+    );
+}
 
 export async function getSkillsCount(){
     return createClient(clientConfig).fetch(

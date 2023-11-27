@@ -1,4 +1,7 @@
 import {JoystickIcon} from '@sanity/icons'
+import { createClient } from 'next-sanity';
+import clientConfig from "../config/client-config";
+
 
 const experiment = {
 
@@ -62,6 +65,9 @@ const experiment = {
             name: 'publishedOn',
             title: 'Published On',
             type: 'date',
+            options: {
+                dateFormat: 'DD MMMM, YYYY',
+            }
         },
         {
             name: 'excerpt',
@@ -159,15 +165,26 @@ const experiment = {
 
 
     ],
-    initialValue: () => ({
-        publishedOn: (new Date()).toISOString().substring(0, 10),
-        parentPage: "experiments",
-        author: {
-            _ref: "64251850-6351-4a3d-8554-86650c505451",
-            _type: "reference"
-          },
-    
-    })
+    orderings: [
+        {
+          title: 'Post Order',
+          name: 'postOrder',
+          by: [
+            {field: 'postOrder', direction: 'desc'}
+          ]
+        }
+    ],
+    initialValue: async () => ({
+      publishedOn: (new Date()).toISOString().substring(0, 10),
+      parentPage: "experiments",
+      author: {
+          _ref: "64251850-6351-4a3d-8554-86650c505451",
+          _type: "reference"
+        },
+      postOrder: await createClient(clientConfig).fetch(`
+      count(*[_type=="experiment"])
+    `) + 1
+  })
 };
 
 export default experiment;
