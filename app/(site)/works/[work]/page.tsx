@@ -16,6 +16,7 @@ export async function generateMetadata({ params }:any){
     const slug = params.work;
     const work = await getWork(slug);
 
+
    
     const host_name = process.env.HOST_NAME;
     const url = host_name + "works/" + slug;

@@ -5,7 +5,7 @@ import { metadata } from "../../layout";
 
 
 export async function generateMetadata({params}:any) {
-  const slug = params.category;
+  const slug = params.skill;
   const skill = await getSkill(slug);
 
   if (skill !== null) {
@@ -21,7 +21,8 @@ export async function generateMetadata({params}:any) {
     }
 }
 
-export default async function Category({ params }: any){
+
+export default async function Skill({ params }: any){
 
   const slug = params.skill;
   const skill = await getSkill(slug);

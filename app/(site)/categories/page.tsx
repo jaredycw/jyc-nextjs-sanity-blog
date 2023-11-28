@@ -1,4 +1,4 @@
-import { getCategories, getCategoriesCount } from "@/sanity/sanity-utils";
+import { getCategories, getCategoriesCount} from "@/sanity/sanity-utils";
 import ArchiveCategories from "@/app/component/archivecategories";
 import { metadata } from "../layout";
 import Link from "next/link";  

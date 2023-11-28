@@ -4,7 +4,7 @@ import Link from 'next/link';
  
 
 
-export default function ArchiveSkills({ skills, count}: any) {
+export default function ArchiveSkills({ skills }: any) {
     
  
 

@@ -3,6 +3,7 @@
 export default async function SkillSection(props: any){
  
   if (props.skills !== null) {
+   
   return (
         <>
 

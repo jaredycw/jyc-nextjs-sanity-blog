@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { metadata } from "../../layout";
  
 export async function generateMetadata({params}:any) {
-  const slug = params.category;
+  const slug = params.industry;
   const industry = await getIndustry(slug);
 
   if (industry !== null) {
