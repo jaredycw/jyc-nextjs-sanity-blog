@@ -87,7 +87,7 @@ export default async function Post({ params }: any){
             <div className="post-heading">{post.title}</div>
                 <div className="post-infor-wrapper">
                     <div className="post-author">{post.author}</div>
-                    <div className="post-date">{post.publishedOn}</div>
+                    <div className="post-date">{getFormattedDate(new Date(post.publishedOn))}</div>
                     <div className="post-reading">{post.estimatedReadingTime} mins read</div>
                 </div>
             </div>

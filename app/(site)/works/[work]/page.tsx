@@ -86,7 +86,7 @@ export default async function Work({ params }:any){
             <div className="post-heading">{work.title}</div>
                 <div className="post-infor-wrapper">
                     <div className="post-author">{work.author}</div>
-                    <div className="post-date">{work.publishedOn}</div>
+                    <div className="post-date">{getFormattedDate(new Date(work.publishedOn))}</div>
                     <div className="post-reading">{work.estimatedReadingTime || "0"} mins</div> 
                 </div>
                 <div className="work-infor-wrapper">

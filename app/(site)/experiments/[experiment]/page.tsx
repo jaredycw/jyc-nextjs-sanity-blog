@@ -79,7 +79,7 @@ export default async function Experiment({ params }: any){
                             )}
 
                 <span className="overlay"></span>
-                <div className="top-left">{experiment.publishedOn}</div>
+                <div className="top-left">{getFormattedDate(new Date(experiment.publishedOn))}</div>
                 <div className="top-right">{experiment.mainImageAlt || "Alt"}</div>
                 <div className="bottom-right">{experiment.mainImageCaption || "Caption"}</div>
             </div>

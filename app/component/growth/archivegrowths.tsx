@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { getFormattedDate } from '@/app/lib/date';
+import { getCertFormattedDate } from '@/app/lib/date';
 
 
 export default function ArchiveGrowth({ growths }: any) {
@@ -35,7 +35,7 @@ export default function ArchiveGrowth({ growths }: any) {
                                     {growth.institution}&nbsp;&nbsp;‧&nbsp; 
                                 </p> 
                                 <p className="mb-0 blcok md:inline text-center md:text-left jy-font-sans font-bold text-l text-gray-500">
-                                  {getFormattedDate(new Date(growth.completedOn))}
+                                  {getCertFormattedDate(new Date(growth.completedOn))}
                                 </p>
                             </div>
         
