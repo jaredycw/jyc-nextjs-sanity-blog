@@ -1,7 +1,6 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import HeroImage from '../../images/hero-img.jpg'
 import logoA from '../../images/svg/logo-a.svg'
 import logoB from '../../images/svg/logo-b.svg'
 import { BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoTypescript, BiLogoPhp, BiLogoTailwindCss } from 'react-icons/bi'
@@ -32,8 +31,13 @@ export function generateMetadata() {
 }
 
 export default function AboutMe(){
+
+    const HeroImage =  "https://cdn.sanity.io/images/mrzc8peh/production/af424b3f44f8455f6d5f74ff61e593a2ea42eaed-1170x1879.jpg"
+    const HeroImageLqip = "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYDBAcF/8QAJhAAAQMDAwQCAwAAAAAAAAAAAQIDBQAEEQYSURQhIkEHMRMjcf/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAHhEAAQQCAwEAAAAAAAAAAAAAAgABAxEEIQUxoSL/2gAMAwEAAhEDEQA/AMgZkUQ0iOpcyyU5Ozvk+jUL+qbVa8oQ5jd9Hir/AMhxaJDVN8uFjXLawZeLRwd2TyB6Fc+70S81Fu3RcCVIG4DkUEiiBmCR99KmLTnZxjrtOcPbIubBt5KikL8gD2orOo6RfVapDl2sFB2gDgUUEsSS3o/EweQjpvj1agJ1voJqT6ZTSGgUkqOQtdKdvqpi+hXGXFFBUP2Z+gKr6l1LFu6EYjItaw6Vj8iVjyPJNKcOwHI+8Hckt7hj1ikR4zSMUhtT2jyZhx1GD21bXLdWA6sNqOzJx/KKhoqnSk2v/9k="
     const HeroImage2 = "https://cdn.sanity.io/images/mrzc8peh/production/40a19833467baaa41140e3639ddf53639525447c-566x745.jpg"
+    const HeroImageLqip2 = "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAaABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAYDBwQFCP/EACQQAAIBBAIABwEAAAAAAAAAAAECBAADBRESIQYHIjEyYXFR/8QAFwEBAQEBAAAAAAAAAAAAAAAABAUCA//EAB0RAAICAgMBAAAAAAAAAAAAAAABAgMSExEhIlH/2gAMAwEAAhEDEQA/AFvy4EGdPaNNU8kJ4j6raZeNEweXuSLClrVwFdcuxS5hPC+VuFJlm8sYEFl2fUf2lnNzZdmbdszixugaOzUZpTsai+SpGDw9dDkgxtsvvIRyWYueSdjdFVuZC77JopGuX0564HRGLjwmim6jBdj5F+qSfMTBwJMISbLIJRfRZDs6+6xfA5L4LMFzyKjrfevypInqx0jl30PeiQrwsbRu2x4Ir18BJ5Hg/Jf7qinNPjRTdsg2TP/Z"
     const HeroImage3 = "https://cdn.sanity.io/images/mrzc8peh/production/2d6293e1c460799b7e63ee1d92c66b9b49c2d50f-826x884.jpg"
+    const HeroImageLqip3 = "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAVABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUGA//EACUQAAEEAgIBAwUAAAAAAAAAAAEAAgMEBREGEhMHIVExQUNhwf/EABcBAAMBAAAAAAAAAAAAAAAAAAADBAL/xAAbEQADAQEAAwAAAAAAAAAAAAAAAQIREgMTMf/aAAwDAQACEQMRAD8Auc8oWHYSGtjbLq0MR1KWHTtfZd/TuC5VwAbdtOtAvJje73Ib8bWnpy0bNO1HcEEk35WNd21+tqM/NU6+L6U4vDXjeRrrpQPwVKymN6WfCtJWgnd3lja5302UWQZy2Qg9KxIB1vaJPrsOkQ+N3XYfLy4+qwGMuIc95Jc4/JKpcksvOOeRoal6+yIqXTp1puklhN4/KTSeXAE+Q/xERNRIz//Z"
     const resume = "https://cdn.sanity.io/files/mrzc8peh/production/f1cb5044dbd070fe3c123a4b89703ce4a155bb0d.pdf"
     
     return (
@@ -68,9 +72,16 @@ export default function AboutMe(){
                 </div>
                 <div className="self-center">
                     <div className="hero-image-wrapper float-right">
-                    <div className="hero-image-container"><Image src={HeroImage} width={150} height={150} alt="baby" className="hero-image" loading="lazy" /></div>
-                    <div className="logo-svg-a"><Image src={logoA} width={25} height={25} alt="Logo SVG A" /></div>
-                    <div className="logo-svg-b"><Image src={logoB} width={25} height={25} alt="Logo SVG B"  /></div>
+                    <div className="hero-image-container">
+                        <Image src={HeroImage} width={225} height={360} 
+                               alt="baby" className="hero-image" loading="lazy" 
+                               placeholder="blur" blurDataURL={HeroImageLqip} /></div>
+                    <div className="logo-svg-a">
+                        <Image src={logoA} width={25} height={25} alt="Logo SVG A" />
+                    </div>
+                    <div className="logo-svg-b">
+                        <Image src={logoB} width={25} height={25} alt="Logo SVG B"  />
+                    </div>
                     </div>
                 </div>
         </div>
@@ -90,9 +101,16 @@ export default function AboutMe(){
             <div className="grid grid-cols-1 md:grid-cols-3 mt-10">
                 <div className="self-center my-10 md:my-5">
                     <div className="hero-image-wrapper">
-                    <div className="hero-image-container"><Image src={HeroImage2} width={150} height={150} alt="Weirdo Image" className="hero-image" loading="lazy" /></div>
-                    <div className="logo-svg-a"><Image src={logoA} width={25} height={25} alt="Logo SVG A" /></div>
-                    <div className="logo-svg-b"><Image src={logoB} width={25} height={25} alt="Logo SVG B"  /></div>
+                    <div className="hero-image-container">
+                        <Image src={HeroImage2} width={225} height={300} alt="Weirdo Image" 
+                        className="hero-image" loading="lazy" placeholder="blur" blurDataURL={HeroImageLqip2}  />
+                    </div>
+                    <div className="logo-svg-a">
+                        <Image src={logoA} width={25} height={25} alt="Logo SVG A" />
+                    </div>
+                    <div className="logo-svg-b">
+                        <Image src={logoB} width={25} height={25} alt="Logo SVG B"  />
+                    </div>
                     </div>
                 </div>
                 <div className="my-5 leading-9 self-center col-span-2">
@@ -125,9 +143,16 @@ export default function AboutMe(){
                 </div>
                 <div className="self-center mt-10 mb-10 md:mt-0">
                     <div className="hero-image-wrapper float-right">
-                    <div className="hero-image-container"><Image src={HeroImage3} width={150} height={150} alt="Weirdo Image" className="hero-image" loading="lazy" /></div>
-                    <div className="logo-svg-a"><Image src={logoA} width={25} height={25} alt="Logo SVG A" /></div>
-                    <div className="logo-svg-b"><Image src={logoB} width={25} height={25} alt="Logo SVG B"  /></div>
+                    <div className="hero-image-container">
+                        <Image src={HeroImage3} width={225} height={240} alt="Weirdo Image" 
+                        className="hero-image" loading="lazy" placeholder="blur" blurDataURL={HeroImageLqip3} />
+                    </div>
+                    <div className="logo-svg-a">
+                        <Image src={logoA} width={25} height={25} alt="Logo SVG A" />
+                    </div>
+                    <div className="logo-svg-b">
+                        <Image src={logoB} width={25} height={25} alt="Logo SVG B"  />
+                    </div>
                     </div>
                 </div>
             </div>

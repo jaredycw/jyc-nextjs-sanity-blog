@@ -12,7 +12,7 @@ import AdsPart from "@/app/component/adpart";
 import SkillSection from "@/app/component/skillsection";
 import IndustrySection from "@/app/component/industrysection";
 import { notFound } from "next/navigation";
-
+import { getFormattedDate } from "@/app/lib/date";
 
 
 export async function generateMetadata({ params } : any){
@@ -88,13 +88,23 @@ export default async function Experiment({ params }: any){
             <div className="post-heading">{experiment.title}</div>
                 <div className="post-infor-wrapper">
                     <div className="post-author">{experiment.author}</div>
-                    <div className="post-date">{experiment.publishedOn}</div>
+                    <div className="post-date">{getFormattedDate(new Date(experiment.publishedOn))}</div>
                     <div className="post-reading">{experiment.estimatedReadingTime  || "0"} mins</div> 
                 </div>
                 <div className="exp-infor-wrapper">
-                    <div className="post-skill">Required Skills: <SkillSection skills={experiment.skills} /></div>
-                    <div className="post-industry">Industry: <IndustrySection industries={experiment.industries}/> </div>
-                    <div className="post-duration">Duration: {experiment.workingTime || "Null"}</div>
+                    <div className="post-skill">Required Skills: 
+                        <div>
+                        <SkillSection skills={experiment.skills} />
+                        </div>
+                    </div>
+                    <div className="post-industry">Industry: 
+                        <div>
+                        <IndustrySection industries={experiment.industries}/> 
+                        </div>
+                    </div>
+                    <div className="post-duration">Duration: 
+                        {experiment.workingTime ? `${experiment.workingTime} Hour` : "N/A"}
+                    </div>
                 </div>
             </div>
 
@@ -116,7 +126,7 @@ export default async function Experiment({ params }: any){
         <AuthorSection authorImage={experiment.authorImage} author={experiment.author} authorBio={experiment.authorBio} authorLqip={experiment.authorLqip}  />
 
 
-        <div id="jyz-experiment-list" className="my-10">
+        <div id="jyz-experiment-list" className="archive-list my-10">
             <div className="section-title">
               <span className="section-name">Latest Experiment</span>
             </div>

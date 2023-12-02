@@ -11,7 +11,7 @@ import { metadata } from "../../layout";
 import DisqusPart from "@/app/component/disquspart";
 import AdsPart from "@/app/component/adpart";
 import { notFound } from "next/navigation";
- 
+import { getFormattedDate } from "@/app/lib/date";
 
 export async function generateMetadata({ params }: any){
 
@@ -78,7 +78,7 @@ export default async function Post({ params }: any){
                             )}
 
                 <span className="overlay"></span>
-                <div className="top-left">{post.publishedOn}</div>
+                <div className="top-left">{getFormattedDate(new Date(post.publishedOn))}</div>
                 <div className="top-right">{post.mainImageAlt || "Alt"}</div>
                 <div className="bottom-right">{post.mainImageCaption || "Caption"}</div>
             </div>

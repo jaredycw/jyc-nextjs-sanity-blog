@@ -10,7 +10,7 @@ import WorkImage from "@/app/component/workimage";
 import SkillSection from "@/app/component/skillsection";
 import IndustrySection from "@/app/component/industrysection";
 import { notFound } from "next/navigation";
- 
+import { getFormattedDate } from "@/app/lib/date";
 
 export async function generateMetadata({ params }:any){
     const slug = params.work;
@@ -77,7 +77,7 @@ export default async function Work({ params }:any){
                             )}
 
                 <span className="overlay"></span>
-                <div className="top-left">{work.publishedOn}</div>
+                <div className="top-left">{getFormattedDate(new Date(work.publishedOn))}</div>
                 <div className="top-right">{work.mainImageAlt || "Alt"}</div>
                 <div className="bottom-right">{work.mainImageCaption || "Caption"}</div>
             </div>
@@ -90,10 +90,19 @@ export default async function Work({ params }:any){
                     <div className="post-reading">{work.estimatedReadingTime || "0"} mins</div> 
                 </div>
                 <div className="work-infor-wrapper">
-                    <div className="post-skill">Required Skills:  <SkillSection skills={work.skills} />
+                    <div className="post-skill">Required Skills:  
+                        <div>
+                        <SkillSection skills={work.skills} />
+                        </div>
                     </div>
-                    <div className="post-industry">Industry: <IndustrySection industries={work.industries}/> </div>
-                    <div className="post-duration">Duration: {work.workingTime || "Null"}</div>
+                    <div className="post-industry">Industry: 
+                        <div>
+                        <IndustrySection industries={work.industries}/> 
+                        </div>
+                    </div>
+                    <div className="post-duration">
+                        Duration: {work.workingTime ? `${work.workingTime} Hour` : "N/A"}
+                    </div>
                 </div>
             </div>
 
@@ -112,7 +121,7 @@ export default async function Work({ params }:any){
         <AuthorSection authorImage={work.authorImage} author={work.author} authorBio={work.authorBio} authorLqip={work.authorLqip}  />
 
 
-        <div id="jyz-work-list" className="my-10">
+        <div id="jyz-work-list" className="archive-list my-10">
             <div className="section-title">
               <span className="section-name">Latest Work</span>
             </div>
