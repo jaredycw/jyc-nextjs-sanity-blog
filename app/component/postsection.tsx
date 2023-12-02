@@ -1,7 +1,9 @@
 import { getPosts } from '@/sanity/sanity-utils' ;
 import Link from 'next/link';
 import Image from 'next/image';
- 
+import { getFormattedDate } from '../lib/date'; 
+
+
 export default async function PostSection() {
     const posts = await getPosts();
 
@@ -29,7 +31,7 @@ export default async function PostSection() {
                                       <div className="post-meta">
                                           <div className="post-title">{post.title}</div>
 
-                                          <div className="post-date">{post.publishedOn}</div>
+                                          <div className="post-date">{getFormattedDate(new Date(post.publishedOn))}</div>
                                       </div>
                                 </div>
                             </Link>

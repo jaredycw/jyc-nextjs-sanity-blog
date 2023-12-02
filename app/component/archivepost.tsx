@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from 'next/link';
 import Image from 'next/image';
- 
+import { getFormattedDate } from "../lib/date";
 
 
 export default function ArchivePost({ posts }: any) {
@@ -44,7 +44,7 @@ export default function ArchivePost({ posts }: any) {
                           )}</div>
                                       <div className="post-meta">
                                           <div className="post-title">{post.title}</div>                   
-                                          <div className="post-date">{post.publishedOn}</div>
+                                          <div className="post-date">{getFormattedDate(new Date(post.publishedOn))}</div>
                                       </div>
                                 </div>
                             </Link>
