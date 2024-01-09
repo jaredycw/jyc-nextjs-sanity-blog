@@ -17,7 +17,9 @@ export default function Header(){
 
     const handleOutsideClick = (event:any) => {
       if (!event.target.closest('.header') && !event.target.closest('.nav-mobile')) {
-        setIsActive(false);
+        setTimeout(() => {
+          setIsActive(false);
+        }, 100); // Delay of  (100 milliseconds)
       }
     };
 

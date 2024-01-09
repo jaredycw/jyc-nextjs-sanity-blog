@@ -22,7 +22,7 @@ export default function PopularArticlesPart(){
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 ">
               {topArticles.articles ? (
                   topArticles.articles?.map((article :any, index: number) => (
-                    <Link href={article.url} target="_blank" className="transition hover:-translate-y-1 hover:scale-25" key={article.id}>
+                    <Link href={article.url || "/404/"} target="_blank" className="transition hover:-translate-y-1 hover:scale-25" key={article.id}>
                     <div className="post-wrapper flex flex-col h-full">
                       <Image
                       className='post-wrapper-img'

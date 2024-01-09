@@ -130,6 +130,25 @@ article img:hover {
     transform: var(--jy-3d-box);
 } 
 **/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: var(--jy-shadow);
+}
+td, th {
+    text-align: left;
+    border: solid 0.05rem var(--jy-grey);
+    padding: calc(var(--jy-lh) * 0.3rem) calc(var(--jy-lh) * 0.5rem);
+}
+th {
+    background: var(--jy-black);
+    color: var(--jy-white);
+}
+tr:nth-child(even) {
+    background: var(--jy-cloudy);
+}
+
 article menu, article ol, article ul{
     margin-left: 1.5rem;
     font-family: var(--jy-tfont);

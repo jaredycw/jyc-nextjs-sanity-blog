@@ -29,14 +29,16 @@ export default function TopArtists(){
                       <Link href={artist.url} target="_blank" className="flex flex-wrap flex-col md:flex-row items-center p-6 article-sample my-5" key={index}>
                         <div className="flex-none w-14 ml-0 md:ml-5 mb-5 md:mb-0"><h2 className="text-center md:text-left">{index + 1}</h2></div>
                         <div className="flex-none ml-0 md:ml-5 mb-5 md:mb-0">
+                        {artist.coverImage && artist.coverImage.url ? (
                           <Image
-                          className='shadow-sm'
-                          src={artist.coverImage.url}
-                          alt={artist.name}
-                          width={100}
-                          height={100}
-                          key={index}
+                            className="shadow-sm"
+                            src={artist.coverImage.url}
+                            alt={artist.name}
+                            width={100}
+                            height={100}
+                            key={index}
                           />
+                        ) : null}
                         </div>
                         <div className='flex-1 flex-wrap ml-0 md:ml-10'>
                         <h2 className="fw-bold text-center md:text-left">
