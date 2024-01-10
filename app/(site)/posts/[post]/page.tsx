@@ -12,6 +12,7 @@ import DisqusPart from "@/app/component/disquspart";
 import AdsPart from "@/app/component/adpart";
 import { notFound } from "next/navigation";
 import { getFormattedDate } from "@/app/lib/date";
+import RankingTable from "@/app/component/thebest/rankingtable";
 
 export async function generateMetadata({ params }: any){
 
@@ -101,6 +102,12 @@ export default async function Post({ params }: any){
 
         <article className="type-post">
           <PortableContent content={post.content}  />
+          <div>
+            {post.jsonlink !== null ? 
+            <div><RankingTable jsonlink={post.jsonlink}/></div> :
+            <div></div>
+            }
+        </div>
         </article>
         <section className="page-featured">
 

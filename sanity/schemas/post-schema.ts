@@ -136,6 +136,11 @@ const post = {
                 type: 'instagramPost'
               }
             ]
+        },
+        {
+          name: 'jsonlink',
+          type: 'url',
+          title: 'JSON Link',
         }
 
 

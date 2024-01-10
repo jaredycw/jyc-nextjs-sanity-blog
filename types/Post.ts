@@ -22,6 +22,7 @@ export type Post = {
     mainImageCaption: string,
     igpost: string,
     estimatedReadingTime: string,
-    content: PortableTextBlock[];
+    content: PortableTextBlock[],
+    jsonlink: string,
 }
 

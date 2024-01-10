@@ -227,7 +227,8 @@ export async function getPost(slug: string): Promise<Post>{
                 _type == "myCodeField" =>{
                     language,code,filename
                 }
-            }
+            },
+            jsonlink,
 
         }`,{ slug }
     );
