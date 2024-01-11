@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from "react";
 
-export default function RankingTable(props: any, category:any) {
+export default function RankingTable(props: any) {
   const [table, setTable] = useState({ items: [] });
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
@@ -67,7 +67,7 @@ export default function RankingTable(props: any, category:any) {
             <table>
               <thead>
                 <tr>
-                  {Array.isArray(props.categories) && props.categories.some(category => category.title.includes("Music"))  ?(
+                  {Array.isArray(props.categories) && props.categories.some((category: { title: string }) => category.title.includes("Music"))  ?(
                     <>
                         <th>Ranking</th>
                         <th>Tracks</th>
