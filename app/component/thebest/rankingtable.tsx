@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from "react";
 
-export default function RankingTable(props: any) {
+export default function RankingTable(props: any, category:any) {
   const [table, setTable] = useState({ items: [] });
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
