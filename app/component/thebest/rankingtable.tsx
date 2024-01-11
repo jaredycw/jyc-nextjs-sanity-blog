@@ -89,7 +89,7 @@ export default function RankingTable(props: any) {
               <tbody>
                 {filteredItems.map((item: any, index: any) => (
                   <tr key={index}>
-                    {Array.isArray(props.categories) && props.categories.some(category => category.title.includes("Music")) ?(
+                    {Array.isArray(props.categories) && props.categories.some((category: { title: string }) => category.title.includes("Music")) ?(
                     <>                       
                       <td>{item.ranking}</td>
                       <td>{item.track}</td>
