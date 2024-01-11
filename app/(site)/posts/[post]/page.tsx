@@ -104,7 +104,7 @@ export default async function Post({ params }: any){
           <PortableContent content={post.content}  />
           <div>
             {post.jsonlink !== null ? 
-            <div><RankingTable jsonlink={post.jsonlink}/></div> :
+            <div><RankingTable jsonlink={post.jsonlink} categories={post.categories} /></div> :
             <div></div>
             }
         </div>

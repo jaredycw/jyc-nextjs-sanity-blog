@@ -141,14 +141,25 @@ td, th {
     border: solid 0.05rem var(--jy-grey);
     padding: calc(var(--jy-lh) * 0.3rem) calc(var(--jy-lh) * 0.5rem);
 }
+
 th {
     background: var(--jy-black);
     color: var(--jy-white);
 }
+tr{
+    transition: all 0.3s ease-in-out;
+}
 tr:nth-child(even) {
     background: var(--jy-cloudy);
+    color:var(--jy-black);
 }
-
+tr:hover{
+    background: var(--jy-dark-grey);
+    color:var(--jy-white);
+}
+.table-overflow{
+    overflow: auto;
+}
 article menu, article ol, article ul{
     margin-left: 1.5rem;
     font-family: var(--jy-tfont);
