@@ -10,7 +10,8 @@ const nextConfig = {
         'nytimes.com',
         'www.hko.gov.hk',
         'd3njjcbhbojbot.cloudfront.net',
-        'media.licdn.com'
+        'media.licdn.com',
+	'jaredycw.github.io'
       ],
       remotePatterns: [
           {

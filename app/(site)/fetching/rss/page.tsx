@@ -9,7 +9,15 @@ import { metadata } from "../../layout"
 
 export function generateMetadata(): Metadata {
   return {
-      title: 'Fetching RSS to JSON - ' + metadata.title
+      title: 'Fetching RSS to JSON - ' + metadata.title,
+      description: 'Fetching RSS from Courseara, Open Culture, Codecademy, BBC Hot topics, and BBC Technology',
+      openGraph: {
+        title: 'Fetching RSS to JSON - ' + metadata.title,
+        images: [{
+            url: "https://cdn.sanity.io/images/mrzc8peh/production/287d32a0d9160a8e440430f44684c2e5ef330374-1334x890.jpg"
+        }
+        ]
+      },
   }
 }
 

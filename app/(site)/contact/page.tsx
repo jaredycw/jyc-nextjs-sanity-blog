@@ -11,7 +11,7 @@ export async function generateMetadata({params}:any){
   return {
       title: 'Contact Me - ' + metadata.title,
       description: 
-      'Instagram, Linkedin, Github, e-mail, and contact form',
+      'Feel free to contact me. Using Form, Instagram, Linkedin, Github, e-mail, and contact form',
       openGraph: {
         url: url,
         images: [{

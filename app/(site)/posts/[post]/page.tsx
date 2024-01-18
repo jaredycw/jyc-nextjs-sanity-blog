@@ -27,7 +27,8 @@ export async function generateMetadata({ params }: any){
         title: post.title + ` — ` + metadata.title ,
         generator: post._id,
         openGraph: {
-            title: post.title + ` — ` + metadata.title ,    
+            title: post.title + ` — ` + metadata.title ,   
+            description: post.excerpt, 
             url: url,
             siteName: metadata.title ,
             images: [{

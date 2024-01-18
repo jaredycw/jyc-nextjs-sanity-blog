@@ -77,11 +77,23 @@ export default function RankingTable(props: any) {
                     </>
                   ):(
                     <>
-                      <th>Ranking</th>
-                      <th>Movies</th>
-                      <th>Year</th>
-                      <th>Directors</th>
-                      <th>Duration</th>
+                    {Array.isArray(props.categories) && props.categories.some((category: { title: string }) => category.title.includes("Award"))  ?(
+                      <>
+                          <th>Session</th>
+                          <th>Best Film</th>
+                          <th>Best Director</th>
+                          <th>Best Screenplay</th>
+                          <th>Year</th>
+                      </>
+                    ):(
+                      <>
+                          <th>Ranking</th>
+                          <th>Movies</th>
+                          <th>Year</th>
+                          <th>Directors</th>
+                          <th>Duration</th>
+                      </>
+                    )}
                     </>
                   )}
                 </tr>
@@ -95,15 +107,27 @@ export default function RankingTable(props: any) {
                       <td>{item.track}</td>
                       <td>{item.artist}</td>
                       <td>{item.year}</td>
-                      <td>{item.label}</td>
+                      <td>{item.label ? item.label: "N/A"}</td>
                     </>
                   ):(
-                    <>
-                      <td>{item.ranking ? item.ranking : index+1}</td>
-                      <td>{item.movie}</td>
-                      <td>{item.year}</td>
-                      <td>{item.director}</td>
-                      <td>{item.duration ? item.duration : " "}</td>
+                    <>{Array.isArray(props.categories) && props.categories.some((category: { title: string }) => category.title.includes("Award")) ?(
+                      <>                       
+                        <td>{item.sessionNumber ? item.sessionNumber : index+1}</td>
+                        <td>{item.bestFilm}</td>
+                        <td>{item.bestDirector}</td>
+                        <td>{item.bestScreenPlay}</td>
+                        <td>{item.year}</td>
+                      </>
+                    ):(
+                      <>                       
+                        <td>{item.ranking ? item.ranking : index+1}</td>
+                        <td>{item.movie}</td>
+                        <td>{item.year}</td>
+                        <td>{item.director}</td>
+                        <td>{item.duration ? item.duration : "N/A"}</td>
+                      </>
+                      )}
+
                     </>
                   )}
                   </tr>

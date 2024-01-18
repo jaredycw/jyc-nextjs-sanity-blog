@@ -13,7 +13,15 @@ import { metadata } from "../layout";
 
 export function generateMetadata(){
   return {
-      title: 'Fetching News - ' + metadata.title
+      title: 'Fetching News - ' + metadata.title,
+      description: 'Fetching API from Weather:Hong Kong Observatory, My Spotify, Hacker News, New York Times, and RSS',
+      openGraph: {
+        title: 'Fetching News - ' + metadata.title,
+        images: [{
+            url: "https://cdn.sanity.io/images/mrzc8peh/production/287d32a0d9160a8e440430f44684c2e5ef330374-1334x890.jpg"
+        }
+        ]
+      },
   }
 }
 

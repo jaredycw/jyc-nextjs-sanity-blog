@@ -25,6 +25,7 @@ export async function generateMetadata({ params }:any){
     return {
         
         title: work.title + ` — ` + metadata.title ,
+        description: work.excerpt,
         generator: work._id,
         openGraph: {
             title: work.title + ` — ` + metadata.title ,    
