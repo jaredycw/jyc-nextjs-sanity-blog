@@ -1,5 +1,5 @@
 import {ThListIcon} from '@sanity/icons'
-import { createClient } from 'next-sanity';
+import { createClient, groq } from 'next-sanity';
 import clientConfig from "../config/client-config";
 
 const post = {
@@ -8,6 +8,20 @@ const post = {
     title: 'Post',
     type: 'document',
     icon: ThListIcon,
+    groups: [
+      {
+        name:'jsonApi',
+        title:'JSON API'
+      }
+    ],
+    fieldsets: [
+      {
+        name: 'rankingTableFieldset',
+        title: 'Ranking Table',
+        description:'JSON: Variable e.g. "Variable": "output"... ',
+        options: { columns: 2 }
+      },
+    ],
     fields: [
         {
             name: 'postOrder',
@@ -84,7 +98,7 @@ const post = {
             options: {
               maxLength: 160,
             },
-            description: 'Make it for SEO Meta Description'
+            description: 'Make it for SEO Meta Description(Google generally truncates snippets to ~ 155-160 characters.)'
         },
         {
             name: 'content',
@@ -141,7 +155,108 @@ const post = {
           name: 'jsonlink',
           type: 'url',
           title: 'JSON Link',
-        }
+          group: 'jsonApi',
+          description: 'JSON API: Ranking table: Music, Movie and Award(Film, Director, Screenplay)'
+        },
+        {
+          name: "firstCol",
+          title: "First Column",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "firstColVariable",
+          title: "Variable",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "secondCol",
+          title: "Second Column",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "secondColVariable",
+          title: "Variable",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "thirdCol",
+          title: "Third Column",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "thirdColVariable",
+          title: "Variable",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "fourthCol",
+          title: "Fourth Column",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "fourthColVariable",
+          title: "Variable",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "fifthCol",
+          title: "Fifth Column",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "fifthColVariable",
+          title: "Variable",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "sixthCol",
+          title: "Sixth Column",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "sixthColVariable",
+          title: "Variable",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "seventhCol",
+          title: "Seventh Column",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+        {
+          name: "seventhColVariable",
+          title: "Variable",
+          type: "string",
+          group: 'jsonApi',
+          fieldset: "rankingTableFieldset"
+        },
+
 
 
     ],

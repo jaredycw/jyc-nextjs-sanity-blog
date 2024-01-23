@@ -74,7 +74,7 @@ const work = {
             options: {
               maxLength: 160,
             },
-            description: 'Make it for SEO Meta Description'
+            description: 'Make it for SEO Meta Description(Google generally truncates snippets to ~ 155-160 characters.)'
         },
         {
             name: 'content',

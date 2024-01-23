@@ -87,11 +87,13 @@ export default function RankingTable(props: any) {
                       </>
                     ):(
                       <>
-                          <th>Ranking</th>
-                          <th>Movies</th>
-                          <th>Year</th>
-                          <th>Directors</th>
-                          <th>Duration</th>
+                          {props.firstCol && <th>{props.firstCol}</th>}
+                          {props.secondCol && <th>{props.secondCol}</th>}
+                          {props.thirdCol && <th>{props.thirdCol}</th>}
+                          {props.fourthCol && <th>{props.fourthCol}</th>}
+                          {props.fifthCol && <th>{props.fifthCol}</th>}
+                          {props.sixthCol && <th>{props.sixthCol}</th>}
+                          {props.seventhCol && <th>{props.seventhCol}</th>}
                       </>
                     )}
                     </>
@@ -120,11 +122,13 @@ export default function RankingTable(props: any) {
                       </>
                     ):(
                       <>                       
-                        <td>{item.ranking ? item.ranking : index+1}</td>
-                        <td>{item.movie}</td>
-                        <td>{item.year}</td>
-                        <td>{item.director}</td>
-                        <td>{item.duration ? item.duration : "N/A"}</td>
+                        {item[props.firstColVariable] && <td>{item[props.firstColVariable]}</td>}
+                        {item[props.secondColVariable] && <td>{item[props.secondColVariable]}</td>}
+                        {item[props.thirdColVariable] && <td>{item[props.thirdColVariable]}</td>}
+                        {item[props.fourthColVariable] && <td>{item[props.fourthColVariable]}</td>}
+                        {item[props.fifthColVariable] && <td>{item[props.fifthColVariable]}</td>}
+                        {item[props.sixthColVariable] && <td>{item[props.sixthColVariable]}</td>}
+                        {item[props.seventhColVariable] && <td>{item[props.seventhColVariable]}</td>}
                       </>
                       )}
 

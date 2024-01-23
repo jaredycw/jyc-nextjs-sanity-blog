@@ -161,7 +161,7 @@ export async function getPosts(): Promise<Post[]>{
  
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="post"]| order(postOrder desc)[0..5]{
+        groq`*[_type=="post"]| order(postOrder asc)[0..5]{
             _id,
             _updatedAt,
             publishedOn,
@@ -177,7 +177,7 @@ export async function getArchivePosts(): Promise<Post[]>{
  
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="post"]| order(_createdAt desc){
+        groq`*[_type=="post"]| order(postOrder asc){
             "count": count(*[_type == "post"]),
             _id,
             publishedOn,
@@ -201,7 +201,7 @@ export async function getPost(slug: string): Promise<Post>{
             "authorImage": author ->image.asset-> url,
             'authorLqip': author-> image.asset->metadata.lqip,
             "authorBio": author -> bio,
-            title,
+            title, excerpt,
             "slug": slug.current,
             "mainImage":mainImage.asset->url,
             "mainImageAlt":mainImage.alt,
@@ -228,7 +228,8 @@ export async function getPost(slug: string): Promise<Post>{
                     language,code,filename
                 }
             },
-            jsonlink,
+            jsonlink, firstCol,firstColVariable, secondCol, secondColVariable, thirdCol, thirdColVariable, 
+            fourthCol, fourthColVariable, fifthCol, fifthColVariable,sixthCol, sixthColVariable, seventhCol, seventhColVariable
 
         }`,{ slug }
     );
@@ -321,11 +322,11 @@ export async function getWork(slug: string): Promise<Work>{
 
         groq`*[_type=="work" && slug.current == $slug][0]{
             _id,
-            publishedOn,
+            publishedOn, 
             "author": author -> title,
             "authorImage": author ->image.asset-> url,
             'authorLqip': author-> image.asset->metadata.lqip,
-            "authorBio": author -> bio, title,
+            "authorBio": author -> bio, title, excerpt,
             "slug": slug.current,
             "mainImage":mainImage.asset->url,
             "mainImageAlt":mainImage.alt,
@@ -404,7 +405,7 @@ export async function getExp(slug: string): Promise<Experiment>{
             "author": author -> title,
             "authorImage": author ->image.asset-> url,
             'authorLqip': author-> image.asset->metadata.lqip,
-            "authorBio": author -> bio, title,
+            "authorBio": author -> bio, title, excerpt,
             "slug": slug.current,
             "mainImage":mainImage.asset->url,
             "mainImageAlt":mainImage.alt,

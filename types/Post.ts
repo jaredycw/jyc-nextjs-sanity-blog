@@ -24,5 +24,20 @@ export type Post = {
     estimatedReadingTime: string,
     content: PortableTextBlock[],
     jsonlink: string,
+    firstCol: string,
+    firstColVariable: string,
+    secondCol: string,
+    secondColVariable: string,
+    thirdCol: string,
+    thirdColVariable: string,
+    fourthCol: string,
+    fourthColVariable: string,
+    fifthCol: string,
+    fifthColVariable: string,
+    sixthCol: string,
+    sixthColVariable: string,
+    seventhCol: string,
+    seventhColVariable: string
+
 }
 

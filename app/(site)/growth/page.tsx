@@ -13,7 +13,7 @@ export function generateMetadata(){
     return {
         
         title: 'Growth - ' + metadata.title,
-        description: 'placing milestone, the online learning and degree certificates',
+        description: 'Embrace growth and set milestones on my online learning journey. Achieving degree certificates fuels my personal and professional development. #EducationForSuccess',
         openGraph: {
             title: 'Growth' + ` — ` + metadata.title ,  
             url: url,

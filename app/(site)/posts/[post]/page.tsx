@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: any){
     return {
         title: post.title + ` — ` + metadata.title ,
         generator: post._id,
+        description: post.excerpt, 
         openGraph: {
             title: post.title + ` — ` + metadata.title ,   
             description: post.excerpt, 
@@ -61,7 +62,7 @@ export default async function Post({ params }: any){
 
         <section className="post-heading">
             <div className="featured-wrapper">
-    
+
                     {post.mainImage !== null ? (
                         <Image 
                         src={post.mainImage} alt={post.title} width={1920} height={1080}
@@ -105,7 +106,16 @@ export default async function Post({ params }: any){
           <PortableContent content={post.content}  />
           <div>
             {post.jsonlink !== null ? 
-            <div><RankingTable jsonlink={post.jsonlink} categories={post.categories} /></div> :
+            <div><RankingTable jsonlink={post.jsonlink} categories={post.categories}
+                                firstCol={post.firstCol} firstColVariable={post.firstColVariable}
+                                secondCol={post.secondCol} secondColVariable={post.secondColVariable}
+                                thirdCol={post.thirdCol} thirdColVariable={post.thirdColVariable}
+                                fourthCol={post.fourthCol} fourthColVariable={post.fourthColVariable}
+                                fifthCol={post.fifthCol} fifthColVariable={post.fifthColVariable}
+                                sixthCol={post.sixthCol} sixthColVariable={post.sixthColVariable}
+                                seventhCol={post.seventhCol} seventhColVariable={post.seventhColVariable}
+                 />
+            </div> :
             <div></div>
             }
         </div>
