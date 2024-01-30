@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://use.typekit.net/alm4ysv.css");
+@import '~chiron-sung-hk-webfont/css/vf.css';
+@import '~chiron-hei-hk-webfont/css/vf.css';
 
 .jy-tester{
     letter-spacing: -0.45rem;
@@ -53,8 +55,8 @@ body[data-theme="light"] {
     --jy-3d-box:scale3d(1.01,1.01,1.01);
     --jy-p: 1rem;
     --jy-lh: 1.8;
-    --jy-hfont: "neue-haas-grotesk-display", Arial, "????" , "Chiron Sung HK WS", "????" , sans-serif;
-    --jy-tfont: "merriweather","????", "Chiron Hei HK WS", serif;
+    --jy-hfont: "neue-haas-grotesk-display", Arial, "Chiron Sung HK WS" , sans-serif;
+    --jy-tfont: "merriweather", "Chiron Hei HK WS", serif;
     --jy-card-width:25rem;
     --jy-card-height:35rem;
     --jy-card-radius:1.25rem;
@@ -136,6 +138,9 @@ table {
     border-collapse: collapse;
     box-shadow: var(--jy-shadow);
 }
+td{
+    white-space: pre-wrap;
+}
 td, th {
     text-align: left;
     border: solid 0.05rem var(--jy-grey);
@@ -192,30 +197,52 @@ article a:hover, .ugly-blue:hover{
     text-decoration: none;
     opacity:0.5;
 }
-article h1, article h2, article h3, article h4, article h5, article h6 {
-    margin: 1rem 0;
-
+article p, table{
+    font-size: calc(var(--jy-p) * 1.05);
 }
-
-article .modal {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1001; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+article h1, article h2, article h3, article h4, article h5, article h6 {
+    margin-top:1rem;
+    margin-bottom: 1.8rem;
+    border-bottom: solid 0.05rem var(--jy-line);
+}
+article h1::before, article h2::before, article h3::before, article h4::before, article h5::before, article h6::before {
+    content: "#";
+    margin-right: 0.5rem;
+}
+article .modal-overlay {
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1001;
 }
 article .modal-content {
+    position: relative;
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 1400px;
+    width: 85%;
 }
+article .close-button {
+    position: absolute;
+    top: -35px;
+    right: 35px;
+    font-size: 7rem;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: var(--jy-black);
+    transition: 0.5s color ease-in-out;
+}
+article .close-button:hover{
+    color: var(--jy-dark-grey);
+}
+
 /* Add Animation */
 .modal-content, #caption {  
     -webkit-animation-name: fadeIn;
@@ -797,12 +824,9 @@ form .form-button{
     text-transform: uppercase;
     vertical-align: baseline;
     margin:0.5rem 0;
-    padding: 0.3rem 1.2rem;
+    padding: 0.5rem 1.8rem;
 }
-.hero-container .tag .icon-down{
-    margin-left: 0.3rem;
-    font-weight: 900;
-}
+
 .hero-bg{
     width: 100%;
     height: 100%;
@@ -1240,10 +1264,11 @@ form .form-button{
     color:var(--jy-white);
 }
 .featured-wrapper .top-left, .featured-wrapper .top-right,.featured-wrapper .bottom-right{
+    display: none;
     padding:0.2rem 1.5rem;
     border-radius:var(--jy-card-radius);
     background:var(--jy-overlay-box);
-    color:var(--jy-grey);
+    color:var(--jy-white);
     transition: background 0.3s ease-in-out;
 }
 .featured-wrapper .top-left:hover, .featured-wrapper .top-right:hover,.featured-wrapper .bottom-right:hover{
@@ -1559,7 +1584,6 @@ body[data-theme="dark"] .error-field, body[data-theme="dark"] .avatar-icon{
     right: 3%;
     padding: 1rem;
     font-size: 1.8rem;
- 
     cursor: pointer;
     z-index: 3;
     border-radius: 50%;
@@ -1690,6 +1714,7 @@ body[data-theme="dark"] .error-field, body[data-theme="dark"] .avatar-icon{
         line-height:1.5;
     }
     .featured-wrapper .top-left, .featured-wrapper .top-right,.featured-wrapper .bottom-right{
+        display: block;
         padding:0.2rem 2rem;
     }
     .featured-wrapper .top-left{

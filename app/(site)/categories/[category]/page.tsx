@@ -31,7 +31,7 @@ export default async function Category({ params }: any){
     return (
       <div className="container mx-auto mb-10">
         <div className="section-title">
-          <h1>{category.title}</h1>
+          <h1>{category.title}.</h1>
           {category.description}
         </div>
           <ArchivePost posts={category.posts} />

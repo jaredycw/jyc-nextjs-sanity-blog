@@ -1,53 +1,90 @@
 "use client"
+import { useState } from 'react';
 import { PortableText } from '@portabletext/react';
 import urlBuilder from '@sanity/image-url';
 import {getImageDimensions} from '@sanity/asset-utils'
 import Image from 'next/image';
 import { InstagramEmbed } from 'react-social-media-embed';
 import { YouTubeEmbed } from 'react-social-media-embed';
- 
- 
+import {Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 export default function PortableContent(props:any) {
 
 
 // Barebones lazy-loaded image component
 const SampleImageComponent = ({value, isInline}:any) => {
   const {width, height} = getImageDimensions(value)
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+  
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   if (value.size == "fullwidth"){
   return (
-    <div>
-      <div className="my-5 content-image">
+    <>
+    <>
+    <div className="my-5 content-image" onClick={openModal} style={{ cursor: 'pointer' }}>
+      <Image
+        src={urlBuilder()
+            .image(value)
+            .projectId('mrzc8peh')
+            .dataset('production')
+            .auto('format')
+            .fit('max')
+            .url()}
+        width={3840}
+        height={2160}
+        alt={value.alt || ' '}
+        loading="lazy"
+        blurDataURL={value.lqip}
+        placeholder="blur"
+        style={{
+          // Display alongside text if image appears inside a block text span
+          display: isInline ? 'inline-block' : 'block',
+          // Avoid jumping around with aspect-ratio CSS property
+          aspectRatio: width / height,
+        }}
+      />
+      <div className="watermark-container">
+          <span className="image-watermark"></span>
+        </div>
+        
+    </div><p className="text-center text-gray-500 image-caption">{value.caption}</p>
+    </>
 
-        <Image
-          src={urlBuilder()
-              .image(value)
-              .projectId('mrzc8peh')
-              .dataset('production')
-              .auto('format')
-              .fit('max')
-              .url()}
+    <div>
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content">
+            <Image
+
+              src={urlBuilder()
+                  .image(value)
+                  .projectId('mrzc8peh')
+                  .dataset('production')
+                  .auto('format')
+                  .fit('max')
+                  .url()}
               width={3840}
               height={2160}
               alt={value.alt || ' '}
-              loading="lazy"
-              blurDataURL={value.lqip}
-              placeholder="blur"
-              style={{
-                  // Display alongside text if image appears inside a block text span
-                  display: isInline ? 'inline-block' : 'block',
-                  // Avoid jumping around with aspect-ratio CSS property
-                  aspectRatio: width / height,
-                }
-              }
-        />
-        <div className="watermark-container">
-          <span className="image-watermark"></span>
+            />
+            <div className="watermark-container">
+              <span className="image-watermark"></span>
+            </div>
+            <span className="close-button" onClick={closeModal}>
+              &times;
+          </span>
+          </div>
+          
         </div>
-        </div>
-        <p className="text-center text-gray-500 image-caption">{value.caption}</p>
-      
+      )}
     </div>
+    </>
     
   )
   }
@@ -56,34 +93,67 @@ const SampleImageComponent = ({value, isInline}:any) => {
       <div></div>
 
       <div>
-      <div className="my-5 content-image">
-        <Image
-          src={urlBuilder()
-              .image(value)
-              .projectId('mrzc8peh')
-              .dataset('production')
-              .auto('format')
-              .fit('max')
-              .url()}
+      <>
+    <>
+    <div className="my-5 content-image" onClick={openModal} style={{ cursor: 'pointer' }}>
+      <Image
+        src={urlBuilder()
+            .image(value)
+            .projectId('mrzc8peh')
+            .dataset('production')
+            .auto('format')
+            .fit('max')
+            .url()}
+        width={600}
+        height={400}
+        alt={value.alt || ' '}
+        loading="lazy"
+        blurDataURL={value.lqip}
+        placeholder="blur"
+        style={{
+          // Display alongside text if image appears inside a block text span
+          display: isInline ? 'inline-block' : 'block',
+          // Avoid jumping around with aspect-ratio CSS property
+          aspectRatio: width / height,
+        }}
+      />
+      <div className="watermark-container">
+          <span className="image-watermark"></span>
+        </div>
+        
+    </div><p className="text-center text-gray-500 image-caption">{value.caption}</p>
+    </>
+
+    <div>
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content">
+            <Image
+
+              src={urlBuilder()
+                  .image(value)
+                  .projectId('mrzc8peh')
+                  .dataset('production')
+                  .auto('format')
+                  .fit('max')
+                  .url()}
               width={600}
               height={400}
               alt={value.alt || ' '}
               loading="lazy"
-              blurDataURL={value.lqip}
-              placeholder="blur"
-              style={{
-                  // Display alongside text if image appears inside a block text span
-                  display: isInline ? 'inline-block' : 'block',
-                  // Avoid jumping around with aspect-ratio CSS property
-                  aspectRatio: width / height,
-                }
-              }
-        />
-        <div className="watermark-container">
-          <span className="image-watermark"></span>
+            />
+            <div className="watermark-container">
+              <span className="image-watermark"></span>
+            </div>
+            <span className="close-button" onClick={closeModal}>
+              &times;
+          </span>
+          </div>
+          
         </div>
-        </div>
-      <p className="text-center text-gray-500 image-caption">{value.caption}</p>
+      )}
+    </div>
+    </>
       </div>
 
       <div></div>
@@ -107,6 +177,18 @@ const InstagramComponent = ({value}:any) =>{
     <div style={{ display: 'flex', justifyContent: 'center' }} className="relative">
       <InstagramEmbed  url={value.igpost} width="100%" />
     </div>
+  )
+}
+
+const CodeInputComponent = ({value}: any) =>{
+  if (!value || !value.code) { return null }
+  
+  return(
+    <>
+    <h4>{value.filename} </h4>
+    <SyntaxHighlighter language={value.language} style={a11yDark} showLineNumbers={true} wrapLongLines={true}>
+      {value.code}
+    </SyntaxHighlighter></>
   )
 }
 
@@ -195,6 +277,7 @@ const components = {
     image: SampleImageComponent,
     youtube: SampleYouTubeComponent,
     instagramPost: InstagramComponent,
+    myCodeField: CodeInputComponent,
     // Any other custom types you have in your content
     // Examples: mapLocation, contactForm, code, featuredProjects, latestNews, etc.
   },

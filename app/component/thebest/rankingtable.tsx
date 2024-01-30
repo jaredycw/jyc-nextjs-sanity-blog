@@ -67,25 +67,6 @@ export default function RankingTable(props: any) {
             <table>
               <thead>
                 <tr>
-                  {Array.isArray(props.categories) && props.categories.some((category: { title: string }) => category.title.includes("Music"))  ?(
-                    <>
-                        <th>Ranking</th>
-                        <th>Tracks</th>
-                        <th>Artists</th>
-                        <th>Year</th>
-                        <th>Labels</th>
-                    </>
-                  ):(
-                    <>
-                    {Array.isArray(props.categories) && props.categories.some((category: { title: string }) => category.title.includes("Award"))  ?(
-                      <>
-                          <th>Session</th>
-                          <th>Best Film</th>
-                          <th>Best Director</th>
-                          <th>Best Screenplay</th>
-                          <th>Year</th>
-                      </>
-                    ):(
                       <>
                           {props.firstCol && <th>{props.firstCol}</th>}
                           {props.secondCol && <th>{props.secondCol}</th>}
@@ -95,32 +76,11 @@ export default function RankingTable(props: any) {
                           {props.sixthCol && <th>{props.sixthCol}</th>}
                           {props.seventhCol && <th>{props.seventhCol}</th>}
                       </>
-                    )}
-                    </>
-                  )}
                 </tr>
               </thead>
               <tbody>
                 {filteredItems.map((item: any, index: any) => (
-                  <tr key={index}>
-                    {Array.isArray(props.categories) && props.categories.some((category: { title: string }) => category.title.includes("Music")) ?(
-                    <>                       
-                      <td>{item.ranking}</td>
-                      <td>{item.track}</td>
-                      <td>{item.artist}</td>
-                      <td>{item.year}</td>
-                      <td>{item.label ? item.label: "N/A"}</td>
-                    </>
-                  ):(
-                    <>{Array.isArray(props.categories) && props.categories.some((category: { title: string }) => category.title.includes("Award")) ?(
-                      <>                       
-                        <td>{item.sessionNumber ? item.sessionNumber : index+1}</td>
-                        <td>{item.bestFilm}</td>
-                        <td>{item.bestDirector}</td>
-                        <td>{item.bestScreenPlay}</td>
-                        <td>{item.year}</td>
-                      </>
-                    ):(
+                  <tr key={index}>      
                       <>                       
                         {item[props.firstColVariable] && <td>{item[props.firstColVariable]}</td>}
                         {item[props.secondColVariable] && <td>{item[props.secondColVariable]}</td>}
@@ -130,10 +90,6 @@ export default function RankingTable(props: any) {
                         {item[props.sixthColVariable] && <td>{item[props.sixthColVariable]}</td>}
                         {item[props.seventhColVariable] && <td>{item[props.seventhColVariable]}</td>}
                       </>
-                      )}
-
-                    </>
-                  )}
                   </tr>
                 ))}
               </tbody>

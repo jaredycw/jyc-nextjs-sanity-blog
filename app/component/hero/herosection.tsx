@@ -50,7 +50,7 @@ export default function HeroSection() {
                   <p className="hero-description ">Web Designer & Developer, Self Learner<br></br>Digital Design & Developing Field
                       <br></br>#Open to Work #Freelance</p>
                   <Link href="/contact" aria-label="Contact me">
-                  <button className="tag">Contact Me  <span className="icon-down"></span></button>
+                  <button className="tag">Contact Me </button>
                   </Link>
               </m.div>
               <m.div

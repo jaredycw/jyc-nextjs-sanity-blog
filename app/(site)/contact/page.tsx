@@ -38,8 +38,8 @@ export default function ContactMe(){
             <div className="self-center">
                 <div>
                     <div className="mb-5">
-                        <div className="w-56 my-10 mx-auto">
-                        <Image src={Avator} width={1} height={1} alt="contact me avatar icon" />
+                        <div className="w-56 my-10 mx-auto avatar-icon">
+                        <Image src={Avator} width={1} height={1} alt="contact me avataricon" />
                         </div>
                        <p>Feel free to contact me 🔥</p>
                         <p>chat, copyrights, technical issues, opportunities, freelance services...</p>

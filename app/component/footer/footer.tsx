@@ -29,7 +29,7 @@ export default function Footer(){
                 </div>
 
                 <div className="footer-wrapper">
-                    <div className="footer-msg">Copyright &copy; 2023. All Rights reserved.</div>
+                    <div className="footer-msg">Copyright &copy; 2024. All Rights reserved.</div>
                     <div className="footer-msg">Designed and Developed by Jared Yeung with ❤️ </div>
                     <div className="footer-msg">
                         <span>Using </span>
