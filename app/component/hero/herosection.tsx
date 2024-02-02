@@ -32,18 +32,12 @@ export default function HeroSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10 hero-section justify-items-center md:justify-items-stretch mb-10 md:mb-7">
               <m.div
               className="self-center"
-              initial={{ x:-500 }}
-              animate={{ x:0 }}
+              initial={{ opacity: 0, x:-650 }}
+              animate={{ opacity: 1, x:0}}
               transition={{
                 duration: 1,
                 delay: 3,
                 ease: [0, 0.71, 0.2, 1.01],
-                scale: {
-                  type: "spring",
-                  damping: 5,
-                  stiffness: 100,
-                  restDelta: 0.001
-                }
               }}
               >
                   <h1 className="hero-title">Jared Yeung</h1>
@@ -54,7 +48,7 @@ export default function HeroSection() {
                   </Link>
               </m.div>
               <m.div
-                  className="self-center "
+                  className="self-center"
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{
@@ -63,8 +57,8 @@ export default function HeroSection() {
                     ease: [0, 0.71, 0.2, 1.01],
                     scale: {
                       type: "spring",
-                      damping: 5,
-                      stiffness: 100,
+                      damping: 1.5,
+                      stiffness: 50,
                       restDelta: 0.001
                     }
                   }}

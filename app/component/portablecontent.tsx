@@ -184,11 +184,12 @@ const CodeInputComponent = ({value}: any) =>{
   if (!value || !value.code) { return null }
   
   return(
-    <>
-    <h4>{value.filename} </h4>
-    <SyntaxHighlighter language={value.language} style={a11yDark} showLineNumbers={true} wrapLongLines={true}>
-      {value.code}
-    </SyntaxHighlighter></>
+    <div className="my-10">
+      <h4>{value.filename} </h4>
+      <SyntaxHighlighter language={value.language} style={a11yDark} showLineNumbers={true} wrapLongLines={true}>
+        {value.code}
+      </SyntaxHighlighter>
+    </div>
   )
 }
 

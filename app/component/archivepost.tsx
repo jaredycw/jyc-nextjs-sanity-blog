@@ -9,10 +9,10 @@ import { getFormattedDate } from "../lib/date";
 export default function ArchivePost({ posts }: any) {
     
 
-      const [ postNum, setPostNum] = useState(6); // Default number of posts dislplayed
+      const [ postNum, setPostNum] = useState(9); // Default number of posts dislplayed
 
       function handleClick() {
-        setPostNum(prevPostNum => prevPostNum + 6) // 6 is the number of posts you want to load per click
+        setPostNum(prevPostNum => prevPostNum + 9) // 6 is the number of posts you want to load per click
       }
 
       const hasMorePosts = postNum < posts.length; // Check if there are more posts to load

@@ -1226,6 +1226,7 @@ form .form-button{
 .post-wrapper{
     margin-bottom: 1.5rem;
     cursor: pointer;
+    animation: fadeIn 1s;
 }
 .featured-wrapper, .jy-card, .post-wrapper{
     position:relative;
