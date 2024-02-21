@@ -11,9 +11,13 @@ export default async function TagSection(props: any){
                         <div className="tag-wrapper w-full lg:w-10/12 self-start">
                         <ul className="tag-wrapper">
                             {props.categories.map((category : any) => (
-                              <Link href={`/categories/${category.slug.current}`} key={category._id}>
-                                <li className="tag">{category.title}</li>
-                              </Link>
+                              
+                              <li className="tag" key={category._id} >
+                                <Link href={`/categories/${category.slug.current}`} >
+                                  {category.title}
+                                </Link>
+                              </li>
+                              
                             ))}
                         </ul>
                         </div>

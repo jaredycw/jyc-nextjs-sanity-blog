@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://use.typekit.net/alm4ysv.css");
-@import '~chiron-sung-hk-webfont/css/vf.css';
-@import '~chiron-hei-hk-webfont/css/vf.css';
+
 
 .jy-tester{
     letter-spacing: -0.45rem;
@@ -724,7 +723,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    color:var(--jy-dark-grey);
+    color:var(--jy-black);
     font-size: calc(var(--jy-p) * 0.85);
     text-transform: uppercase;
     gap:0.25rem;
@@ -835,7 +834,7 @@ form .form-button{
     padding:0;
     position: absolute;
     z-index: 1;
-    background-image: url(https://cdn.sanity.io/images/mrzc8peh/production/ce7155a8059009bd07a68fc13f809b9fec467973-733x1472.jpg);
+    background-image: url(https://cdn.sanity.io/images/mrzc8peh/production/931990b079897510a01e298a329ba4a69c7a3e3f-733x1472.webp);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -1447,10 +1446,12 @@ form .form-button{
     border:solid 0.1rem var(--jy-black);
     color: var(--jy-black);
     border-radius:2.5rem;
-    padding:0.05rem 1.2rem;
     margin:0.5rem;
     cursor:pointer;
     transition:all 0.3s ease-in-out;
+}
+.tag-wrapper .tag a, .tag a {
+    padding:0 1.2rem;
 }
 .tag-wrapper .tag:hover, .tag:hover{
     background:var(--jy-black);

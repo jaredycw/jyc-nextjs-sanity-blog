@@ -1,4 +1,4 @@
-
+import { Suspense } from 'react'
 import Image from "next/image"
 import Link from "next/link"
 import logoA from '../../images/svg/logo-a.svg'
@@ -8,7 +8,7 @@ import { BsWordpress, BsFonts } from 'react-icons/bs'
 import { FaHtml5, FaBootstrap, FaFigma, FaWindows, FaApple } from 'react-icons/fa'
 import { SiNextdotjs, SiNodedotjs, SiCanva, SiAdobecreativecloud } from 'react-icons/si'
 import { metadata } from "../layout"
-
+import AnimationCard from '@/app/component/widgets/animationcard'
 
 export function generateMetadata() {
     const host_name = process.env.HOST_NAME;
@@ -43,9 +43,12 @@ export default function AboutMe(){
     return (
        
         <div className="container mx-auto mt-5 mb-10 pb-10 ab-me">
+            
         <div className="mb-20">
-            <h1 className="uppercase md:text-5xl mb-3">Welcome! Hello! </h1>
-            <h1 className="uppercase md:text-8xl">I&rsquo;m Jared Yeung 👨🏻‍💻💤</h1>
+  
+                    <h1 className="uppercase md:text-5xl mb-3">Welcome! Hello! </h1>
+                    <h1 className="uppercase md:text-8xl">I&rsquo;m Jared Yeung 👨🏻‍💻💤</h1>
+ 
             <span className="float-right">
                 (TL;DR <Link href={resume} target="_blank" className="ugly-blue">#Resume</Link>)
             </span>
@@ -71,18 +74,7 @@ export default function AboutMe(){
                     
                 </div>
                 <div className="self-center">
-                    <div className="hero-image-wrapper float-right">
-                    <div className="hero-image-container">
-                        <Image src={HeroImage} width={225} height={360} 
-                               alt="baby" className="hero-image" loading="lazy" 
-                               placeholder="blur" blurDataURL={HeroImageLqip} /></div>
-                    <div className="logo-svg-a">
-                        <Image src={logoA} width={25} height={25} alt="Logo SVG A" />
-                    </div>
-                    <div className="logo-svg-b">
-                        <Image src={logoB} width={25} height={25} alt="Logo SVG B"  />
-                    </div>
-                    </div>
+                    <AnimationCard />
                 </div>
         </div>
         <section className="mt-20">
@@ -95,6 +87,7 @@ export default function AboutMe(){
                 style={{backgroundImage: 'url(https://cdn.sanity.io/images/mrzc8peh/production/287d32a0d9160a8e440430f44684c2e5ef330374-1334x890.jpg)'}} 
                 >
                 </div>
+
             </div>
 
 
@@ -383,13 +376,10 @@ export default function AboutMe(){
                 style={{backgroundImage: 'url(https://cdn.sanity.io/images/mrzc8peh/production/644cbd127277831caffb7d3b1e8156cf32d52f44-1454x1057.jpg)'}} 
                 >
                 </div>
+                
         </div>
-
- 
- 
-
-
-
+        
+            
         </div>
       
     )

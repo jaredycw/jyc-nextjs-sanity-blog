@@ -1,5 +1,6 @@
 
 import '../globals.css'
+import '../font.css'
 import '../styles/font.css'
 import type { Metadata } from 'next'
 import Header from '../component/header/header'
@@ -7,7 +8,6 @@ import Footer from '../component/footer/footer'
 import BacktoTop from '../component/widgets/backtotop'
 import { Analytics } from '@vercel/analytics/react';
 export const revalidate = 60;
-
 const host_name = process.env.HOST_NAME;
 
 export const metadata: Metadata = {
