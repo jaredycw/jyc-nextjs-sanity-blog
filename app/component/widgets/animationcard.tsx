@@ -4,15 +4,15 @@ import Image from 'next/image';
 import logoA from '../../images/svg/logo-a.svg'
 import logoB from '../../images/svg/logo-b.svg'
 
-export default function AnimationCard() {
+export default function AnimationCard({ media1 , media2, height }:any) {
   const mediaItems = [
     {
-      src: 'https://cdn.sanity.io/files/mrzc8peh/production/befdaa3d8c566017413f4ced88d3191c4213445a.mp4',
-      alt: 'Image',
+      src: media1,
+      alt: 'Visual',
     },
     {
-      src: 'https://cdn.sanity.io/files/mrzc8peh/production/551590d737c555c18b770df2071f2943cbd6c633.mp4',
-      alt: 'Video',
+      src: media2,
+      alt: 'Visual',
     },
 
   ];
@@ -34,12 +34,14 @@ export default function AnimationCard() {
 
 
   return (
-     <div className="hero-image-wrapper float-right">
+     <>
       {isImage && (
         <Image
           className='hero-image'
+          style={{ height: `${height}`, background:'var(--jy-black)' }}
           src={currentMediaItem.src}
           alt={currentMediaItem.alt}
+          loading="lazy"
           width={400}
           height={600}
         />
@@ -47,10 +49,11 @@ export default function AnimationCard() {
       {isVideo && (
         <video
           className='hero-image'
-          style={{ height: '335px' }}
+          style={{ height: `${height}`, background:'var(--jy-black)' }}
           src={currentMediaItem.src}
           autoPlay
           loop
+          muted
         />
       )}
       <div className="logo-svg-a">
@@ -59,7 +62,7 @@ export default function AnimationCard() {
       <div className="logo-svg-b">
         <Image src={logoB} width={25} height={25} alt="Logo SVG B"  />
       </div>     
-    </div>
+    </>
     
   );
 }
