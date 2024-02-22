@@ -99,7 +99,7 @@ export default function AboutMe(){
             <div className="grid grid-cols-1 md:grid-cols-3 mt-10">
                 <div className="self-center my-10 md:my-5">
                     <div className="hero-image-wrapper">
-                        <AnimationCard media1={jaredBaby} media2={jaredNerd} height='335px' />
+                        <AnimationCard media1={jaredBaby} media2={jaredNerd} height='300px' />
                     </div>
                 </div>
                 <div className="my-5 leading-9 self-center col-span-2">
