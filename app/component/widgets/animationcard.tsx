@@ -52,6 +52,7 @@ export default function AnimationCard({ media1 , media2, height }:any) {
           style={{ height: `${height}`, background:'var(--jy-black)' }}
           src={currentMediaItem.src}
           autoPlay
+          playsInline
           loop
           muted
         />
