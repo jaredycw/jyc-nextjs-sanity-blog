@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://use.typekit.net/alm4ysv.css");
+
 
 
 .jy-tester{
@@ -908,7 +908,7 @@ form .form-button{
 }
 .hero-description{
     width: 100%;
-    max-width: 20rem;
+    max-width: 21rem;
     margin-top: 1rem;
     line-height: 2;
 }
