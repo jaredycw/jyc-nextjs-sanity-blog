@@ -22,8 +22,9 @@
     margin:0 auto;
     top:45%;
 }
-.preloader .preloader-text{
+.preloader .preloader-text, .theme-toggle{
     position: relative;
+    font-family: var(--jy-sfont);
 }
 .preloader .preloader-text:after{
     content: " %";
@@ -56,6 +57,7 @@ body[data-theme="light"] {
     --jy-lh: 1.8;
     --jy-hfont: "neue-haas-grotesk-display", Arial, "Chiron Sung HK WS" , sans-serif;
     --jy-tfont: "merriweather", "Chiron Hei HK WS", serif;
+    --jy-sfont: "pf-uniform", sans-serif;
     --jy-card-width:25rem;
     --jy-card-height:35rem;
     --jy-card-radius:1.25rem;
@@ -476,6 +478,7 @@ section {
 }
 .overlay-menu li{
   width: auto;
+  font-family: var(--jy-sfont);
   font-weight: 900;
   font-size:5.8vh;
   margin: 0.5rem 0;
@@ -688,7 +691,7 @@ section {
 .tag-box .tag-box-infor{
     color:var(--jy-black);
     font-size: calc(var(--jy-p) * 1);
-    font-weight:100;
+    font-weight:500;
     text-align:center;
     line-height: 1.5;
 }
