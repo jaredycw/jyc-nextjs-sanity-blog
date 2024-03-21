@@ -57,7 +57,7 @@ body[data-theme="light"] {
     --jy-lh: 1.8;
     --jy-hfont: "neue-haas-grotesk-display", Arial, "Chiron Sung HK WS" , sans-serif;
     --jy-tfont: "merriweather", "Chiron Hei HK WS", serif;
-    --jy-sfont: "pf-uniform", sans-serif;
+    --jy-sfont: "neue-haas-grotesk-display", Arial, "Chiron Sung HK WS" , sans-serif;
     --jy-card-width:25rem;
     --jy-card-height:35rem;
     --jy-card-radius:1.25rem;
