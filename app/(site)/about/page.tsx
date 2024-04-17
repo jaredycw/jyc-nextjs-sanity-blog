@@ -140,8 +140,6 @@ export default function AboutMe(){
 
         </section>
 
- 
-
         <section className="my-10">
             <h2 className="uppercase md:text-5xl">Skills</h2>
             <h3 className="border-b">(TL;DR - Self-Learner - Generalist &#8594; interest on sth. sth...  )</h3>
@@ -320,8 +318,74 @@ export default function AboutMe(){
    
             </div>
         </section>
+
+        <section className="mt-20">
+            <h2 className="uppercase md:text-5xl">Asking</h2>
+            <h3 className="border-b">What? When? Why? How? Strengths? Weaknesses?</h3>
+
+            <div className="mt-5">
+                <div className="my-5 leading-9">
+                    <h4 className='font-semibold'>#What?</h4>
+ 
+                    <p>
+                        After studying Social Sciences / government and international studies, it can train my mindset, curiosity about future possibilities, love for questioning the whys.
+                        something like why is it difficult to find a right job?, why am I unemployed? and why is changing job is so hard.
+                        The mindset about questioning and answering question is important.
+                    </p>
+                    <p>
+                        Thanks to this mindset, I am able to avoid blaming external factors or accusing others for my circumstances. 
+                        Instead, I take responsibility for my own actions and focus on finding solutions and personal growth. 
+                        This mindset allows me to approach challenges with a proactive and constructive attitude, 
+                        seeking opportunities for self-improvement rather than dwelling on negativity or assigning blame. 
+                    </p>
+                    <h4 className='font-semibold'>#When?</h4>
+                    <p>
+                        The first job, e-Commerece, ignited my passion in IT industry.
+                    </p>
+                    <h4 className='font-semibold'>#Why?</h4>
+                    <p>
+                        Curious about the trend, trying to be tech savvy, learning new technologies, volunteering in tech field position, working with clients.
+                        <br></br>
+                    </p>
+                    <h4 className='font-semibold'>How?</h4>
+                    <p>
+                        Coursera, Courses Online, Codecademy, ChatGPT, FreecodeCamp,  Google, Free Source Online, Logical thinking
+                    </p>
+                    <h4 className='font-semibold'>Strengths</h4>
+                    <p>
+                        1. Eagerness to learn and my ability to quickly pick up new things
+                    </p>
+                    <p>
+                        2. Patient and Detailed
+                    </p>
+                    <p>
+                        3. Efficient
+                    </p>
+                    <h4 className='font-semibold'>Weaknesses</h4>
+                    <p> 1. 
+                        <Link href="https://www.ncbi.nlm.nih.gov/books/NBK585058/#:~:text=Introduction,accomplishments%20among%20high%2Dachieving%20individuals" className='ugly-blue'>Imposter Syndrome</Link><br></br>
+                        refers to the self-doubt experienced by high-achieving individuals regarding their intellect, 
+                        skills, or accomplishments. For instance, 
+                        I often assume that everyone possesses the same level of knowledge in certain areas 
+                        (such as computer skills), only to discover that I have more expertise than most individuals. 
+                        Additionally, I tend to attribute my achievements to luck or external factors rather than acknowledging my own capabilities. 
+                        This is evident in situations such as completing volunteer work or transitioning to design or 
+                        IT-related jobs despite having a non-related academic background.
+                         
+                    </p>
+                    <p>
+                        2.  Decision-Making. <br></br>While I consider myself an efficient person, I sometimes struggle with making decisions, particularly when it comes to selecting a content management system (CMS). Once I have made a decision on which CMS to use, however, I am able to quickly learn and navigate the system, much like choosing a meal for lunch and then eating it promptly.
+                    </p>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
         <section className="my-10">
-            <h2 className="uppercase md:text-5xl">More...</h2>
+            <h2 className="uppercase md:text-5xl">Life</h2>
             <h3 className="border-b">If you want to know more about myself</h3>
             <div className="my-5 grid grid-cols-1 md:grid-cols-3">
                 <div>

@@ -161,7 +161,7 @@ export async function getPosts(): Promise<Post[]>{
  
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="post"]| order(postOrder asc)[0..5]{
+        groq`*[_type=="post" && (!("Minimalist Table" in categories[]->title))]| order(postOrder desc)[0..5]{
             _id,
             _updatedAt,
             publishedOn,
@@ -177,7 +177,7 @@ export async function getArchivePosts(): Promise<Post[]>{
  
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="post"]| order(postOrder asc){
+        groq`*[_type=="post"]| order(publishedOn desc){
             "count": count(*[_type == "post"]),
             _id,
             publishedOn,

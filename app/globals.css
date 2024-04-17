@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://use.typekit.net/alm4ysv.css");
+
 
 
 .jy-tester{
@@ -22,8 +22,10 @@
     margin:0 auto;
     top:45%;
 }
-.preloader .preloader-text{
+.preloader .preloader-text, .theme-toggle{
     position: relative;
+    font-family: var(--jy-sfont);
+    font-weight: 600;
 }
 .preloader .preloader-text:after{
     content: " %";
@@ -56,6 +58,7 @@ body[data-theme="light"] {
     --jy-lh: 1.8;
     --jy-hfont: "neue-haas-grotesk-display", Arial, "Chiron Sung HK WS" , sans-serif;
     --jy-tfont: "merriweather", "Chiron Hei HK WS", serif;
+    --jy-sfont: "neue-haas-grotesk-display", Arial, "Chiron Sung HK WS" , sans-serif;
     --jy-card-width:25rem;
     --jy-card-height:35rem;
     --jy-card-radius:1.25rem;
@@ -85,6 +88,7 @@ body[data-theme="dark"] {
 }
 .jy-font-sans{
     font-family: var(--jy-hfont);
+    letter-spacing: 0.05rem;
 }
 .jy-bt-border{
     border-bottom: solid 0.05rem var(--jy-grey);
@@ -274,44 +278,55 @@ hr {
 }
 h1,h2,h3,h4,h5,h6{
     font-family: var(--jy-hfont);
-    font-weight: 900;
     width: 100% !important;
     position: relative;
     padding: 0;
+    letter-spacing: 0.02rem;
 }
 h1 {
     font-size: calc(var(--jy-p) * 1.5);
+    font-weight: 600;
 }
 h2 {
     font-size: calc(var(--jy-p) * 1.4);
+    font-weight: 600;
 }
 h3 {
     font-size: calc(var(--jy-p) * 1.3);
+    font-weight: 500;
 }
 h4 {
     font-size: calc(var(--jy-p) * 1.2);
+    font-weight: 400;
 }
 h5 {
     font-size: calc(var(--jy-p) * 1.1);
+    font-weight: 400;
 }
 h6 {
     font-size: calc(var(--jy-p) * 1.05);
+    font-weight: 400;
+}
+span {
+    font-weight: 400;
 }
 
 p {
-    font-weight: 400;
-}
-p, strong {
     width: 100%;
+    font-weight: 400;
     font-family: var(--jy-tfont);
     font-size: var(--jy-p);
     margin-bottom: calc(var(--jy-lh) * 0.4rem);
 }
+
 button, input, optgroup, select, textarea {
     font-family: var(--jy-hfont);
 }
 strong {
-    font-weight: 700;
+    font-weight: 600;
+}
+.font-bold{
+    font-weight: 500;
 }
 main form {
     width: 100%;
@@ -322,7 +337,7 @@ main form {
 main form h1 {
     color: var(--jy-black);
     font-size: calc(var(--jy-p) * 1.8);
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1rem;
     border-bottom: solid 0.05rem var(--jy-grey);
 }
@@ -330,7 +345,8 @@ main form h1 {
     color:var(--jy-black);
 }
 blockquote {
-    font-size: calc(var(--jy-p) * 0.9);
+    font-size: calc(var(--jy-p) );
+    letter-spacing: 0.025rem;
     background: var(--jy-cloudy);
     border-radius: var(--jy-card-radius);
     padding:1.5rem;
@@ -353,7 +369,7 @@ section {
     margin-bottom: 1.5rem;
 }
 .section-title span{
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.5;
     font-size: calc(var(--jy-p) * 1.5);
 }
@@ -476,7 +492,8 @@ section {
 }
 .overlay-menu li{
   width: auto;
-  font-weight: 900;
+  font-family: var(--jy-sfont);
+  font-weight: 700;
   font-size:5.8vh;
   margin: 0.5rem 0;
   text-transform: uppercase;
@@ -557,7 +574,7 @@ section {
 }
 .post-wrapper .post-meta .post-title{
     font-size: calc(var(--jy-p) * 1.3);
-    font-weight: 700;
+    font-weight: 600;
     color:var(--jy-black);
     line-height: 1.2;
     overflow: hidden;
@@ -569,6 +586,7 @@ section {
 }
 .post-wrapper .post-meta .post-date{
     font-size: calc(var(--jy-p) * 0.95);
+    font-weight: 500;
     color: var(--jy-dark-grey);
 }
 
@@ -688,7 +706,7 @@ section {
 .tag-box .tag-box-infor{
     color:var(--jy-black);
     font-size: calc(var(--jy-p) * 1);
-    font-weight:100;
+    font-weight:600;
     text-align:center;
     line-height: 1.5;
 }
@@ -703,7 +721,7 @@ section {
 }
 .site-footer .motto-wrapper{
     font-size: calc(var(--jy-p) * 2);
-    font-weight: 900;
+    font-weight: 700;
     border-top: solid 0.06rem var(--jy-line);
 }
 .site-footer .motto-wrapper::after{
@@ -753,7 +771,7 @@ section {
     flex-direction: row;
     flex-wrap:wrap;
     line-height: 1.5;
-    font-weight:900 !important;
+    font-weight:700 !important;
     padding:1rem 0;
     font-size: calc(var(--jy-p) * 1.4);
 }
@@ -784,7 +802,7 @@ section {
     padding: 0.4rem 2.8rem;
     margin: 1rem;
     font-size: calc(var(--jy-p) * 1.15);
-    font-weight: 700;
+    font-weight: 600;
     font-family: var(--jy-hfont);
     text-transform: capitalize;
     background: var(--jy-rgba);
@@ -819,7 +837,7 @@ form .form-button{
 }
 .hero-container .tag{
     border-radius: 0;
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     vertical-align: baseline;
     margin:0.5rem 0;
@@ -903,12 +921,13 @@ form .form-button{
     line-height: 1.5;
     text-transform: uppercase;
     width: fit-content !important;
+    font-weight: 600;
     border-bottom: solid 0.5rem var(--jy-black);
     border-bottom-right-radius: 0.5rem;
 }
 .hero-description{
     width: 100%;
-    max-width: 20rem;
+    max-width: 21rem;
     margin-top: 1rem;
     line-height: 2;
 }
@@ -996,7 +1015,7 @@ form .form-button{
 }
 .hobby-title{
     margin-top:1rem;
-    font-weight: 400;
+    font-weight: 500;
     font-size:calc(var(--jy-p) * 1.3);
 }
 #section-hobby .book{
@@ -1007,17 +1026,19 @@ form .form-button{
     color: var(--jy-black);
     font-size:calc(var(--jy-p) * 1.25);
     line-height: 1.5;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     text-transform: capitalize;
 }
 #section-hobby .book-author{
     color:var(--jy-black);
     font-size:calc(var(--jy-p) * 1.15);
+    font-weight: 400;
     font-style: italic;
 }
 #section-hobby .book-author::before{
     content: "by";
     margin-right: 0.5rem;
+    font-weight: 400;
     font-style:normal;
 }
 #section-hobby .book-cover{
@@ -1056,6 +1077,7 @@ form .form-button{
 .study-list div{
     color: var(--jy-black);
     padding: 1rem 0 ;
+    letter-spacing: 0.15rem;
     font-size:calc(var(--jy-p) * 1.15);
     border-bottom: solid 0.06rem var(--jy-line);
 }
@@ -1353,7 +1375,7 @@ form .form-button{
     line-height: 1.5;
 }
 .hobbies-heading .title h1{
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 0.5rem;
     font-size: calc(var(--jy-p) * 1.4);
 }
@@ -1494,7 +1516,7 @@ form .form-button{
 }
 .author-wrapper .author-infor .author-name{
     position: relative;
-    font-weight:800;
+    font-weight:600;
     line-height: 1.5;
     margin-bottom: 0.5rem;
     font-size: calc(var(--jy-p) * 1.5);
@@ -1526,7 +1548,7 @@ form .form-button{
 }
 .card-grid-title{
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 00;
 }
 .now-playing:hover, .card-sample:hover, .article-sample:hover{
     box-shadow:var(--jy-shadow);
