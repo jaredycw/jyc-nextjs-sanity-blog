@@ -29,7 +29,6 @@ export default async function Page() {
           <MotionMovies>
             <MovieSection />
           </ MotionMovies>
-          <CraftSection />
         </div>
 
           <div className="section-wrapper">  
