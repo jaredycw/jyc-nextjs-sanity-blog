@@ -1093,9 +1093,6 @@ form .form-button{
 .study-list div:hover::after{
     right: 1.5rem;
 }
-#section-watching {
-    border-bottom: solid 0.06rem var(--jy-line);
-}
 #section-watching .watching-wrapper{
     display: flex;
     flex-direction: column;
