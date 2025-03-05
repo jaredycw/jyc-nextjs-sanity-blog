@@ -43,6 +43,8 @@ export default function ContactMe(){
                         </div>
                        <p>Feel free to contact me 🔥</p>
                         <p>chat, copyrights, technical issues, opportunities, freelance services...</p>
+                        <p>Need a stunning, mobile-friendly website or blog? Let's try <a href="https://www.strikingly.com/a/NaRgIB" target="_blank">Strikingly</a>, a user-friendly platform that lets anyone—coding skills or not—build sleek, optimized sites for all devices, 
+                           from phones to desktops. Get in touch, and let’s create something amazing together!</p>
                     </div>
                     <div className="mb-10">
                         <span className="icon-email mr-2"></span>
