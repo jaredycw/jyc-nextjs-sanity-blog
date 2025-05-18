@@ -99,11 +99,13 @@ export default async function Post({ params }: any){
             
 
         </section>
-        <AdBanner
+        <div className="ad-placement my-5">
+            <AdBanner
                 dataAdFormat="auto"
                 dataFullWidthResponsive={true}
                 dataAdSlot="8196219014"
-        />
+            />
+        </div>
        
 
         <article className="type-post">
@@ -133,7 +135,13 @@ export default async function Post({ params }: any){
         <TagSection categories={post.categories} />
             <AuthorSection authorImage={post.authorImage} author={post.author} authorBio={post.authorBio} authorLqip={post.authorLqip}  />
 
-        <div className="ad-placement my-5"></div>
+        <div className="ad-placement my-5">
+            <AdBanner
+                dataAdFormat="auto"
+                dataFullWidthResponsive={true}
+                dataAdSlot="8196219014"
+            />
+        </div>
 
         <div id="jyz-post-list" className="my-10">
             <div className="section-title">

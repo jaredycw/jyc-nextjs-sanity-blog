@@ -109,11 +109,13 @@ export default async function Experiment({ params }: any){
             </div>
 
            <SnsWidget />
-           <AdBanner
-                dataAdFormat="auto"
-                dataFullWidthResponsive={true}
-                dataAdSlot="8196219014"
-        />
+           <div className="ad-placement my-5">
+                <AdBanner
+                    dataAdFormat="auto"
+                    dataFullWidthResponsive={true}
+                    dataAdSlot="8196219014"
+                />
+            </div>
             
 
         </section>
@@ -128,7 +130,13 @@ export default async function Experiment({ params }: any){
         
         <MottoSection />                    
         <AuthorSection authorImage={experiment.authorImage} author={experiment.author} authorBio={experiment.authorBio} authorLqip={experiment.authorLqip}  />
-
+        <div className="ad-placement my-5">
+            <AdBanner
+                dataAdFormat="auto"
+                dataFullWidthResponsive={true}
+                dataAdSlot="8196219014"
+            />
+        </div>                    
 
         <div id="jyz-experiment-list" className="archive-list my-10">
             <div className="section-title">
