@@ -109,7 +109,11 @@ export default async function Experiment({ params }: any){
             </div>
 
            <SnsWidget />
-           <AdBanner />
+           <AdBanner
+                dataAdFormat="auto"
+                dataFullWidthResponsive={true}
+                dataAdSlot="8196219014"
+        />
             
 
         </section>
