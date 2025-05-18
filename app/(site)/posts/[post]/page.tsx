@@ -99,7 +99,7 @@ export default async function Post({ params }: any){
             
 
         </section>
-        <div className="ad-placement my-5">
+        <div className="my-5">
             <AdBanner
                 dataAdFormat="auto"
                 dataFullWidthResponsive={true}
@@ -135,7 +135,7 @@ export default async function Post({ params }: any){
         <TagSection categories={post.categories} />
             <AuthorSection authorImage={post.authorImage} author={post.author} authorBio={post.authorBio} authorLqip={post.authorLqip}  />
 
-        <div className="ad-placement my-5">
+        <div className="my-5">
             <AdBanner
                 dataAdFormat="auto"
                 dataFullWidthResponsive={true}

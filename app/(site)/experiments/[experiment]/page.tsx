@@ -109,7 +109,7 @@ export default async function Experiment({ params }: any){
             </div>
 
            <SnsWidget />
-           <div className="ad-placement my-5">
+           <div className="my-5">
                 <AdBanner
                     dataAdFormat="auto"
                     dataFullWidthResponsive={true}
@@ -130,7 +130,7 @@ export default async function Experiment({ params }: any){
         
         <MottoSection />                    
         <AuthorSection authorImage={experiment.authorImage} author={experiment.author} authorBio={experiment.authorBio} authorLqip={experiment.authorLqip}  />
-        <div className="ad-placement my-5">
+        <div className="my-5">
             <AdBanner
                 dataAdFormat="auto"
                 dataFullWidthResponsive={true}
