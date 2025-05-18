@@ -9,7 +9,7 @@ import PortableContent from "@/app/component/portablecontent";
 import SnsWidget from "@/app/component/snswidget";
 import { metadata } from "../../layout";
 import DisqusPart from "@/app/component/disquspart";
-import AdsPart from "@/app/component/adpart";
+import AdBanner from "@/app/component/adpart";
 import { notFound } from "next/navigation";
 import { getFormattedDate } from "@/app/lib/date";
 import RankingTable from "@/app/component/thebest/rankingtable";
@@ -99,8 +99,8 @@ export default async function Post({ params }: any){
             
 
         </section>
-                   
-        <AdsPart />
+        <AdBanner />
+       
 
         <article className="type-post">
           <PortableContent content={post.content}  />

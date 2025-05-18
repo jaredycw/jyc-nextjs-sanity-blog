@@ -8,7 +8,7 @@ import { metadata } from "../../layout";
 import DisqusPart from "@/app/component/disquspart";
 import ExperimentImage from "@/app/component/expimage";
 import ArchiveMotionExperiments from "@/app/component/motionframe/archivemexps";
-import AdsPart from "@/app/component/adpart";
+import AdBanner from "@/app/component/adpart";
 import SkillSection from "@/app/component/skillsection";
 import IndustrySection from "@/app/component/industrysection";
 import { notFound } from "next/navigation";
@@ -109,7 +109,7 @@ export default async function Experiment({ params }: any){
             </div>
 
            <SnsWidget />
-           <AdsPart />
+           <AdBanner />
             
 
         </section>

@@ -5,7 +5,7 @@ import logoA from '../../images/svg/logo-a.svg'
 import logoB from '../../images/svg/logo-b.svg'
 import { BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoTypescript, BiLogoPhp, BiLogoTailwindCss } from 'react-icons/bi'
 import { BsWordpress, BsFonts } from 'react-icons/bs'
-import { FaHtml5, FaBootstrap, FaFigma, FaWindows, FaApple } from 'react-icons/fa'
+import { FaHtml5, FaBootstrap, FaFigma, FaWindows, FaApple, FaPython } from 'react-icons/fa'
 import { SiNextdotjs, SiNodedotjs, SiCanva, SiAdobecreativecloud } from 'react-icons/si'
 import { metadata } from "../layout"
 import AnimationCard from '@/app/component/widgets/animationcard'
@@ -195,7 +195,14 @@ export default function AboutMe(){
                                 <div className="card-grid-icon"><BiLogoPhp size={25}/></div> 
                                 <div className="card-grid-title">PHP</div>
                             </div>
-                        </div>  
+                        </div> 
+                        <div className="card-sample"> 
+                            <div className="card-sample-grid gap-2">
+                                <div className="card-grid-icon"><FaPython size={25}/></div> 
+                                <div className="card-grid-title">Python</div>
+                            </div>
+                        </div> 
+                        
                     </div>
                 </div>
 

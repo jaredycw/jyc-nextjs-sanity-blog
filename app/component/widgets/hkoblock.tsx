@@ -18,7 +18,20 @@ export default function HKOWeatherWidget(){
             <div className=" flex flex-wrap flex-col md:flex-row items-center now-playing p-6">
             <h2 className="mb-5 ml-0 md:ml-5 uppercase border-b">Today</h2>
             <div className="mb-5 ml-0 md:ml-5">
-                <Image src={`https://www.hko.gov.hk/images/HKOWxIconOutline/pic${hkoWeather.hkoIcon}.png`} width={100} height={100} alt="weather Icon"/>
+                {hkoWeather.hkoIcon.map((icon: number, index: number) => (
+                    
+                    <Image
+                      key={index}
+                      src={`https://www.hko.gov.hk/images/HKOWxIconOutline/pic${icon}.png`}
+                      width={100}
+                      height={100}
+                      alt={`Weather Icon ${icon}`}
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement; // Type assertion
+                        target.style.display = 'none'; // Hide the image if it fails to load
+                      }}
+                    />
+                  ))}
             </div>
  
                 

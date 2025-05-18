@@ -7,7 +7,7 @@ export default async function MovieSection() {
 
   return (
             <div>
-                <div className="hobby-title">Best Films Watched in 2023</div>
+                <div className="hobby-title">Best Films Watched in 2025</div>
                 <div className="watching-wrapper">
                     {movies.map((movie : any) => (
                     <div key={movie._id}>

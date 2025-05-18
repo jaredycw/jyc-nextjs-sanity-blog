@@ -605,7 +605,7 @@ section {
 
 /** icon **/
 [class^="icon-"], [class*=" icon-"]{
-    vertical-align: text-top;
+    vertical-align: middle;
 }
 .post-infor-wrapper .post-author:before, .post-date:before, .post-skill:before, .post-industry:before, .post-duration:before,
 .post-infor-wrapper .post-visit:before, .image-caption:before, article a:before, .post-reading:before{
@@ -1092,9 +1092,6 @@ form .form-button{
 }
 .study-list div:hover::after{
     right: 1.5rem;
-}
-#section-watching {
-    border-bottom: solid 0.06rem var(--jy-line);
 }
 #section-watching .watching-wrapper{
     display: flex;

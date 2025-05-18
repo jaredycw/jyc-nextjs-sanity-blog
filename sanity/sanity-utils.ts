@@ -294,7 +294,7 @@ export async function getWorks(): Promise<Work[]>{
 
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="work"][0..10]| order(postOrder desc){
+        groq`*[_type=="work"]| order(postOrder desc)[0..9]{
             _id,
             "slug": slug.current,
             title,"mainImage":mainImage.asset->url,
@@ -370,7 +370,7 @@ export async function getExps(): Promise<Experiment[]>{
 
     return createClient(clientConfig).fetch(
 
-        groq`*[_type=="experiment"][0..10]| order(postOrder desc){
+        groq`*[_type=="experiment"]| order(postOrder desc)[0..9]{
             _id,
             "slug": slug.current,
             title,"mainImage":mainImage.asset->url,

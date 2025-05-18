@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import Header from '../component/header/header'
 import Footer from '../component/footer/footer'
 import BacktoTop from '../component/widgets/backtotop'
+import AdSenseScript from '../component/AdSenseScript';
 import { Analytics } from '@vercel/analytics/react';
 export const revalidate = 60;
 const host_name = process.env.HOST_NAME;
@@ -35,6 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       <link rel="stylesheet" href="https://use.typekit.net/alm4ysv.css"></link> 
+      <AdSenseScript />
       </head>
       <body>
         <Header />

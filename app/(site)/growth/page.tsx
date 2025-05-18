@@ -50,7 +50,7 @@ export default async function AboutGrowth(){
                         <div className="flex-none ml-0 md:ml-5 mb-5 md:mb-0">
                                     <Image
                                     className='shadow-sm bg-black w-16 h-16'
-                                    src="https://media.licdn.com/dms/image/D4E0BAQHhJJQ6PkLcBg/company-logo_200_200/0/1688384749050/university_of_london_logo?e=1718841600&v=beta&t=1E6MSTeeW3T-BsfNCmlDyi9cvsMwi_mZjws2Z6A9alk"
+                                    src="https://media.licdn.com/dms/image/v2/D4E0BAQFaGp18XZmvsQ/company-logo_200_200/company-logo_200_200/0/1719823486163/university_of_london_logo?e=1732752000&v=beta&t=6FccsSORWCWzEothGdFO7m8gOh6wdwnuIwpN5CE1gmk"
                                     alt="University of London"
                                     width={50}
                                     height={50}
@@ -76,7 +76,7 @@ export default async function AboutGrowth(){
                         <div className="flex-none ml-0 md:ml-5 mb-5 md:mb-0">
                                     <Image
                                     className='shadow-sm bg-black w-16 h-16'
-                                    src="https://media.licdn.com/dms/image/C560BAQHtsZjrx46lRw/company-logo_200_200/0/1630643447192?e=1718841600&v=beta&t=kK86KUSwbka3q0xPdTIuGOzqIGv-hitq5hj-lZ3dot4"
+                                    src="https://media.licdn.com/dms/image/v2/C560BAQHtsZjrx46lRw/company-logo_200_200/company-logo_200_200/0/1630643447192?e=1732752000&v=beta&t=KMqgjb4UFoACTn34YI5HR3ylCo7M4eSvQZTzIyb4_CI"
                                     alt="Hong Kong Baptist University"
                                     width={50}
                                     height={50}
