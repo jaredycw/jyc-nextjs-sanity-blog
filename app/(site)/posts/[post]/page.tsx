@@ -99,7 +99,11 @@ export default async function Post({ params }: any){
             
 
         </section>
-        <AdBanner />
+        <AdBanner
+                dataAdFormat="auto"
+                dataFullWidthResponsive={true}
+                dataAdSlot="8196219014"
+        />
        
 
         <article className="type-post">
