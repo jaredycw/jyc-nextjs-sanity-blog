@@ -88,7 +88,7 @@ body[data-theme="dark"] {
 }
 .jy-font-sans{
     font-family: var(--jy-hfont);
-    letter-spacing: 0.05rem;
+    : 0.05rem;
 }
 .jy-bt-border{
     border-bottom: solid 0.05rem var(--jy-grey);
@@ -203,6 +203,9 @@ article a:hover, .ugly-blue:hover{
 article p, table{
     font-size: calc(var(--jy-p) * 1.05);
 }
+table td{
+    letter-spacing: 0.05rem;
+}
 article h1, article h2, article h3, article h4, article h5, article h6 {
     margin-top:1rem;
     margin-bottom: 1.8rem;
@@ -281,7 +284,7 @@ h1,h2,h3,h4,h5,h6{
     width: 100% !important;
     position: relative;
     padding: 0;
-    letter-spacing: 0.02rem;
+    : 0.02rem;
 }
 h1 {
     font-size: calc(var(--jy-p) * 1.5);
@@ -346,7 +349,7 @@ main form h1 {
 }
 blockquote {
     font-size: calc(var(--jy-p) );
-    letter-spacing: 0.025rem;
+    letter-spacing: 0.035rem;
     background: var(--jy-cloudy);
     border-radius: var(--jy-card-radius);
     padding:1.5rem;
