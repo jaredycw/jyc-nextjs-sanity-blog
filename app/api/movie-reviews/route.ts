@@ -15,7 +15,7 @@ export async function GET() {
       date: article.pub_date,
       abstract: article.abstract,
       byline: article.byline?.original || 'Unknown',
-      cover: article.multimedia?.default?.url || null,
+      cover: article.multimedia.default.url || null,
   }));
  
 
