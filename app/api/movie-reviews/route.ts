@@ -10,6 +10,7 @@ export async function GET() {
     }
   const data  = await res.json();
   const articles = data.response.docs.slice(0, 10).map((article:any) => ({
+    url: article.web_url,
     title: article.headline.main,
     date: article.pub_date,
     abstract: article.abstract,
