@@ -48,7 +48,7 @@ export default function MovieReviewsPart(){
                   </Link>
                   ))
                 ) : (
-                  <>Failed</>
+                  <>Failed to fetch data</>
               )}
               </div>
             </div>
