@@ -26,7 +26,7 @@ export default function MovieReviewsPart(){
                     <div>
                       <Image
                       className="post-wrapper-img"
-                      src={`http://nytimes.com/${article.cover}`}
+                      src={article.cover}
                       alt={article.title}
                       width={600}
                       height={400}
