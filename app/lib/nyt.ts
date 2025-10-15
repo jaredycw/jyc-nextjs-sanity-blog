@@ -34,7 +34,7 @@ export const bestSeller = async () => {
   export const movieReviews = async () => {
     const api = await getApiKey();
    
-    return fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=section_name:%22Movies%22%20AND%20type_of_material:%22Review%22&sort=newest&page=0&api-key=${api}`, {
+    return fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=movies&fq=reviews&api-key=${api}`, {
         headers: {
           'Content-Type': 'application/json',
           'cache-control': 'public, s-maxage=86400, stale-while-revalidate=43200'
