@@ -8,14 +8,14 @@ export async function GET() {
     if (!res.ok) {
       throw new Error('Failed to fetch data'); // Handle this error appropriately
     }
-  const data  = await res.json();
-  const articles = data.response.docs.slice(0, 10).map((article:any) => ({
-    url: article.web_url,
-    title: article.headline.main,
-    date: article.pub_date,
-    abstract: article.abstract,
-    byline: article.byline.original,
-    cover:article.multimedia[0].url,
+  const data = await res.json();
+  const articles = data.response.docs.slice(0, 10).map((article: any) => ({
+      url: article.web_url,
+      title: article.headline.main,
+      date: article.pub_date,
+      abstract: article.abstract,
+      byline: article.byline?.original || 'Unknown',
+      cover: article.multimedia?.default?.url || null,
   }));
  
 
