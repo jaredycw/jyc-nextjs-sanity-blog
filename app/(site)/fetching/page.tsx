@@ -58,9 +58,7 @@ export default function Fetching(){
             <PopularArticlesPart />
             <MovieReviewsPart />
         </section>
-        <section id="github-section" className="pt-10">
-            Coming Soon
-        </section>
+ 
         </div>
       
     )

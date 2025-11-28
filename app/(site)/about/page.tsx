@@ -18,7 +18,7 @@ export function generateMetadata() {
         
         title: 'About Myself - ' + metadata.title,
         description: 
-        'A self-taught web designer and developer driven by a deep passion for design and development. I am currently employed as a web designer at Mirum in Hong Kong.',
+        'A web designer and developer driven by a deep passion for design and development.',
         openGraph: {
             title: 'About Myself - ' + ` — ` + metadata.title ,  
             url: url,
@@ -32,9 +32,6 @@ export function generateMetadata() {
 
 export default function AboutMe(){
 
-
-    const resume = "https://cdn.sanity.io/files/mrzc8peh/production/f1cb5044dbd070fe3c123a4b89703ce4a155bb0d.pdf"
-    
     const HeroVideo1 = "https://cdn.sanity.io/files/mrzc8peh/production/befdaa3d8c566017413f4ced88d3191c4213445a.mp4"
     const HeroVideo2 = "https://cdn.sanity.io/files/mrzc8peh/production/551590d737c555c18b770df2071f2943cbd6c633.mp4"
     const jaredBaby = "https://cdn.sanity.io/images/mrzc8peh/production/96442a97152fb4b4ee156e00ef31e74462be77e0-532x701.jpg"
@@ -49,18 +46,19 @@ export default function AboutMe(){
             
         <div className="mb-20">
   
-                    <h1 className="uppercase md:text-5xl mb-3">Welcome! Hello! </h1>
-                    <h1 className="uppercase md:text-8xl">I&rsquo;m Jared Yeung 👨🏻‍💻💤</h1>
+                    <h1 className="uppercase md:text-5xl mb-3 tracking-wide">Whats'up!</h1>
+                    <h1 className="uppercase md:text-8xl ">I&rsquo;m Jared Yeung 👨🏻‍💻💤</h1>
  
             <span className="float-right">
-                (TL;DR <Link href={resume} target="_blank" className="ugly-blue">#Resume</Link>)
+                (TL;DR)
             </span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-0 my-10">
                 <div className="self-center">
                     <div className="bg-[var(--jy-cloudy)] text-[var(--jy-black)] jy-border-radius p-8 mb-10">
-                    <p className="text-base md:text-lg leading-7 md:leading-9 mb-6">A self-taught web designer and developer driven by a deep passion for design and development.
-                    I am currently employed as a web designer at Mirum in Hong Kong. 
+                    <p className="text-base md:text-lg leading-7 md:leading-9 mb-6">
+                        A digital enthusiast with a passion for web design and development with:
+                        can-do attitude, eager to learn new technologies, and a strong desire to create meaningful digital experiences.
                     </p>
                     <p className="text-base md:text-lg leading-7 md:leading-9 m-0"> 
                         🌃 Living City: Hong Kong 🇭🇰
@@ -69,7 +67,7 @@ export default function AboutMe(){
                         📀 Elements in my life: Aesthetic, Minimalism, Creativity
                     </p>
                     </div>
-                    <div className="bg-[var(--jy-cloudy)] text-[var(--jy-black)] jy-border-radius px-8 py-5 m-0">
+                    <div className="bg-[var(--jy-cloudy)] text-[var(--jy-black)] jy-border-radius px-8 py-5 m-0 tracking-wider">
                         <span>#Full-Time #Freelance(Commercial/NGO) #Volunteering  #Website #Design <br></br>#Web Design & Developing
                         #Cyber Security #Machine Learning #Artificial Intelligence
                         </span>
@@ -84,7 +82,7 @@ export default function AboutMe(){
         </div>
         <section className="mt-20">
             <h2 className="uppercase md:text-5xl">Story</h2>
-            <h3 className="border-b">(TL;DR - Graduate &#8594; Self-Learner &#8594; Web Designer & 2nd degree &#8594; ? )</h3>
+            <h3 className="border-b">(TL;DR - Graduate &#8594; Digital Enthusiast)</h3>
  
             <div className="story-background-container py-10">
                 <div 
@@ -104,15 +102,8 @@ export default function AboutMe(){
                 </div>
                 <div className="my-5 leading-9 self-center col-span-2">
                     <p>
-                        In 2020, I graduated in 🎓 Social Sciences.
-                        Then, COVID-19 hit, making jobs hard to find for humanities majors. 
-                        So, I turned to the digital world for more chances and progress. Eager to enter the digital world, I started by learning more about IT. 
-                        <br></br>
-                        My first practical experience came from handling website admin and design in e-commerce. 
-                        This got me hooked on technology, and I wanted to grasp it inside out. I craved to be tech-savvy!
-                        <br></br>
-                        Eventually, I became a web designer 👨🏻‍💻 in Mirum. 
-                        Though I enjoyed the work, I hungered for more challenge 🧗. 
+                        In June 2023, I started creating <Link href="https://jaredyeung.com/" target="_blank" className="ugly-blue">my portfolio and blog website</Link>. <br></br>
+                        I don't just build websites; I craft digital experiences that connect and convert. With a can-do attitude and a passion for clean code and compelling design, I turn complex problems into elegant, user-friendly solutions.
                     </p>
                 </div>
             </div>
@@ -121,13 +112,8 @@ export default function AboutMe(){
             <div className="grid grid-cols-1 md:grid-cols-3 mb-5">
                 <div className="my-5 leading-9 self-center col-span-2">
                     <p>
-                        In June 2023, I started creating <Link href="https://jaredyeung.com/" target="_blank" className="ugly-blue">my portfolio and blog website</Link>. 
-                        I was thrilled to display my improving skills and projects. 
-                        I used the newest tech(for me) like the concept of Headless CMS, Node.js, React.js, and Next.js to craft a platform that shows my love for being inventive. 
-                        Every bit of code I wrote was like taking a step towards not just making a website but also creating my path in the digital world. There are several platforms: <Link href="https://chat.openai.com/" target="_blank" className="ugly-blue">ChatGPT</Link>, <Link href="https://www.freecodecamp.org/" target="_blank" className="ugly-blue">Freecodecamp</Link> , <Link href="https://www.coursera.org/" target="_blank" className="ugly-blue">Coursera</Link> , and <Link href="https://www.codecademy.com/" target="_blank" className="ugly-blue">Codecademy</Link> have been helping me a lot for learning digital world.
-                    </p>
-                    <p>
-                        Lastly, I have enrolled in my second bachelor degree Computer Science while working full time job.
+                        
+                        It starts with a spark of an idea. For me, that spark is a passion for creating in the digital space. As a web designer and developer, I get my energy from bringing those ideas to life—merging aesthetic design with solid code to build digital experiences that aren't just functional, but meaningful. I approach every challenge with a 'yes, we can' attitude and an eagerness to learn the tools that will make it happen.
                     </p>
                 </div>
                 <div className="self-center mt-10 mb-10 md:mt-0">
@@ -142,7 +128,7 @@ export default function AboutMe(){
 
         <section className="my-10">
             <h2 className="uppercase md:text-5xl">Skills</h2>
-            <h3 className="border-b">(TL;DR - Self-Learner - Generalist &#8594; interest on sth. sth...  )</h3>
+            <h3 className="border-b">Equip.</h3>
             <div className="my-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 gap-y-5">
                 <div>
@@ -324,71 +310,6 @@ export default function AboutMe(){
                 
    
             </div>
-        </section>
-
-        <section className="mt-20">
-            <h2 className="uppercase md:text-5xl">Asking</h2>
-            <h3 className="border-b">What? When? Why? How? Strengths? Weaknesses?</h3>
-
-            <div className="mt-5">
-                <div className="my-5 leading-9">
-                    <h4 className='font-semibold'>#What?</h4>
- 
-                    <p>
-                        After studying Social Sciences / government and international studies, it can train my mindset, curiosity about future possibilities, love for questioning the whys.
-                        something like why is it difficult to find a right job?, why am I unemployed? and why is changing job is so hard.
-                        The mindset about questioning and answering question is important.
-                    </p>
-                    <p>
-                        Thanks to this mindset, I am able to avoid blaming external factors or accusing others for my circumstances. 
-                        Instead, I take responsibility for my own actions and focus on finding solutions and personal growth. 
-                        This mindset allows me to approach challenges with a proactive and constructive attitude, 
-                        seeking opportunities for self-improvement rather than dwelling on negativity or assigning blame. 
-                    </p>
-                    <h4 className='font-semibold'>#When?</h4>
-                    <p>
-                        The first job, e-Commerece, ignited my passion in IT industry.
-                    </p>
-                    <h4 className='font-semibold'>#Why?</h4>
-                    <p>
-                        Curious about the trend, trying to be tech savvy, learning new technologies, volunteering in tech field position, working with clients.
-                        <br></br>
-                    </p>
-                    <h4 className='font-semibold'>How?</h4>
-                    <p>
-                        Coursera, Courses Online, Codecademy, ChatGPT, FreecodeCamp,  Google, Free Source Online, Logical thinking
-                    </p>
-                    <h4 className='font-semibold'>Strengths</h4>
-                    <p>
-                        1. Eagerness to learn and my ability to quickly pick up new things
-                    </p>
-                    <p>
-                        2. Patient and Detailed
-                    </p>
-                    <p>
-                        3. Efficient
-                    </p>
-                    <h4 className='font-semibold'>Weaknesses</h4>
-                    <p> 1. 
-                        <Link href="https://www.ncbi.nlm.nih.gov/books/NBK585058/#:~:text=Introduction,accomplishments%20among%20high%2Dachieving%20individuals" className='ugly-blue'>Imposter Syndrome</Link><br></br>
-                        refers to the self-doubt experienced by high-achieving individuals regarding their intellect, 
-                        skills, or accomplishments. For instance, 
-                        I often assume that everyone possesses the same level of knowledge in certain areas 
-                        (such as computer skills), only to discover that I have more expertise than most individuals. 
-                        Additionally, I tend to attribute my achievements to luck or external factors rather than acknowledging my own capabilities. 
-                        This is evident in situations such as completing volunteer work or transitioning to design or 
-                        IT-related jobs despite having a non-related academic background.
-                         
-                    </p>
-                    <p>
-                        2.  Decision-Making. <br></br>While I consider myself an efficient person, I sometimes struggle with making decisions, particularly when it comes to selecting a content management system (CMS). Once I have made a decision on which CMS to use, however, I am able to quickly learn and navigate the system, much like choosing a meal for lunch and then eating it promptly.
-                    </p>
-                </div>
-            </div>
-
-
-
-
         </section>
 
         <section className="my-10">

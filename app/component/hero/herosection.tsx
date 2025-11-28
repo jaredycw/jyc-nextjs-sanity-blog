@@ -41,8 +41,8 @@ export default function HeroSection() {
               }}
               >
                   <h1 className="hero-title">Jared Yeung</h1>
-                  <p className="hero-description ">Web Designer & Developer, Self Learner<br></br>Digital Design & Developing Field
-                      <br></br>#Open to Work #Freelance</p>
+                  <p className="hero-description ">Digital Enthusiast<br></br>Aesthetic, Minimalism, and Creativity.
+                      <br></br></p>
                   <Link href="/contact" aria-label="Contact me">
                   <button className="tag">Contact Me </button>
                   </Link>

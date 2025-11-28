@@ -1,5 +1,5 @@
 # JYC Nextjs Sanity Blog
-<img src="https://www.jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2F926db6f7d5b119da2e8fa0572415c94880ddf40e-3334x2084.jpg&w=1920&q=75">
+<img src="https://jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2F926db6f7d5b119da2e8fa0572415c94880ddf40e-3334x2084.jpg&w=1920&q=75">
 
 
 Here is my Blog and Portfolio / Personal Website.
@@ -73,22 +73,22 @@ I will add database later on my website.
 # Design
 
 ## Color Scheme
-<img src="https://www.jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2F1b4fd58f9647452d508f5b054f8b78405932ea5d-3334x2084.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75">
+<img src="https://jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2F1b4fd58f9647452d508f5b054f8b78405932ea5d-3334x2084.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75">
 
 ## Logo
-<img src="https://www.jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2F6f41a2de1bdf3e046f3ea82e5a94762f6db65e36-3334x2084.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75">
+<img src="https://jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2F6f41a2de1bdf3e046f3ea82e5a94762f6db65e36-3334x2084.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75">
 
 ## Typeface
-<img src="https://www.jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2Fc3270768703969a0c1cd3426232a8e0bfc0a6072-3334x2084.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75">
+<img src="https://jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2Fc3270768703969a0c1cd3426232a8e0bfc0a6072-3334x2084.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75">
 
 ## Icon 
 
-<img src="https://www.jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2F056ff3a411e5bd162aceac5deeccd52c2e40a9ed-3334x2084.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75" >
+<img src="https://jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2F056ff3a411e5bd162aceac5deeccd52c2e40a9ed-3334x2084.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75" >
 
-<img src="https://www.jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2F7c256623e530d647de471a8f69a922783814145e-3334x2084.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75">
+<img src="https://jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2F7c256623e530d647de471a8f69a922783814145e-3334x2084.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75">
 
-<img src="https://www.jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2Fc761cbab4b6623859d8259345a993cf5afcc8dc3-3334x2084.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75">
+<img src="https://jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2Fc761cbab4b6623859d8259345a993cf5afcc8dc3-3334x2084.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75">
 
 ## Figma
 
-<img src="https://www.jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2Fbc952d81ec5301d332e92d0c9e339aaac24a7709-8000x4500.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75" >
+<img src="https://jaredyeung.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fmrzc8peh%2Fproduction%2Fbc952d81ec5301d332e92d0c9e339aaac24a7709-8000x4500.jpg%3Ffit%3Dmax%26auto%3Dformat&w=3840&q=75" >
