@@ -1,14 +1,14 @@
-import { Suspense } from 'react'
+import { Suspense } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import logoA from '../../images/svg/logo-a.svg'
-import logoB from '../../images/svg/logo-b.svg'
-import { BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoTypescript, BiLogoPhp, BiLogoTailwindCss } from 'react-icons/bi'
-import { BsWordpress, BsFonts } from 'react-icons/bs'
-import { FaHtml5, FaBootstrap, FaFigma, FaWindows, FaApple, FaPython } from 'react-icons/fa'
-import { SiNextdotjs, SiNodedotjs, SiCanva, SiAdobecreativecloud } from 'react-icons/si'
+import logoA from "../../images/svg/logo-a.svg"
+import logoB from "../../images/svg/logo-b.svg"
+import { BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoTypescript, BiLogoPhp, BiLogoTailwindCss } from "react-icons/bi"
+import { BsWordpress, BsFonts } from "react-icons/bs"
+import { FaHtml5, FaBootstrap, FaFigma, FaWindows, FaApple, FaPython } from "react-icons/fa"
+import { SiNextdotjs, SiNodedotjs, SiCanva, SiAdobecreativecloud } from "react-icons/si"
 import { metadata } from "../layout"
-import AnimationCard from '@/app/component/widgets/animationcard'
+import AnimationCard from "@/app/component/widgets/animationcard"
 
 export function generateMetadata() {
     const host_name = process.env.HOST_NAME;
@@ -16,11 +16,11 @@ export function generateMetadata() {
     const url = host_name + "/about/";
     return {
         
-        title: 'About Myself - ' + metadata.title,
+        title: "About Myself - " + metadata.title,
         description: 
-        'A web designer and developer driven by a deep passion for design and development.',
+        "A web designer and developer driven by a deep passion for design and development.",
         openGraph: {
-            title: 'About Myself - ' + ` — ` + metadata.title ,  
+            title: "About Myself - " + ` — ` + metadata.title ,  
             url: url,
             images: [{
                 url: "https://cdn.sanity.io/images/mrzc8peh/production/287d32a0d9160a8e440430f44684c2e5ef330374-1334x890.jpg"
@@ -46,7 +46,7 @@ export default function AboutMe(){
             
         <div className="mb-20">
   
-                    <h1 className="uppercase md:text-5xl mb-3 tracking-wide">Whats'up!</h1>
+                    <h1 className="uppercase md:text-5xl mb-3 tracking-wide">Whats"up!</h1>
                     <h1 className="uppercase md:text-8xl ">I&rsquo;m Jared Yeung 👨🏻‍💻💤</h1>
  
             <span className="float-right">
@@ -76,7 +76,7 @@ export default function AboutMe(){
                 </div>
                 <div className="self-center">
                     <div className="hero-image-wrapper float-right">
-                        <AnimationCard media1={HeroVideo1} media2={HeroVideo2} height='335px' />
+                        <AnimationCard media1={HeroVideo1} media2={HeroVideo2} height="335px" />
                     </div>
                 </div>
         </div>
@@ -87,7 +87,7 @@ export default function AboutMe(){
             <div className="story-background-container py-10">
                 <div 
                 className="story-background"
-                style={{backgroundImage: 'url(https://cdn.sanity.io/images/mrzc8peh/production/287d32a0d9160a8e440430f44684c2e5ef330374-1334x890.jpg)'}} 
+                style={{backgroundImage: "url(https://cdn.sanity.io/images/mrzc8peh/production/287d32a0d9160a8e440430f44684c2e5ef330374-1334x890.jpg)"}} 
                 >
                 </div>
 
@@ -97,13 +97,13 @@ export default function AboutMe(){
             <div className="grid grid-cols-1 md:grid-cols-3 mt-10">
                 <div className="self-center my-10 md:my-5">
                     <div className="hero-image-wrapper">
-                        <AnimationCard media1={jaredBaby} media2={jaredNerd} height='300px' />
+                        <AnimationCard media1={jaredBaby} media2={jaredNerd} height="300px" />
                     </div>
                 </div>
                 <div className="my-5 leading-9 self-center col-span-2">
                     <p>
                         In June 2023, I started creating <Link href="https://jaredyeung.com/" target="_blank" className="ugly-blue">my portfolio and blog website</Link>. <br></br>
-                        I don't just build websites; I craft digital experiences that connect and convert. With a can-do attitude and a passion for clean code and compelling design, I turn complex problems into elegant, user-friendly solutions.
+                        I don"t just build websites; I craft digital experiences that connect and convert. With a can-do attitude and a passion for clean code and compelling design, I turn complex problems into elegant, user-friendly solutions.
                     </p>
                 </div>
             </div>
@@ -113,12 +113,12 @@ export default function AboutMe(){
                 <div className="my-5 leading-9 self-center col-span-2">
                     <p>
                         
-                        It starts with a spark of an idea. For me, that spark is a passion for creating in the digital space. As a web designer and developer, I get my energy from bringing those ideas to life—merging aesthetic design with solid code to build digital experiences that aren't just functional, but meaningful. I approach every challenge with a 'yes, we can' attitude and an eagerness to learn the tools that will make it happen.
+                        It starts with a spark of an idea. For me, that spark is a passion for creating in the digital space. As a web designer and developer, I get my energy from bringing those ideas to life—merging aesthetic design with solid code to build digital experiences that aren"t just functional, but meaningful. I approach every challenge with a "yes, we can" attitude and an eagerness to learn the tools that will make it happen.
                     </p>
                 </div>
                 <div className="self-center mt-10 mb-10 md:mt-0">
                     <div className="hero-image-wrapper float-right">
-                        <AnimationCard media1={jaredBoxing} media2={jaredFiring} height='335px' />
+                        <AnimationCard media1={jaredBoxing} media2={jaredFiring} height="335px" />
                     </div>
                 </div>
             </div>
@@ -344,7 +344,7 @@ export default function AboutMe(){
         <div className="story-background-container py-10">
                 <div 
                 className="story-background"
-                style={{backgroundImage: 'url(https://cdn.sanity.io/images/mrzc8peh/production/35e47756cd4f20c3650346128daf307c89c7e11e-1024x768.jpg)'}} 
+                style={{backgroundImage: "url(https://cdn.sanity.io/images/mrzc8peh/production/35e47756cd4f20c3650346128daf307c89c7e11e-1024x768.jpg)"}} 
                 >
                 </div>
         </div>
@@ -352,7 +352,7 @@ export default function AboutMe(){
         <div className="story-background-container py-10">
                 <div 
                 className="story-background"
-                style={{backgroundImage: 'url(https://cdn.sanity.io/images/mrzc8peh/production/644cbd127277831caffb7d3b1e8156cf32d52f44-1454x1057.jpg)'}} 
+                style={{backgroundImage: "url(https://cdn.sanity.io/images/mrzc8peh/production/644cbd127277831caffb7d3b1e8156cf32d52f44-1454x1057.jpg)"}} 
                 >
                 </div>
                 
