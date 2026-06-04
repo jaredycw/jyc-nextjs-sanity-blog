@@ -46,7 +46,7 @@ export default function AboutMe(){
             
         <div className="mb-20">
   
-                    <h1 className="uppercase md:text-5xl mb-3 tracking-wide">Whats"up!</h1>
+                    <h1 className="uppercase md:text-5xl mb-3 tracking-wide">Whats&quot;up!</h1>
                     <h1 className="uppercase md:text-8xl ">I&rsquo;m Jared Yeung 👨🏻‍💻💤</h1>
  
             <span className="float-right">
@@ -103,7 +103,7 @@ export default function AboutMe(){
                 <div className="my-5 leading-9 self-center col-span-2">
                     <p>
                         In June 2023, I started creating <Link href="https://jaredyeung.com/" target="_blank" className="ugly-blue">my portfolio and blog website</Link>. <br></br>
-                        I don"t just build websites; I craft digital experiences that connect and convert. With a can-do attitude and a passion for clean code and compelling design, I turn complex problems into elegant, user-friendly solutions.
+                        I don&quot;t just build websites; I craft digital experiences that connect and convert. With a can-do attitude and a passion for clean code and compelling design, I turn complex problems into elegant, user-friendly solutions.
                     </p>
                 </div>
             </div>
@@ -113,7 +113,7 @@ export default function AboutMe(){
                 <div className="my-5 leading-9 self-center col-span-2">
                     <p>
                         
-                        It starts with a spark of an idea. For me, that spark is a passion for creating in the digital space. As a web designer and developer, I get my energy from bringing those ideas to life—merging aesthetic design with solid code to build digital experiences that aren"t just functional, but meaningful. I approach every challenge with a "yes, we can" attitude and an eagerness to learn the tools that will make it happen.
+                        It starts with a spark of an idea. For me, that spark is a passion for creating in the digital space. As a web designer and developer, I get my energy from bringing those ideas to life—merging aesthetic design with solid code to build digital experiences that aren&quot;t just functional, but meaningful. I approach every challenge with a &quot;yes, we can&quot; attitude and an eagerness to learn the tools that will make it happen.
                     </p>
                 </div>
                 <div className="self-center mt-10 mb-10 md:mt-0">
